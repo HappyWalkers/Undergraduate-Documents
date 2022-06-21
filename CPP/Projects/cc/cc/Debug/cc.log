@@ -1,0 +1,33 @@
+﻿生成启动时间为 2019/4/3 23:29:47。
+     1>项目“c:\Users\anhuishuangqiao\documents\visual studio 2010\Projects\cc\cc\cc.vcxproj”在节点 2 上(build 个目标)。
+     1>PrepareForBuild:
+         正在创建目录“c:\users\anhuishuangqiao\documents\visual studio 2010\Projects\cc\Debug\”。
+       InitializeBuildStatus:
+         正在创建“Debug\cc.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         E:\visual studio 2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\cc.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         E:\visual studio 2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\cc.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt cc.cpp
+         cc.cpp
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\cc.exe.embed.manifest.res" Debug\cc_manifest.rc 
+       Link:
+         E:\visual studio 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\anhuishuangqiao\documents\visual studio 2010\Projects\cc\Debug\cc.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\cc.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\anhuishuangqiao\documents\visual studio 2010\Projects\cc\Debug\cc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\anhuishuangqiao\documents\visual studio 2010\Projects\cc\Debug\cc.lib" /MACHINE:X86 Debug\cc.exe.embed.manifest.res
+         Debug\cc.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\cc.exe.embed.manifest" /manifest Debug\cc.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\cc.exe.embed.manifest.res" Debug\cc_manifest.rc 
+       LinkEmbedManifest:
+         E:\visual studio 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\anhuishuangqiao\documents\visual studio 2010\Projects\cc\Debug\cc.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\cc.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\anhuishuangqiao\documents\visual studio 2010\Projects\cc\Debug\cc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\anhuishuangqiao\documents\visual studio 2010\Projects\cc\Debug\cc.lib" /MACHINE:X86 Debug\cc.exe.embed.manifest.res
+         Debug\cc.obj
+         Debug\stdafx.obj
+         cc.vcxproj -> c:\users\anhuishuangqiao\documents\visual studio 2010\Projects\cc\Debug\cc.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\cc.unsuccessfulbuild”。
+         正在对“Debug\cc.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“c:\Users\anhuishuangqiao\documents\visual studio 2010\Projects\cc\cc\cc.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.23

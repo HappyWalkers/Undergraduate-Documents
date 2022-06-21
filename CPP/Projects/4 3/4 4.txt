@@ -1,0 +1,22 @@
+﻿1>------ 已启动生成: 项目: 4 4, 配置: Release Win32 ------
+1>生成启动时间为 2019/3/23 9:12:07。
+1>InitializeBuildStatus:
+1>  正在创建“Release\4 4.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+1>ClCompile:
+1>  所有输出均为最新。
+1>  4 4.cpp
+1>4 4.cpp(12): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+1>4 4.cpp(13): warning C4244: “=”: 从“double”转换到“long”，可能丢失数据
+1>4 4.cpp(10): warning C4101: “z”: 未引用的局部变量
+1>Link:
+1>  正在生成代码
+1>  已完成代码的生成
+1>  4 4.vcxproj -> c:\users\anhuishuangqiao\documents\visual studio 2010\Projects\4 4\Release\4 4.exe
+1>FinalizeBuildStatus:
+1>  正在删除文件“Release\4 4.unsuccessfulbuild”。
+1>  正在对“Release\4 4.lastbuildstate”执行 Touch 任务。
+1>
+1>生成成功。
+1>
+1>已用时间 00:00:01.07
+========== 生成: 成功 1 个，失败 0 个，最新 0 个，跳过 0 个 ==========

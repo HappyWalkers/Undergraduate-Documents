@@ -1,0 +1,19 @@
+﻿生成启动时间为 2019/4/7 10:26:48。
+     1>项目“F:\C++\6-1 奇偶数列\6-1 奇偶数列\6-1 奇偶数列.vcxproj”在节点 2 上(build 个目标)。
+     1>PrepareForBuild:
+         正在创建目录“F:\C++\6-1 奇偶数列\Debug\”。
+       InitializeBuildStatus:
+         正在创建“Debug\6-1 奇偶数列.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         E:\visual studio 2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\6-1 奇偶数列.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         E:\visual studio 2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\6-1 奇偶数列.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "6-1 奇偶数列.cpp"
+         6-1 奇偶数列.cpp
+     1>f:\c++\6-1 奇偶数列\6-1 奇偶数列\6-1 奇偶数列.cpp(18): error C2146: 语法错误: 缺少“)”(在标识符“）”的前面)
+     1>f:\c++\6-1 奇偶数列\6-1 奇偶数列\6-1 奇偶数列.cpp(18): error C2065: “）”: 未声明的标识符
+     1>f:\c++\6-1 奇偶数列\6-1 奇偶数列\6-1 奇偶数列.cpp(18): error C2146: 语法错误: 缺少“;”(在标识符“cout”的前面)
+     1>已完成生成项目“F:\C++\6-1 奇偶数列\6-1 奇偶数列\6-1 奇偶数列.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.06
