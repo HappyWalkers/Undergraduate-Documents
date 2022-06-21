@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>主页--KindlePush</title>
+	</head>
+	<!-- 引入样式 -->
+	<script src="js/vue.js"></script>
+	<link rel="stylesheet" href="css/element.css">
+	<!-- 引入组件库 -->
+	<script src="js/elementui.js"></script>
+	<script src="js/axios.js"></script>
+	<body>
+		<div style="background-color: #EBEBEB;min-height:800px" id="app">
+		
+		    <div style="width:100%;background-color: #1C8ED0; overflow: hidden">
+		
+				<span class="demonstration" style="float:left;padding-top:10px;color:white;margin-left:1%">
+				   <a href="index.html" style="color: aliceblue;">KindlePush</a>
+				</span>
+		
+		        <span class="demonstration" style="float:left;padding:5px;color:white;margin-left:2%;width:35%">
+						<el-input
+		                        placeholder="请输入"
+		                        icon="search"
+		                        v-model="searchCriteria">
+						</el-input>
+				</span>
+		
+		        <span style="padding:5px;color:white;margin-left:2%">
+			<!--          <el-radio v-model="radio" label="1">按作者</el-radio>-->
+		            <!--          <el-radio v-model="radio" label="2">按书名</el-radio>-->
+					<el-radio-group v-model="searchBy">
+					  <el-radio-button label="author" style="margin-top:3px">按作者</el-radio-button>
+					  <el-radio-button label="bookname" style="margin-top:3px">按书名</el-radio-button>
+					</el-radio-group>
+		            <!--           <el-checkbox v-model="searchByAuthor" text-color="white">按作者</el-checkbox>-->
+		            <!--         <el-checkbox v-model="searchByBookName">按书名</el-checkbox>-->
+				</span>
+		
+		        <span style="padding:5px;color:white;margin:2%;margin-top: 10%">
+					<el-button icon="el-icon-search" @click="handleSearchButtonClick" style="margin-top:5px">
+						搜索
+					</el-button>
+				</span>
+
+		    </div>
+		
+		    <div style="margin-top:5px">
+		        <el-row :gutter="10">
+		            <el-col :xs="4" :sm="4" :md="4" :lg="4">
+		                <div>
+		                    <!-- 侧边栏，handleSelect函数负责 -->
+						<!-- 侧边栏，handleSelect函数负责 -->
+							<el-menu  class="el-menu-vertical-demo" style="min-height:600px" @select="handleSelect">
+								<el-menu-item index="1" style="margin-top: 100px;" ><i class="el-icon-s-custom"></i>注册新用户</el-menu-item>
+								<el-menu-item index="2" v-if="!login" style="margin-top: 30px;"><i class="el-icon-circle-check"></i>登录</el-menu-item>
+								<el-menu-item index="3" v-if="login" style="margin-top: 30px;"><i class="el-icon-lock"></i>修改密码</el-menu-item>
+								<el-menu-item index="4" v-if="login" style="margin-top: 30px;"><i class="el-icon-message"></i>修改邮箱</el-menu-item>
+								<el-menu-item index="5" v-if="login" style="margin-top: 30px;"><i class="el-icon-message"></i>退出登录</el-menu-item>
+							</el-menu>
+                </div>
+            </el-col>
+			
+			
+			
+            <el-col :xs="20" :sm="20" :md="20" :lg="20">	
+<!-- <p>{{JSON.stringify(searchResult)}}</p> -->
+              <!-- 显示搜索结果的地方 -->
+ 
+				<el-row :gutter="20">
+					
+				  <el-col :span="6" v-for="eachbook in searchResult">
+				  
+						<span style="margin-top:10px;display:inline-block;">
+											<span style="margin-left: 60px;margin-top: 30px;margin-bottom: 30px"  >
+													<img :src="'http://www.leyou.com/'+eachbook.covername+'.jpg'"
+														 style="width: 200px; height: 294px"
+														 alt="书籍图片">
+													  <h2><a :href="'/detail.html?bookid='+eachbook.bookid" style="margin-left: 40%;font-size:20px">{{eachbook.bookname}}</a></h2>
+													  <p style="margin-left: 40%;">作者: {{eachbook.author}}</p>	
+											</span>
+						
+						   </span> 
+				  
+				  
+				  </el-col>
+				  
+				</el-row>
+				
+				
+<!-- 				 <el-table
+				    :data="searchResult"
+				    stripe
+				    style="width: 100%"
+					>
+				    <el-table-column
+				      prop="covername"
+				      label="图片"
+				      width="180">
+				    </el-table-column>
+				    <el-table-column
+				      prop="bookname"
+				      label="书名"
+				      width="180">
+				    </el-table-column>
+				    <el-table-column
+				      prop="author"
+				      label="作者">
+				    </el-table-column>
+				  </el-table> -->
+
+            </el-col>
+			
+			
+			
+        </el-row>
+    </div>
+
+</div>
+
+	<script>
+		axios.defaults.withCredentials=true
+	    var api_prefix = "http://www.leyou.com/api";
+	    var api={
+	        register:api_prefix+"/user/register",
+	        getCapcha:api_prefix+"/user/getCapcha",
+	        search:api_prefix+"/book/search",
+	        findById:api_prefix+"/book/item",
+	        sendMail:api_prefix+"/book/send",
+	        login:api_prefix+"/user/login",
+	        logout:api_prefix+"/user/logout",
+	        setEmail:api_prefix+"/user/email",
+	        changePassword:api_prefix+"/user/passwd",
+			checkLogin:api_prefix+"/user/checklogin"			
+	    };
+		
+		var html_prefix = "http://www.bmq.com";
+		var html = {
+			register:html_prefix+"/register.html",
+			login:html_prefix+"/login.html",
+			logout:html_prefix+"/logout.html",
+			setEmail:html_prefix+"/email.html",
+			changePassword:html_prefix+"/passwd.html",
+			detail:html_prefix+"/detail.html",
+			index:html_prefix+"/index.html"
+		};
+		
+		var str = document.location.pathname;
+		var endstr = str.substr(str.lastIndexOf('/'));
+		
+		function getQueryVariable(variable)
+		{
+		       var query = window.location.search.substring(1);
+		       var vars = query.split("&");
+		       for (var i=0;i<vars.length;i++) {
+		               var pair = vars[i].split("=");
+		               if(pair[0] == variable){return pair[1];}
+		       }
+		       return(false);
+		}
+	
+	
+	    var app = new Vue(
+	        {
+	            el: "#app",
+	            data:{
+	
+	                "searchCriteria":"",
+	                "searchBy":"bookname",
+	                "login":false,
+	                "searchResult":null,
+					"searchBy":"bookname",
+					"aBook":null,
+					"input_username":"",
+					"input_password":""
+	            },
+				computed:{
+					notlogin:function(){
+						return !this.login;
+					}
+				},
+	
+	            methods:{
+	
+	                handleSearchButtonClick:function(){
+	
+	                    if(this.searchBy==="bookname"){
+	                        axios.post(api.search, params={
+	                            bookname:this.searchCriteria
+	                        }).then(response=>(this.searchResult=response.data))
+	                            .catch(error=>console.log(error));
+	                    }else{
+	                        axios.post(api.search, params={
+	                            author:this.searchCriteria
+	                        }).then(response=>(this.searchResult=response.data))
+	                            .catch(error=>console.log(error));
+	                    }
+	
+	                },
+	                handleSelect:function(key,keyPath){
+	                    if(key==="1"){
+	                        window.location.href=html.register;
+	
+	                    }else if(key==="2"){
+	                        window.location.href=html.login;
+	                    }else if(key==="3"){
+	                        window.location.href=html.changePassword;
+	                    }else if(key==="4"){
+	                        window.location.href=html.setEmail;
+	                    }else if(key==="5"){
+	                        this.logoutfunc();
+	                    }
+	                },
+					loginfunc:function(){
+						that = this;
+						axios.post(api.login
+						, params={"username":this.input_username,"userpwd":this.input_password}).
+						then(function(response){
+								alert(response.data.info);
+								if(response.data.statusCode===200){
+									
+									that.login = true;
+									window.location.href = html.index;
+	
+								}
+							
+						})
+							.catch(error=>alert("密码错误！"));
+					},
+					checkLogin:function(){
+						
+					},
+					logoutfunc:function(){
+						axios.post(api.logout).
+						then(function(){
+							this.login=false;
+							alert("您已经登出！");
+						});
+					}
+					
+	
+	            },
+				beforeCreate() {
+					
+					axios.post(api.checkLogin).
+					then(response=>this.login=true).catch(function(){
+						alert("请登录！")
+					});	
+					
+					if(endstr==="/index.html"){
+						axios.post(api.search
+						, params={"bookname":""}).then(response=>(this.searchResult=response.data))
+							.catch(error=>console.log(error));
+					};
+					if(endstr==="/detail.html"){
+						axios.post(api.findById
+						, params={"bookid":getQueryVariable("bookid")}).then(response=>(this.aBook=response.data))
+							.catch(error=>console.log(error));
+						
+					}
+	
+	        },
+	
+			});
+	    // // app.searchResult=response.data
+	        console.log(app.$data)
+	</script>
+		
+		
+	
+</body>
+</html>
