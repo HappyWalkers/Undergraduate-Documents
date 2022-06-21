@@ -1,0 +1,73 @@
+Microsoft (R) Macro Assembler Version 5.10                  2/18/20 17:44:41
+                                                             Page     1-1
+
+
+       1 0000				DATA    SEGMENT
+       2 0000  0005					X	dw 5
+       3 0002  0006					Y	dw 6
+       4 0004  0007					Z	dw 7
+       5 0006  0000					W	dw ?
+       6 0008				DATA   ENDS
+       7 0000				CODE  SEGMENT
+       8 0000				MAIN     PROC      FAR
+       9					ASSUME  CS:CODE , DS:DATA
+      10 0000				START: 
+      11 0000  1E			PUSH	DS
+      12 0001  2B C0				SUB		AX ,AX
+      13 0003  50				PUSH	AX 
+      14 0004  B8 ---- R			MOV	AX , DATA
+      15 0007  8E D8			  MOV    DS,AX
+      16				  ;бн   
+      17 0009  A1 0000 R		  mov    ax,X
+      18 000C  03 06 0002 R		  add     ax,Y
+      19 0010  03 06 0004 R		  add     ax,Z
+      20 0014  A3 0006 R		  mov    W,ax
+      21 0017  BB 0005			  mov    bx,5
+      22 001A  BB FFFD			  mov    bx,-3
+      23 001D  2B C3			  sub    ax,bx
+      24 001F  2B D8			  sub    bx,ax
+      25				;бн
+      26 0021  CB				RET
+      27 0022				MAIN  ENDP
+      28 0022				CODE  ENDS
+      29				END START
+Microsoft (R) Macro Assembler Version 5.10                  2/18/20 17:44:41
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+CODE . . . . . . . . . . . . . .  	0022	PARA	NONE	
+DATA . . . . . . . . . . . . . .  	0008	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+MAIN . . . . . . . . . . . . . .  	F PROC	0000	CODE	Length = 0022
+
+START  . . . . . . . . . . . . .  	L NEAR	0000	CODE
+
+W  . . . . . . . . . . . . . . .  	L WORD	0006	DATA
+
+X  . . . . . . . . . . . . . . .  	L WORD	0000	DATA
+
+Y  . . . . . . . . . . . . . . .  	L WORD	0002	DATA
+
+Z  . . . . . . . . . . . . . . .  	L WORD	0004	DATA
+
+@CPU . . . . . . . . . . . . . .  	TEXT  0101h		
+@FILENAME  . . . . . . . . . . .  	TEXT  demo		
+@VERSION . . . . . . . . . . . .  	TEXT  510		
+
+
+     29 Source  Lines
+     29 Total   Lines
+     13 Symbols
+
+  47448 + 463907 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors
