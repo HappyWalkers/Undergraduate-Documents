@@ -1,0 +1,12 @@
+Version: 3.0
+Options: m37
+Obj: "D:\unSPIDE\startupcode\startupD.obj"
+Obj: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic\Ex01\Debug\main.obj"
+Obj: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic\Ex01\Debug\isr.obj"
+Obj: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic\Ex01\Debug\Resource.obj"
+Output: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic\Ex01\Debug\Ex_C_Basic.S37"
+;Locate: unSP_StartUp in "startupD.obj" at 8009 
+;Align: unSP_StartUp in "startupD.obj" with 0 
+;Locate: CODE in "main.obj" at 806C 
+;Align: CODE in "main.obj" with 0 
+;Locate: __sn_init_table at 8000 

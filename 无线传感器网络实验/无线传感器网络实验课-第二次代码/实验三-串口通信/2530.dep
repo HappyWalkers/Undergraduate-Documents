@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>486654109</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex04_PC_UART\Source\UART.c</file>
+      <file>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex04_PC_UART\Source\Basic.h</file>
+      <file>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex04_PC_UART\Source\Basic.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\Basic.r51</file>
+      <file>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex04_PC_UART\Source\UART.h</file>
+      <file>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex04_PC_UART\Source\main.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\UART.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\Basic.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\UART.pbi</file>
+      <file>$PROJ_DIR$\Debug\Exe\2530.d51</file>
+      <file>$PROJ_DIR$\Debug\Obj\2530.pbd</file>
+      <file>$TOOLKIT_DIR$\config\devices\_generic\lnk51ew_8052.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-nsid-1e16x01.r51</file>
+      <file>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex02_IOOut\Source\Basic.h</file>
+      <file>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex02_IOOut\Source\Basic.c</file>
+      <file>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex02_IOOut\Source\led.c</file>
+      <file>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex02_IOOut\Source\led.h</file>
+      <file>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex02_IOOut\Source\main.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\led.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\led.pbi</file>
+    </outputs>
+    <file>
+      <name>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex04_PC_UART\Source\UART.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 7</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 5 1 14 15 16</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 1 14 15 16</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex04_PC_UART\Source\Basic.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 1 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex04_PC_UART\Source\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 5 1 14 15 16</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 1 14 15 16</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 11</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\2530.d51</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 13 4 23 3 17</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\2530.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 8 24 9</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex02_IOOut\Source\Basic.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex02_IOOut\Source\led.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 21 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>E:\&#x5149;&#x76D8;&#x8D44;&#x6599;V1.2.0&#xFF08;&#x4e2D;&#x5357;&#x5927;&#x5B66;&#xFF09;\&#x5B9e;&#x9A8C;&#x6307;&#x5BFC;&#x4e66;\&#x5B9e;&#x9A8C;&#x7BB1;&#x5B9e;&#x9A8C;-Linux&#x5e73;&#x53F0;&#x7BC7;\Code\Cap1_Basic\Ex02_IOOut\Source\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9</file>
+        </tool>
+      </outputs>
+    </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

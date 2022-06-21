@@ -1,0 +1,60 @@
+# Begin Project
+# Begin SubItem "ex9_UART&LCD&SPR4096  Resources"
+# Begin Source File
+SOURCE=voice\at_finish.72k
+USEPARAM=FALSE
+PARAM=
+ID=RES_AT_FINISH_72K
+EXPORT=3
+# End Source File
+# Begin Source File
+SOURCE=voice\fail.72k
+USEPARAM=FALSE
+PARAM=
+ID=RES_FAIL_72K
+EXPORT=3
+# End Source File
+# Begin Source File
+SOURCE=voice\lianjie.72k
+USEPARAM=FALSE
+PARAM=
+ID=RES_LIANJIE_72K
+EXPORT=3
+# End Source File
+# Begin Source File
+SOURCE=voice\success.72k
+USEPARAM=FALSE
+PARAM=
+ID=RES_SUCCESS_72K
+EXPORT=3
+# End Source File
+# Begin Source File
+SOURCE=voice\status_inq.72k
+USEPARAM=FALSE
+PARAM=
+ID=RES_STATUS_INQ_72K
+EXPORT=3
+# End Source File
+# Begin Source File
+SOURCE=voice\ass.72k
+USEPARAM=FALSE
+PARAM=
+ID=RES_ASS_72K
+EXPORT=3
+# End Source File
+# Begin Source File
+SOURCE=voice\cur_net.72k
+USEPARAM=FALSE
+PARAM=
+ID=RES_CUR_NET_72K
+EXPORT=3
+# End Source File
+# Begin Source File
+SOURCE=voice\no_ass.72k
+USEPARAM=FALSE
+PARAM=
+ID=RES_NO_ASS_72K
+EXPORT=3
+# End Source File
+# End SubItem
+# End Project

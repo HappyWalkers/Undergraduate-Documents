@@ -1,0 +1,1413 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V8.10.1.10194/W32 for 8051        04/Jun/2021  11:37:31 /
+// Copyright 2004-2011 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\Source\SAPP_Device.c           /
+//    Command line       =  -f E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ /
+//                          ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530- /
+//                          r200\Projects\SappWsn\..\zstack\Tools\CC2530DB\f8 /
+//                          wEndev.cfg (-DCPU32MHZ -DROOT=__near_func         /
+//                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6        /
+//                          -DMAC_CFG_RX_MAX=3) -f E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û— /
+//                          ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_Z /
+//                          Stack\ZStack-CC2530-r200\Projects\SappWsn\..\zsta /
+//                          ck\Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO      /
+//                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      /
+//                          -DDEFAULT_CHANLIST=0x00000800                     /
+//                          -DZDAPP_CONFIG_PAN_ID=0x4327                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=100             /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DLINK_STATUS_JITTER_MASK=0x007F                  /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07, 0x09,     /
+//                          0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08,   /
+//                          0x0A, 0x0C, 0x0D}" -DMAC_MAX_FRAME_SIZE=116       /
+//                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
+//                          __code" -DGENERIC=__generic                       /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
+//                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
+//                          -DREJOIN_POLL_RATE=440 E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û— /
+//                          ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_Z /
+//                          Stack\ZStack-CC2530-r200\Projects\SappWsn\Source\ /
+//                          SAPP_Device.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D     /
+//                          xMT_TASK -D xMT_SYS_FUNC -D MT_ZDO_FUNC -D        /
+//                          SAPP_ZSTACK -lC E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ— /
+//                          È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\Z /
+//                          Stack-CC2530-r200\Projects\SappWsn\EndDeviceEB\Li /
+//                          st\ -lA E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ /
+//                           µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC /
+//                          2530-r200\Projects\SappWsn\EndDeviceEB\List\      /
+//                          --diag_suppress Pe001,Pa010 -o                    /
+//                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\EndDeviceEB\Obj\ -e            /
+//                          --no_code_motion --debug --core=plain             /
+//                          --dptr=16,1 --data_model=large                    /
+//                          --code_model=banked --calling_convention=xdata_re /
+//                          entrant --place_constants=data_rom                /
+//                          --nr_virtual_regs 16 -I                           /
+//                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û— /
+//                          ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_Z /
+//                          Stack\ZStack-CC2530-r200\Projects\SappWsn\Source\ /
+//                           -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—È /
+//                          œ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530 /
+//                          -r200\Projects\SappWsn\..\zstack\ZMain\TI2530DB\  /
+//                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ /
+//                          ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530- /
+//                          r200\Projects\SappWsn\..\..\Components\hal\includ /
+//                          e\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ /
+//                          —Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC25 /
+//                          30-r200\Projects\SappWsn\..\..\Components\hal\tar /
+//                          get\CC2530EB\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ /
+//                          —È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ /
+//                          ZStack-CC2530-r200\Projects\SappWsn\..\..\Compone /
+//                          nts\mac\include\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£© /
+//                          \ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZSta /
+//                          ck\ZStack-CC2530-r200\Projects\SappWsn\..\..\Comp /
+//                          onents\mac\high_level\ -I                         /
+//                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\..\..\Components\mac\low_level /
+//                          \srf04\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº /
+//                           È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack /
+//                          -CC2530-r200\Projects\SappWsn\..\..\Components\ma /
+//                          c\low_level\srf04\single_chip\ -I                 /
+//                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\..\..\Components\mt\ -I        /
+//                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\..\..\Components\osal\include\ /
+//                           -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—È /
+//                          œ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530 /
+//                          -r200\Projects\SappWsn\..\..\Components\services\ /
+//                          saddr\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº  /
+//                          È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack- /
+//                          CC2530-r200\Projects\SappWsn\..\..\Components\ser /
+//                          vices\sdata\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ— /
+//                          È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\Z /
+//                          Stack-CC2530-r200\Projects\SappWsn\..\..\Componen /
+//                          ts\stack\af\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ— /
+//                          È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\Z /
+//                          Stack-CC2530-r200\Projects\SappWsn\..\..\Componen /
+//                          ts\stack\nwk\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ /
+//                          —È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ /
+//                          ZStack-CC2530-r200\Projects\SappWsn\..\..\Compone /
+//                          nts\stack\sapi\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ /
+//                           µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStac /
+//                          k\ZStack-CC2530-r200\Projects\SappWsn\..\..\Compo /
+//                          nents\stack\sec\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£© /
+//                          \ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZSta /
+//                          ck\ZStack-CC2530-r200\Projects\SappWsn\..\..\Comp /
+//                          onents\stack\sys\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£ /
+//                          ©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZSt /
+//                          ack\ZStack-CC2530-r200\Projects\SappWsn\..\..\Com /
+//                          ponents\stack\zdo\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß /
+//                          £©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZS /
+//                          tack\ZStack-CC2530-r200\Projects\SappWsn\..\..\Co /
+//                          mponents\zmac\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\  /
+//                          µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack /
+//                          \ZStack-CC2530-r200\Projects\SappWsn\..\..\Compon /
+//                          ents\zmac\f8w\ -Ohz --require_prototypes          /
+//    List file          =  E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\EndDeviceEB\List\SAPP_Device.s /
+//                          51                                                /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME SAPP_Device
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?BANKED_ENTER_XDATA
+        EXTERN ?BANKED_LEAVE_XDATA
+        EXTERN ?BDISPATCH
+        EXTERN ?DEALLOC_XSTACK8
+        EXTERN ?PUSH_XSTACK_I_ONE
+        EXTERN ?PUSH_XSTACK_I_TWO
+        EXTERN ?V0
+        EXTERN ?XSTACK_DISP0_8
+        EXTERN __INIT_XDATA_I
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC ??testFunc_RecvData?relay
+        FUNCTION ??testFunc_RecvData?relay,0203H
+        PUBLIC ??testFunc_TimeOut?relay
+        FUNCTION ??testFunc_TimeOut?relay,0203H
+        PUBLIC funcCount
+        PUBLIC funcList
+        PUBLIC testFunc_RecvData
+        FUNCTION testFunc_RecvData,021603H
+        ARGFRAME XSTACK, 2, STACK
+        LOCFRAME XSTACK, 12, STACK
+        PUBLIC testFunc_TimeOut
+        FUNCTION testFunc_TimeOut,021603H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 11, STACK
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA_SP SP IDATA
+        CFI StackFrame CFA_PSP16 PSP16 XDATA
+        CFI StackFrame CFA_XSP16 XSP16 XDATA
+        CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+        CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+        CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+        CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+        CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+        CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+        CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+        CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+        CFI Resource V8:8, V9:8, V10:8, V11:8, V12:8, V13:8, V14:8, V15:8, SP:8
+        CFI Resource PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+        CFI VirtualResource ?RET:24
+        CFI Resource ?BRET_EXT:8
+        CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+        CFI ResourceParts PSP16 PSPH, PSPL
+        CFI ResourceParts XSP16 XSPH, XSPL
+        CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-3
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B Undefined
+        CFI A Undefined
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 Undefined
+        CFI R5 Undefined
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI V8 SameValue
+        CFI V9 SameValue
+        CFI V10 SameValue
+        CFI V11 SameValue
+        CFI V12 SameValue
+        CFI V13 SameValue
+        CFI V14 SameValue
+        CFI V15 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT Frame(CFA_SP, 3)
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-2
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B SameValue
+        CFI A SameValue
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 SameValue
+        CFI R1 SameValue
+        CFI R2 SameValue
+        CFI R3 SameValue
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI V8 SameValue
+        CFI V9 SameValue
+        CFI V10 SameValue
+        CFI V11 SameValue
+        CFI V12 SameValue
+        CFI V13 SameValue
+        CFI V14 SameValue
+        CFI V15 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT SameValue
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon1
+        
+memcpy              SYMBOL "memcpy"
+SendData            SYMBOL "SendData"
+UART0_Init          SYMBOL "UART0_Init"
+UART0_Send          SYMBOL "UART0_Send"
+??SendData?relay    SYMBOL "?relay", SendData
+??UART0_Init?relay  SYMBOL "?relay", UART0_Init
+??UART0_Send?relay  SYMBOL "?relay", UART0_Send
+??memcpy?relay      SYMBOL "?relay", memcpy
+testFunc_RecvData   SYMBOL "testFunc_RecvData"
+??testFunc_RecvData?relay SYMBOL "?relay", testFunc_RecvData
+testFunc_TimeOut    SYMBOL "testFunc_TimeOut"
+??testFunc_TimeOut?relay SYMBOL "?relay", testFunc_TimeOut
+
+        EXTERN memcpy
+        FUNCTION memcpy,010202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN SendData
+        FUNCTION SendData,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN UART0_Init
+        FUNCTION UART0_Init,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN UART0_Send
+        FUNCTION UART0_Send,0202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN ??SendData?relay
+        FUNCTION ??SendData?relay,00H
+        EXTERN ??UART0_Init?relay
+        FUNCTION ??UART0_Init?relay,00H
+        EXTERN ??UART0_Send?relay
+        FUNCTION ??UART0_Send?relay,00H
+        EXTERN ??memcpy?relay
+        FUNCTION ??memcpy?relay,00H
+
+// E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\Projects\SappWsn\Source\SAPP_Device.c
+//    1 #if defined(SAPP_ZSTACK)
+//    2 #include "SAPP_Device.h"
+//    3 #include "hal_io.h"
+//    4 #include "UART.h"
+//    5 #include "Basic.h"
+//    6 #include <string.h>
+//    7 
+//    8 /**************************************************************/
+//    9 /* ¥´∏–∆˜¡–±Ì                                                 */
+//   10 /**************************************************************/
+//   11 /********************************/
+//   12 /* »º∆¯¥´∏–∆˜                   */
+//   13 /********************************/
+//   14 #if defined(HAS_GAS)
+//   15 #define GAS_IO_GROUP        0
+//   16 #define GAS_IO_BIT          0
+//   17 void sensorGasResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//   18 void sensorGasResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//   19 {
+//   20     if(type == ResInit)
+//   21     {
+//   22         HalIOSetInput(GAS_IO_GROUP, GAS_IO_BIT, Pull_Down);
+//   23         HalIOIntSet(ep->ep, GAS_IO_GROUP, GAS_IO_BIT, IOInt_Rising, 0);
+//   24     }
+//   25     //IO∂Àø⁄÷–∂œ¥•∑¢£¨÷–∂œ‘¥ºÏ≤‚
+//   26     if(type == ResIOInt)
+//   27     {
+//   28         uint8 GasValue = 1;
+//   29         SendData(ep->ep, &GasValue, 0x0000, TRANSFER_ENDPOINT, sizeof(GasValue));
+//   30     }
+//   31 }
+//   32 void sensorGasTimeout(struct ep_info_t *ep);
+//   33 void sensorGasTimeout(struct ep_info_t *ep)
+//   34 {
+//   35     uint8 value = HalIOGetLevel(GAS_IO_GROUP, GAS_IO_BIT);
+//   36     SendData(ep->ep, &value, 0x0000, TRANSFER_ENDPOINT, sizeof(value));
+//   37 }
+//   38 #endif
+//   39 /********************************/
+//   40 /* Œ¬∂»¥´∏–∆˜                   */
+//   41 /********************************/
+//   42 #if defined(HAS_TEMP) || defined(HAS_HUMM)
+//   43 #include "sht10.h"
+//   44 static uint16 TempValue = 0;
+//   45 #endif
+//   46 #if defined(HAS_TEMP)
+//   47 void sensorTempResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//   48 void sensorTempResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//   49 {
+//   50     if(type == ResInit)
+//   51     {
+//   52         SHT10_init(0x01);
+//   53     }
+//   54 }
+//   55 void sensorTempTimeout(struct ep_info_t *ep);
+//   56 void sensorTempTimeout(struct ep_info_t *ep)
+//   57 {
+//   58     unsigned int value = 0;
+//   59     unsigned char checksum = 0;
+//   60     SHT10_Measure(&value,&checksum, TEMPERATURE);
+//   61     TempValue = (value << 2) - 3960;
+//   62     SendData(ep->ep, &TempValue, 0x0000, TRANSFER_ENDPOINT, sizeof(TempValue));
+//   63 }
+//   64 #endif
+//   65 /********************************/
+//   66 /*  ™∂»¥´∏–∆˜                   */
+//   67 /********************************/
+//   68 #if defined(HAS_HUMM)
+//   69 void sensorHummResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//   70 void sensorHummResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//   71 {
+//   72     if(type == ResInit)
+//   73     {
+//   74         SHT10_init(0x01);
+//   75     }
+//   76 }
+//   77 void sensorHummTimeout(struct ep_info_t *ep);
+//   78 void sensorHummTimeout(struct ep_info_t *ep)
+//   79 {
+//   80     const float C1 = -4.0f;              // for 8 Bit
+//   81     const float C2 = +0.648f;            // for 8 Bit
+//   82     const float C3 = -0.0000072f;        // for 8 Bit
+//   83     const float T1 = 0.01f;              // for 8 bit
+//   84     const float T2 = 0.00128f;           // for 8 bit
+//   85     float rh_lin    =   0.0f;                     // rh_lin: Humidity linear
+//   86     float rh_true   =   0.0f;                    // rh_true: Temperature compensated humidity
+//   87     float t_C   = 0.0f;                        // t_C   : Temperature []
+//   88 
+//   89     unsigned int HumiValue = 0;
+//   90     unsigned char checksum = 0;
+//   91     SHT10_Measure(&HumiValue,&checksum, HUMIDITY);
+//   92     rh_lin=C3*HumiValue*HumiValue + C2*HumiValue + C1;     //calc. humidity from ticks to [%RH]
+//   93     rh_true=(t_C-25)*(T1+T2*HumiValue)+rh_lin;   //calc. temperature compensated humidity [%RH]
+//   94     if(rh_true>100)
+//   95         rh_true=100;       //cut if the value is outside of
+//   96     if(rh_true<0.1)
+//   97         rh_true=0.1f;       //the physical possible range
+//   98     HumiValue = (unsigned int)(rh_true * 100);
+//   99     SendData(ep->ep, &HumiValue, 0x0000, TRANSFER_ENDPOINT, sizeof(HumiValue));
+//  100 }
+//  101 #endif
+//  102 /********************************/
+//  103 /* ”ÍµŒ¥´∏–∆˜                   */
+//  104 /********************************/
+//  105 #if defined(HAS_RAIN)
+//  106 #define RAIN_IO_GROUP       0
+//  107 #define RAIN_IO_BIT         0
+//  108 void sensorRainResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//  109 void sensorRainResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//  110 {
+//  111     if(type == ResInit)
+//  112     {
+//  113         HalIOSetInput(RAIN_IO_GROUP, RAIN_IO_BIT, Pull_None);
+//  114         HalIOIntSet(ep->ep, RAIN_IO_GROUP, RAIN_IO_BIT, IOInt_Rising, 0);
+//  115     }
+//  116     //IO∂Àø⁄÷–∂œ¥•∑¢£¨÷–∂œ‘¥ºÏ≤‚
+//  117     if(type == ResIOInt)
+//  118     {
+//  119         uint8 RainValue = 1;
+//  120         SendData(ep->ep, &RainValue, 0x0000, TRANSFER_ENDPOINT, sizeof(RainValue));
+//  121     }
+//  122 }
+//  123 void sensorRainTimeout(struct ep_info_t *ep);
+//  124 void sensorRainTimeout(struct ep_info_t *ep)
+//  125 {
+//  126     uint8 value = HalIOGetLevel(RAIN_IO_GROUP, RAIN_IO_BIT);
+//  127     SendData(ep->ep, &value, 0x0000, TRANSFER_ENDPOINT, sizeof(value));
+//  128 }
+//  129 #endif
+//  130 /********************************/
+//  131 /* ª—Ê¥´∏–∆˜                   */
+//  132 /********************************/
+//  133 #if defined(HAS_FIRE)
+//  134 #define FIRE_IO_GROUP       0
+//  135 #define FIRE_IO_BIT         0
+//  136 void sensorFireResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//  137 void sensorFireResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//  138 {
+//  139     if(type == ResInit)
+//  140     {
+//  141         HalIOSetInput(FIRE_IO_GROUP, FIRE_IO_BIT, Pull_Down);
+//  142         HalIOIntSet(ep->ep, FIRE_IO_GROUP, FIRE_IO_BIT, IOInt_Rising, 0);
+//  143     }
+//  144     //IO∂Àø⁄÷–∂œ¥•∑¢£¨÷–∂œ‘¥ºÏ≤‚
+//  145     if(type == ResIOInt)
+//  146     {
+//  147         uint8 FireValue = 1;
+//  148         SendData(ep->ep, &FireValue, 0x0000, TRANSFER_ENDPOINT, sizeof(FireValue));
+//  149     }
+//  150 }
+//  151 void sensorFireTimeout(struct ep_info_t *ep);
+//  152 void sensorFireTimeout(struct ep_info_t *ep)
+//  153 {
+//  154     uint8 value = HalIOGetLevel(FIRE_IO_GROUP, FIRE_IO_BIT);
+//  155     SendData(ep->ep, &value, 0x0000, TRANSFER_ENDPOINT, sizeof(value));
+//  156 }
+//  157 #endif
+//  158 /********************************/
+//  159 /* —ÃŒÌ¥´∏–∆˜                   */
+//  160 /********************************/
+//  161 #if defined(HAS_SMOKE)
+//  162 #define SMOKE_IO_GROUP      0
+//  163 #define SMOKE_IO_BIT        0
+//  164 void sensorSmokeResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//  165 void sensorSmokeResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//  166 {
+//  167     if(type == ResInit)
+//  168     {
+//  169         HalIOSetInput(SMOKE_IO_GROUP, SMOKE_IO_BIT, Pull_Down);
+//  170         HalIOIntSet(ep->ep, SMOKE_IO_GROUP, SMOKE_IO_BIT, IOInt_Rising, 0);
+//  171     }
+//  172     //IO∂Àø⁄÷–∂œ¥•∑¢£¨÷–∂œ‘¥ºÏ≤‚
+//  173     if(type == ResIOInt)
+//  174     {
+//  175         uint8 SmokeValue = 1;
+//  176         SendData(ep->ep, &SmokeValue, 0x0000, TRANSFER_ENDPOINT, sizeof(SmokeValue));
+//  177     }
+//  178 }
+//  179 void sensorSmokeTimeout(struct ep_info_t *ep);
+//  180 void sensorSmokeTimeout(struct ep_info_t *ep)
+//  181 {
+//  182     uint8 value = HalIOGetLevel(SMOKE_IO_GROUP, SMOKE_IO_BIT);
+//  183     SendData(ep->ep, &value, 0x0000, TRANSFER_ENDPOINT, sizeof(value));
+//  184 }
+//  185 #endif
+//  186 /********************************/
+//  187 /* π‚’’∂»¥´∏–∆˜                 */
+//  188 /********************************/
+//  189 #if defined(HAS_ILLUM)
+//  190 #include "hal_adc.h"
+//  191 void sensorILLumTimeout(struct ep_info_t *ep);
+//  192 void sensorILLumTimeout(struct ep_info_t *ep)
+//  193 {
+//  194     uint16 LightValue = 256 - (HalAdcRead(0, HAL_ADC_RESOLUTION_14) >> 3);
+//  195     // Ω´AD÷µ±‰ªªŒ™π‚’’∂»µƒ100±∂
+//  196     LightValue = LightValue * 39;// * 10000 / 256;
+//  197     SendData(ep->ep, &LightValue, 0x0000, TRANSFER_ENDPOINT, sizeof(LightValue));
+//  198 }
+//  199 #endif
+//  200 /********************************/
+//  201 /* ∞≤∑¿¥´∏–∆˜                   */
+//  202 /********************************/
+//  203 #if defined(HAS_IRPERS)
+//  204 #define SAFTY_IO_GROUP      1
+//  205 #define SAFTY_IO_BIT        0
+//  206 void sensorIRPersResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//  207 void sensorIRPersResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//  208 {
+//  209     if(type == ResInit)
+//  210     {
+//  211         HalIOSetInput(SAFTY_IO_GROUP, SAFTY_IO_BIT, Pull_Down);
+//  212         HalIOIntSet(ep->ep, SAFTY_IO_GROUP, SAFTY_IO_BIT, IOInt_Rising, 0);
+//  213     }
+//  214     //IO∂Àø⁄÷–∂œ¥•∑¢£¨÷–∂œ‘¥ºÏ≤‚
+//  215     if(type == ResIOInt)
+//  216     {
+//  217         uint8 IRPersValue = 1;
+//  218         SendData(ep->ep, &IRPersValue, 0x0000, TRANSFER_ENDPOINT, sizeof(IRPersValue));
+//  219     }
+//  220 }
+//  221 void sensorIRPersTimeout(struct ep_info_t *ep);
+//  222 void sensorIRPersTimeout(struct ep_info_t *ep)
+//  223 {
+//  224     uint8 value = HalIOGetLevel(SAFTY_IO_GROUP, SAFTY_IO_BIT);
+//  225     SendData(ep->ep, &value, 0x0000, TRANSFER_ENDPOINT, sizeof(value));
+//  226 }
+//  227 #endif
+//  228 /********************************/
+//  229 /* ∫ÏÕ‚≤‚æ‡¥´∏–∆˜               */
+//  230 /********************************/
+//  231 #if defined(HAS_IRDIST)
+//  232 #include "hal_adc.h"
+//  233 extern uint16 irDistTab[256];
+//  234 void sensorIRDistTimeout(struct ep_info_t *ep);
+//  235 void sensorIRDistTimeout(struct ep_info_t *ep)
+//  236 {
+//  237     uint8 value = HalAdcRead(0, HAL_ADC_RESOLUTION_14) >> 3;
+//  238     // º∆À„æ‡¿Î÷µvalueµƒµ•ŒªŒ™mm
+//  239     uint16 IRDistValue = irDistTab[value];
+//  240     SendData(ep->ep, &IRDistValue, 0x0000, TRANSFER_ENDPOINT, sizeof(IRDistValue));
+//  241 }
+//  242 #endif
+//  243 /********************************/
+//  244 /* ”Ô“Ù¥´∏–∆˜                   */
+//  245 /********************************/
+//  246 #if defined(HAS_VOICE)
+//  247 #include "hal_uart.h"
+//  248 static struct ep_info_t *voiceEndPoint = NULL;
+//  249 static uint8 LastVoiceData = 0;
+//  250 static void sensorVoiceUartProcess( uint8 port, uint8 event );
+//  251 static void sensorVoiceUartProcess( uint8 port, uint8 event )
+//  252 {
+//  253     (void)event;  // Intentionally unreferenced parameter
+//  254     while (Hal_UART_RxBufLen(port))
+//  255     {
+//  256         HalUARTRead(port, &LastVoiceData, 1);
+//  257         if(LastVoiceData == 0xAA)
+//  258             LastVoiceData = 1;
+//  259         else if(LastVoiceData == 0x55)
+//  260             LastVoiceData = 0;
+//  261         else
+//  262             LastVoiceData = -1;
+//  263         if(voiceEndPoint != NULL)
+//  264             SendData(voiceEndPoint->ep, &LastVoiceData, 0x0000, TRANSFER_ENDPOINT, 1);
+//  265     }
+//  266 }
+//  267 void sensorVoiceNwkStateChange(struct ep_info_t *ep);
+//  268 void sensorVoiceNwkStateChange(struct ep_info_t *ep)
+//  269 {
+//  270     voiceEndPoint = ep;
+//  271 }
+//  272 void sensorVoiceResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//  273 void sensorVoiceResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//  274 {
+//  275     if(type == ResInit)
+//  276     {
+//  277         halUARTCfg_t uartConfig;
+//  278 
+//  279         voiceEndPoint = ep;
+//  280         /* UART Configuration */
+//  281         uartConfig.configured           = TRUE;
+//  282         uartConfig.baudRate             = HAL_UART_BR_9600;
+//  283         uartConfig.flowControl          = FALSE;
+//  284         uartConfig.flowControlThreshold = MT_UART_DEFAULT_THRESHOLD;
+//  285         uartConfig.rx.maxBufSize        = MT_UART_DEFAULT_MAX_RX_BUFF;
+//  286         uartConfig.tx.maxBufSize        = MT_UART_DEFAULT_MAX_TX_BUFF;
+//  287         uartConfig.idleTimeout          = MT_UART_DEFAULT_IDLE_TIMEOUT;
+//  288         uartConfig.intEnable            = TRUE;
+//  289         uartConfig.callBackFunc         = sensorVoiceUartProcess;
+//  290         HalUARTOpen(HAL_UART_PORT_1, &uartConfig);
+//  291     }
+//  292 }
+//  293 void sensorVoiceTimeout(struct ep_info_t *ep);
+//  294 void sensorVoiceTimeout(struct ep_info_t *ep)
+//  295 {
+//  296     uint8 nulData = 0;
+//  297     SendData(ep->ep, &nulData, 0x0000, TRANSFER_ENDPOINT, 1);
+//  298 }
+//  299 #endif
+//  300 /********************************/
+//  301 /* ∂˛Ω¯÷∆÷¥––∆˜¥´∏–∆˜           */
+//  302 /********************************/
+//  303 #if defined(HAS_EXECUTEB)
+//  304 #define ControlInit()   do { HalIOSetOutput(1,4);HalIOSetOutput(1,5);HalIOSetOutput(1,6);HalIOSetOutput(1,7);Control(0); } while(0)
+//  305 #define Control(mask)   do { HalIOSetLevel(1,4,mask&0x01);HalIOSetLevel(1,5,mask&0x02);HalIOSetLevel(1,6,mask&0x04);HalIOSetLevel(1,7,mask&0x08); } while(0)
+//  306 void OutputExecuteBResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//  307 void OutputExecuteBResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//  308 {
+//  309     if(type == ResInit)
+//  310         ControlInit();
+//  311 }
+//  312 void outputExecuteB(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg);
+//  313 void outputExecuteB(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg)
+//  314 {
+//  315     //msg->Data[], msg->DataLength, msg->TransSeqNumber
+//  316     Control(msg->Data[0]);
+//  317     SendData(ep->ep, &msg->Data[0], 0x0000, TRANSFER_ENDPOINT, 1);
+//  318 }
+//  319 void outputExecuteBTimeout(struct ep_info_t *ep);
+//  320 void outputExecuteBTimeout(struct ep_info_t *ep)
+//  321 {
+//  322     uint8 value = P1 >> 4;
+//  323     SendData(ep->ep, &value, 0x0000, TRANSFER_ENDPOINT, sizeof(value));
+//  324 }
+//  325 #endif
+//  326 /********************************/
+//  327 /* ƒ£ƒ‚÷¥––∆˜¥´∏–∆˜             */
+//  328 /********************************/
+//  329 #if defined(HAS_EXECUTEA)
+//  330 void outputExecuteA(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg);
+//  331 void outputExecuteA(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg)
+//  332 {
+//  333 }
+//  334 #endif
+//  335 /********************************/
+//  336 /* “£øÿ∆˜¥´∏–∆˜                 */
+//  337 /********************************/
+//  338 #if defined(HAS_REMOTER)
+//  339 #include "IR.h"
+//  340 static uint8 lastCode[32];
+//  341 static uint8 lastCodeLen = 0;
+//  342 void IRSendResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//  343 void IRSendResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//  344 {
+//  345     if(type == ResInit)
+//  346         IRSendInit();   // –Ë“™≥ı ºªØ
+//  347 }
+//  348 void outputRemoter(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg);
+//  349 void outputRemoter(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg)
+//  350 {
+//  351    lastCodeLen = msg->Data[0];
+//  352    memcpy(lastCode, &msg->Data[1], lastCodeLen);
+//  353    GenIR(&msg->Data[1], IRGuideLen_9ms, (uint8)lastCodeLen);
+//  354    SendData(ep->ep, lastCode, 0x0000, TRANSFER_ENDPOINT, lastCodeLen>>3);
+//  355 }
+//  356 void outputRemoterTimeout(struct ep_info_t *ep);
+//  357 void outputRemoterTimeout(struct ep_info_t *ep)
+//  358 {
+//  359     if(lastCodeLen <= 0)
+//  360     {
+//  361         uint8 value = 0;
+//  362         SendData(ep->ep, &value, 0x0000, TRANSFER_ENDPOINT, 1);
+//  363     }
+//  364     else
+//  365         SendData(ep->ep, lastCode, 0x0000, TRANSFER_ENDPOINT, lastCodeLen>>3);
+//  366 }
+//  367 #endif
+//  368 /********************************/
+//  369 /* –Èƒ‚π¶ƒ‹                     */
+//  370 /********************************/
+//  371 #if defined(HAS_TESTFUNCTION)
+//  372 #define TEST_STRING     "Z-Stack for SAPP"
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  373 static uint8 lastData[119] = TEST_STRING;
+lastData:
+        DATA8
+        DS 119
+        REQUIRE `?<Initializer for lastData>`
+        REQUIRE __INIT_XDATA_I
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA8
+//  374 static uint8 lastLen = 0;
+lastLen:
+        DS 1
+        REQUIRE __INIT_XDATA_Z
+//  375 void testFunc_RecvData(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg);
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  376 void testFunc_RecvData(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg)
+testFunc_RecvData:
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI Function testFunc_RecvData
+        CODE
+//  377 {
+        FUNCALL testFunc_RecvData, memcpy
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL testFunc_RecvData, SendData
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0xa
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 10)
+        ; Saved register size: 10
+        ; Auto size: 0
+        MOV     A,R2
+        MOV     R6,A
+        MOV     A,R3
+        MOV     R7,A
+        MOV     A,#0xa
+        LCALL   ?XSTACK_DISP0_8
+        MOVX    A,@DPTR
+        MOV     R0,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R0
+        MOV     R2,A
+        MOV     A,R1
+        MOV     R3,A
+//  378     
+//  379     lastLen = msg->DataLength;
+        MOV     DPL,R2
+        MOV     DPH,R3
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     DPTR,#lastLen
+        MOVX    @DPTR,A
+//  380     memcpy(&lastData[sizeof(TEST_STRING) - 1], msg->Data, lastLen);
+        ; Setup parameters for call to function memcpy
+        MOV     ?V0 + 0,A
+        MOV     ?V0 + 1,#0x0
+        MOV     R0,#?V0 + 0
+        LCALL   ?PUSH_XSTACK_I_TWO
+        CFI CFA_XSP16 add(XSP16, 12)
+        MOV     DPL,R2
+        MOV     DPH,R3
+        INC     DPTR
+        INC     DPTR
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R4,A
+        INC     DPTR
+        MOVX    A,@DPTR
+        MOV     R5,A
+        MOV     R2,#(lastData + 16) & 0xff
+        MOV     R3,#((lastData + 16) >> 8) & 0xff
+        LCALL   ??memcpy?relay
+        MOV     A,#0x2
+        LCALL   ?DEALLOC_XSTACK8
+        CFI CFA_XSP16 add(XSP16, 10)
+//  381     SendData(ep->ep, lastData, 0x0000, TRANSFER_ENDPOINT,
+//  382                      lastLen + sizeof(TEST_STRING) - 1);
+        ; Setup parameters for call to function SendData
+        MOV     DPTR,#lastLen
+        MOVX    A,@DPTR
+        ADD     A,#0x10
+        MOV     ?V0 + 0,A
+        MOV     R0,#?V0 + 0
+        LCALL   ?PUSH_XSTACK_I_ONE
+        CFI CFA_XSP16 add(XSP16, 11)
+        MOV     ?V0 + 0,#0x1
+        MOV     R0,#?V0 + 0
+        LCALL   ?PUSH_XSTACK_I_ONE
+        CFI CFA_XSP16 add(XSP16, 12)
+        LCALL   ?Subroutine0 & 0xFFFF
+??CrossCallReturnLabel_0:
+        LCALL   ?DEALLOC_XSTACK8
+        CFI CFA_XSP16 add(XSP16, 10)
+//  383     
+//  384 }
+        MOV     R7,#0x2
+        LJMP    ?BANKED_LEAVE_XDATA
+        CFI EndBlock cfiBlock0
+//  385 void testFunc_TimeOut(struct ep_info_t *ep);
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  386 void testFunc_TimeOut(struct ep_info_t *ep)
+testFunc_TimeOut:
+        CFI Block cfiBlock1 Using cfiCommon0
+        CFI Function testFunc_TimeOut
+        CODE
+//  387 {
+        FUNCALL testFunc_TimeOut, SendData
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 11, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 11, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL testFunc_TimeOut, UART0_Init
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL testFunc_TimeOut, UART0_Send
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x9
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+        MOV     A,R2
+        MOV     R6,A
+        MOV     A,R3
+        MOV     R7,A
+//  388     SendData(ep->ep, lastData, 0x0000, TRANSFER_ENDPOINT,
+//  389                      lastLen + sizeof(TEST_STRING) - 1);
+        ; Setup parameters for call to function SendData
+        MOV     DPTR,#lastLen
+        MOVX    A,@DPTR
+        ADD     A,#0x10
+        MOV     ?V0 + 0,A
+        MOV     R0,#?V0 + 0
+        LCALL   ?PUSH_XSTACK_I_ONE
+        CFI CFA_XSP16 add(XSP16, 10)
+        MOV     ?V0 + 0,#0x1
+        MOV     R0,#?V0 + 0
+        LCALL   ?PUSH_XSTACK_I_ONE
+        CFI CFA_XSP16 add(XSP16, 11)
+        LCALL   ?Subroutine0 & 0xFFFF
+??CrossCallReturnLabel_1:
+        LCALL   ?DEALLOC_XSTACK8
+        CFI CFA_XSP16 add(XSP16, 9)
+//  390     
+//  391     UART0_Init( BAUD_115200 );
+        ; Setup parameters for call to function UART0_Init
+        MOV     R1,#0x9
+        LCALL   ??UART0_Init?relay
+//  392     UART0_Send( TEST_STRING, sizeof(TEST_STRING)-1);
+        ; Setup parameters for call to function UART0_Send
+        MOV     R4,#0x10
+        MOV     R5,#0x0
+        MOV     R2,#`?<Constant "Z-Stack for SAPP">` & 0xff
+        MOV     R3,#(`?<Constant "Z-Stack for SAPP">` >> 8) & 0xff
+        LCALL   ??UART0_Send?relay
+//  393 }
+        MOV     R7,#0x1
+        LJMP    ?BANKED_LEAVE_XDATA
+        CFI EndBlock cfiBlock1
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine0:
+        CFI Block cfiCond2 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_0
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 12)
+        CFI Block cfiCond3 Using cfiCommon0
+        CFI (cfiCond3) NoFunction
+        CFI (cfiCond3) Conditional ??CrossCallReturnLabel_1
+        CFI (cfiCond3) R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI (cfiCond3) VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI (cfiCond3) V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI (cfiCond3) R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI (cfiCond3) ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI (cfiCond3) ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI (cfiCond3) ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI (cfiCond3) DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI (cfiCond3) DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI (cfiCond3) CFA_SP SP+0
+        CFI (cfiCond3) CFA_XSP16 add(XSP16, 11)
+        CFI Block cfiPicker4 Using cfiCommon1
+        CFI (cfiPicker4) NoFunction
+        CFI (cfiPicker4) Picker
+        MOV     R4,#0x0
+        MOV     R5,#0x0
+        MOV     R2,#lastData & 0xff
+        MOV     R3,#(lastData >> 8) & 0xff
+        MOV     A,R6
+        ADD     A,#0xb
+        MOV     DPL,A
+        MOV     A,R7
+        ADDC    A,#0x0
+        MOV     DPH,A
+        MOVX    A,@DPTR
+        MOV     R1,A
+        LCALL   ??SendData?relay
+        MOV     A,#0x2
+        RET
+        CFI EndBlock cfiCond2
+        CFI EndBlock cfiCond3
+        CFI EndBlock cfiPicker4
+//  394 #endif
+//  395 /********************************/
+//  396 /* π„≤•∑¢ÀÕπ¶ƒ‹                 */
+//  397 /********************************/
+//  398 #if defined(HAS_BROADCASTSEND)
+//  399 #define BROADCAST_STRING     "\r\nBroadcast Message\r\n"
+//  400 void BroadcastSend_TimeOut(struct ep_info_t *ep);
+//  401 void BroadcastSend_TimeOut(struct ep_info_t *ep)
+//  402 {
+//  403     SendData(ep->ep, BROADCAST_STRING, 0XFFFF, TRANSFER_ENDPOINT,
+//  404                      sizeof(BROADCAST_STRING) - 1);
+//  405     //π„≤•∫Û÷∏ æµ∆ LED_D9 …¡À∏2¥Œ
+//  406     HalLedBlink( HAL_LED_2, 2, 50, 100 );
+//  407 }
+//  408 #endif
+//  409 /********************************/
+//  410 /* π„≤•Ω” ’π¶ƒ‹                 */
+//  411 /********************************/
+//  412 #if defined(HAS_BROADCASTRECEIVE)
+//  413 void BroadcastReceiveData(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg);
+//  414 void BroadcastReceiveData(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg)
+//  415 {
+//  416     // ’µΩπ„≤• ˝æ›∫Û LED_D8 ¡¨–¯…¡À∏4¥Œ!
+//  417     HalLedBlink( HAL_LED_1, 4, 50, 120 );
+//  418     HalUARTWrite(HAL_UART_PORT_0, msg->Data, msg->DataLength);
+//  419 }
+//  420 #define BROADCAST_STRING     "Broadcast Message"
+//  421 void BroadcastSend_TimeOut(struct ep_info_t *ep);
+//  422 void BroadcastSend_TimeOut(struct ep_info_t *ep)
+//  423 {
+//  424     SendData(ep->ep, BROADCAST_STRING, 0X0000, TRANSFER_ENDPOINT,
+//  425                      sizeof(BROADCAST_STRING) - 1);
+//  426 }
+//  427 #endif
+//  428 /********************************/
+//  429 /* ICø®∂¡ø®∆˜                   */
+//  430 /********************************/
+//  431 #if defined(HAS_125KREADER)
+//  432 #include "hal_uart.h"
+//  433 #define CARDID_SIZE     5                   // ø®∫≈≥§∂»
+//  434 static uint8 lastCardId[CARDID_SIZE];       // ”√¿¥±£¥ÊΩ” ’µΩµƒø®∫≈
+//  435 static uint8 cardRecvIdx;                   // …œ“ª¥ŒΩ” ’µΩµƒ≥§∂»
+//  436 static uint32 lastTick;                     // …œ“ª¥ŒΩ” ’ ˝æ›µƒœµÕ≥ ±º‰
+//  437 static struct ep_info_t *cardEndPoint;
+//  438 static void sensor125kReaderUartProcess( uint8 port, uint8 event );
+//  439 static void sensor125kReaderUartProcess( uint8 port, uint8 event )
+//  440 {
+//  441     (void)event;  // Intentionally unreferenced parameter
+//  442     if((lastTick + 100) <= osal_GetSystemClock())
+//  443     {                                       // »Áπ˚±æ¥ŒΩ” ’µΩµƒ ±º‰æ‡¿Î…œ¥Œ≥¨π˝¡À0.1√Î
+//  444         cardRecvIdx = 0;                    // ‘Ú«Âø’º∆ ˝∆˜£¨÷ÿ–¬Ω” ’ø®∫≈
+//  445     }
+//  446     lastTick = osal_GetSystemClock();       // º«¬ºœ¬µ±«∞µƒ ±º‰
+//  447     while (Hal_UART_RxBufLen(port))
+//  448     {
+//  449         uint16 restLen = Hal_UART_RxBufLen(port);
+//  450         if(restLen > (CARDID_SIZE - cardRecvIdx))
+//  451             restLen = CARDID_SIZE - cardRecvIdx;
+//  452         HalUARTRead(port, &lastCardId[cardRecvIdx], restLen);
+//  453         cardRecvIdx += restLen;
+//  454         if(cardRecvIdx >= CARDID_SIZE)      // »Áπ˚“—æ≠Ω” ’ÕÍ≥…“ª∏ˆÕÍ’˚µƒø®∫≈
+//  455         {                                   // ‘Ú∑¢ÀÕ∏¯–≠µ˜∆˜
+//  456             SendData(cardEndPoint->ep, lastCardId, 0x0000, TRANSFER_ENDPOINT, CARDID_SIZE);
+//  457         }
+//  458     }
+//  459 }
+//  460 void sensor125kReaderResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//  461 void sensor125kReaderResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//  462 {
+//  463     if(type == ResInit)
+//  464     {
+//  465         halUARTCfg_t uartConfig;
+//  466 
+//  467         memset(lastCardId, 0, sizeof(lastCardId));
+//  468         cardRecvIdx = 0;
+//  469         cardEndPoint = ep;
+//  470         /* UART Configuration */
+//  471         uartConfig.configured           = TRUE;
+//  472         uartConfig.baudRate             = HAL_UART_BR_19200;
+//  473         uartConfig.flowControl          = FALSE;
+//  474         uartConfig.flowControlThreshold = MT_UART_DEFAULT_THRESHOLD;
+//  475         uartConfig.rx.maxBufSize        = MT_UART_DEFAULT_MAX_RX_BUFF;
+//  476         uartConfig.tx.maxBufSize        = MT_UART_DEFAULT_MAX_TX_BUFF;
+//  477         uartConfig.idleTimeout          = MT_UART_DEFAULT_IDLE_TIMEOUT;
+//  478         uartConfig.intEnable            = TRUE;
+//  479         uartConfig.callBackFunc         = sensor125kReaderUartProcess;
+//  480         HalUARTOpen(HAL_UART_PORT_0, &uartConfig);
+//  481     }
+//  482 }
+//  483 void sensor125kReaderTimeout(struct ep_info_t *ep);
+//  484 void sensor125kReaderTimeout(struct ep_info_t *ep)
+//  485 {
+//  486     uint8 nullId[CARDID_SIZE] = { 0x00 };
+//  487     SendData(cardEndPoint->ep, nullId, 0x0000, TRANSFER_ENDPOINT, CARDID_SIZE);
+//  488 }
+//  489 #endif
+//  490 /********************************/
+//  491 /* ”Ô“Ù≤•∑≈Ω⁄µ„                 */
+//  492 /********************************/
+//  493 #if defined(HAS_SPEAKER)
+//  494 void OutputSpeakerResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//  495 void OutputSpeakerResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//  496 {
+//  497     if(type == ResInit)
+//  498         HalUART1HwInit();
+//  499 }
+//  500 void outputSpeaker(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg);
+//  501 void outputSpeaker(struct ep_info_t *ep, uint16 addr, uint8 endPoint, afMSGCommandFormat_t *msg)
+//  502 {
+//  503     //msg->Data[], msg->DataLength, msg->TransSeqNumber
+//  504     HalUART1HwTxByte(msg->Data[0]);
+//  505 //    SendData(ep->ep, &msg->Data[0], 0x0000, TRANSFER_ENDPOINT, 1);
+//  506 }
+//  507 void outputSpeakerTimeout(struct ep_info_t *ep);
+//  508 void outputSpeakerTimeout(struct ep_info_t *ep)
+//  509 {
+//  510     uint8 value = 0;
+//  511     SendData(ep->ep, &value, 0x0000, TRANSFER_ENDPOINT, sizeof(value));
+//  512 }
+//  513 #endif
+//  514 /********************************/
+//  515 /* ∫ÏÕ‚Ω” ’Ω‚¬Î                 */
+//  516 /********************************/
+//  517 #if defined(HAS_IRDecode)
+//  518 #include <hal_irdec.h>
+//  519 void IRDecodeResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res);
+//  520 void IRDecodeResAvailable(struct ep_info_t *ep, RES_TYPE type, void *res)
+//  521 {
+//  522     if(type == ResInit)
+//  523     {
+//  524         IRDecodeT1Init(ep->task_id, ep->ep);
+//  525     }
+//  526     //∂® ±∆˜1Õ®µ¿0“ª¥Œ∫ÏÕ‚Ω‚¬ÎΩ· ¯,œÚ…œ¥´ÀÕΩ‚¬ÎΩ·π˚
+//  527     if(type == ResTimerInt)
+//  528     {
+//  529         OSALIRDecData_t *irData = (OSALIRDecData_t *)res;
+//  530         SendData(ep->ep, irData->irCode, 0x0000, TRANSFER_ENDPOINT, irData->irLen);
+//  531     }
+//  532 }
+//  533 void IRDecodeTimeout(struct ep_info_t *ep);
+//  534 void IRDecodeTimeout(struct ep_info_t *ep)
+//  535 {
+//  536     uint8 value = 0;
+//  537     SendData(ep->ep, &value, 0x0000, TRANSFER_ENDPOINT, sizeof(value));
+//  538 }
+//  539 #endif
+//  540 /***************************************************/
+//  541 /* Ω⁄µ„π¶ƒ‹¡–±Ì                                    */
+//  542 /***************************************************/
+
+        RSEG XDATA_I:XDATA:NOROOT(0)
+//  543 struct ep_info_t funcList[] = {
+funcList:
+        DATA8
+        DS 33
+        REQUIRE `?<Initializer for funcList>`
+        REQUIRE __INIT_XDATA_I
+//  544 #if defined(HAS_GAS)
+//  545     {
+//  546         // º”»ÎÕ¯¬Á, ’µΩ ˝æ›,≥¨ ±¥¶¿Ì,◊ ‘¥±‰ªØ
+//  547         NULL, NULL, sensorGasTimeout, sensorGasResAvailable,
+//  548         { DevGas, 0, 5 },                   // type, id, refresh cycle
+//  549     },
+//  550 #endif
+//  551 #if defined(HAS_TEMP)
+//  552     {
+//  553         NULL, NULL, sensorTempTimeout, sensorTempResAvailable,
+//  554         { DevTemp, 1, 5 },                 // type, id, refresh cycle
+//  555     },
+//  556 #endif
+//  557 #if defined(HAS_HUMM)
+//  558     {
+//  559         NULL, NULL, sensorHummTimeout, sensorHummResAvailable,
+//  560         { DevHumm, 0, 5 },                 // type, id, refresh cycle
+//  561     },
+//  562 #endif
+//  563 #if defined(HAS_ILLUM)
+//  564     {
+//  565         NULL, NULL, sensorILLumTimeout, NULL,
+//  566         { DevILLum, 0, 3 },                // type, id, refresh cycle
+//  567     },
+//  568 #endif
+//  569 #if defined(HAS_RAIN)
+//  570     {
+//  571         NULL, NULL, sensorRainTimeout, sensorRainResAvailable,
+//  572         { DevRain, 0, 5 },                 // type, id, refresh cycle
+//  573     },
+//  574 #endif
+//  575 #if defined(HAS_IRDIST)
+//  576     {
+//  577         NULL, NULL, sensorIRDistTimeout, NULL,
+//  578         { DevIRDist, 0, 3 },               // type, id, refresh cycle
+//  579     },
+//  580 #endif
+//  581 #if defined(HAS_SMOKE)
+//  582     {
+//  583         NULL, NULL, sensorSmokeTimeout, sensorSmokeResAvailable,
+//  584         { DevSmoke, 0, 5 },                 // type, id, refresh cycle
+//  585     },
+//  586 #endif
+//  587 #if defined(HAS_FIRE)
+//  588     {
+//  589         NULL, NULL, sensorFireTimeout, sensorFireResAvailable,
+//  590         { DevFire, 0, 3 },                  // type, id, refresh cycle
+//  591     },
+//  592 #endif
+//  593 #if defined(HAS_IRPERS)
+//  594     {
+//  595         NULL, NULL, sensorIRPersTimeout, sensorIRPersResAvailable,
+//  596         { DevIRPers, 0, 2 },                // type, id, refresh cycle
+//  597     },
+//  598 #endif
+//  599 #if defined(HAS_VOICE)
+//  600     {
+//  601         sensorVoiceNwkStateChange, NULL, sensorVoiceTimeout, sensorVoiceResAvailable,
+//  602         { DevVoice, 0, 5 },                // type, id, refresh cycle
+//  603     },
+//  604 #endif
+//  605 #if defined(HAS_EXECUTEB)
+//  606     {
+//  607         NULL, outputExecuteB, outputExecuteBTimeout, OutputExecuteBResAvailable,
+//  608         { DevExecuteB, 3, 10 },              // type, id, refresh cycle
+//  609     },
+//  610 #endif
+//  611 #if defined(HAS_EXECUTEA)
+//  612     {
+//  613         NULL, outputExecuteA, NULL, NULL,
+//  614         { DevExecuteA, 0, 3 },              // type, id, refresh cycle
+//  615     },
+//  616 #endif
+//  617 #if defined(HAS_REMOTER)
+//  618     {
+//  619         NULL, outputRemoter, outputRemoterTimeout, IRSendResAvailable,
+//  620         { DevRemoter, 0, 3 },              // type, id, refresh cycle
+//  621     },
+//  622 #endif
+//  623 #if defined(HAS_TESTFUNCTION)
+//  624     {
+//  625         NULL,
+//  626         testFunc_RecvData,
+//  627         testFunc_TimeOut,
+//  628         NULL,
+//  629         { DevTest, 0, 3 },
+//  630     },
+//  631 #endif
+//  632 #if defined(HAS_BROADCASTSEND)
+//  633     {
+//  634         NULL,
+//  635         NULL,
+//  636         BroadcastSend_TimeOut,
+//  637         NULL,
+//  638         { DevBroadcastSend, 0, 3 },
+//  639     },
+//  640 #endif
+//  641 #if defined(HAS_BROADCASTRECEIVE)
+//  642     {
+//  643         NULL,
+//  644         BroadcastReceiveData,
+//  645         BroadcastSend_TimeOut,
+//  646         NULL,
+//  647         { DevBroadcastReceive, 0, 30 },
+//  648     },
+//  649 #endif
+//  650 #if defined(HAS_125KREADER)
+//  651     {
+//  652         NULL, NULL, sensor125kReaderTimeout, sensor125kReaderResAvailable,
+//  653         { Dev125kReader, 0, 10 },
+//  654     },
+//  655 #endif
+//  656 #if defined(HAS_SPEAKER)
+//  657     {
+//  658         NULL, outputSpeaker, outputSpeakerTimeout, OutputSpeakerResAvailable,
+//  659         { DevSpeaker, 0, 9 },              // type, id, refresh cycle
+//  660     },
+//  661 #endif
+//  662 #if defined(HAS_IRDecode)
+//  663     {
+//  664         NULL, NULL, IRDecodeTimeout, IRDecodeResAvailable,
+//  665         { DevIRDecode, 0, 5 },              // type, id, refresh cycle
+//  666     },
+//  667 #endif
+//  668 #if defined(ZDO_COORDINATOR)
+//  669     {   // –≠µ˜∆˜
+//  670         CoordinatorNwkStateChangeRoutine,
+//  671         CoordinatorIncomingRoutine,
+//  672         CoordinatorTimeoutRoutine,
+//  673         CoordinatorResAvailableRoutine,
+//  674         { DevCoordinator, 0, 0 },
+//  675     },
+//  676 #elif defined(RTR_NWK)
+//  677     {   // ¬∑”…∆˜
+//  678         RouterNwkStateChangeRoutine,
+//  679         RouterIncomingRoutine,
+//  680         RouterTimeoutRoutine,
+//  681         RouterResAvailableRoutine,
+//  682         { DevRouter, 0, 30 },
+//  683     },
+//  684 #endif
+//  685 };
+//  686 
+//  687 // ≤ªƒ‹–ﬁ∏ƒœ¬√Êµƒƒ⁄»›!!!
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+//  688 const uint8 funcCount = sizeof(funcList) / sizeof(funcList[0]);
+funcCount:
+        DB 1
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for lastData>`:
+        DB "Z-Stack for SAPP"
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0
+
+        RSEG XDATA_ID:CODE:NOROOT(0)
+`?<Initializer for funcList>`:
+        DATA16
+        DW 0H
+        DW ??testFunc_RecvData?relay
+        DW ??testFunc_TimeOut?relay
+        DW 0H
+        DATA8
+        DB 16
+        DB 0
+        DB 3
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??testFunc_RecvData?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    testFunc_RecvData
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??testFunc_TimeOut?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    testFunc_TimeOut
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+`?<Constant "Z-Stack for SAPP">`:
+        DB "Z-Stack for SAPP"
+
+        END
+//  689 #endif
+// 
+// 182 bytes in segment BANKED_CODE
+//  12 bytes in segment BANK_RELAYS
+// 152 bytes in segment XDATA_I
+// 152 bytes in segment XDATA_ID
+//  18 bytes in segment XDATA_ROM_C
+//   1 byte  in segment XDATA_Z
+// 
+// 346 bytes of CODE  memory
+//  18 bytes of CONST memory
+// 153 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: 1

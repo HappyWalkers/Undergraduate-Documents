@@ -1,0 +1,875 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         04/Jun/2021  11:37:39 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap1_Basic\Ex04_PC_UART\Source\ #
+#                          UART.c                                             #
+#    Command line       =  -f E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\zstack\Tools\CC2530DB\f8wEn #
+#                          dev.cfg (-DCPU32MHZ -DROOT=__near_func             #
+#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
+#                          -DMAC_CFG_RX_MAX=3) -f E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß #
+#                          £©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZSt #
+#                          ack\ZStack-CC2530-r200\Projects\SappWsn\..\zstack\ #
+#                          Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO          #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0x4327                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß #
+#                          £©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap1_Bas #
+#                          ic\Ex04_PC_UART\Source\UART.c -D NWK_AUTO_POLL -D  #
+#                          ZTOOL_P1 -D xMT_TASK -D xMT_SYS_FUNC -D            #
+#                          MT_ZDO_FUNC -D SAPP_ZSTACK -lC                     #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\EndDeviceEB\List\ -lA             #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\EndDeviceEB\List\                 #
+#                          --diag_suppress Pe001,Pa010 -o                     #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\EndDeviceEB\Obj\ -e               #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û— #
+#                          ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZS #
+#                          tack\ZStack-CC2530-r200\Projects\SappWsn\Source\   #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\zstack\ZMain\TI2530DB\ -I   #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\..\..\Components\hal\include\ -I  #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\..\..\Components\hal\target\CC253 #
+#                          0EB\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\  #
+#                          µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC25 #
+#                          30-r200\Projects\SappWsn\..\..\Components\mac\incl #
+#                          ude\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\  #
+#                          µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC25 #
+#                          30-r200\Projects\SappWsn\..\..\Components\mac\high #
+#                          _level\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº  #
+#                          È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-C #
+#                          C2530-r200\Projects\SappWsn\..\..\Components\mac\l #
+#                          ow_level\srf04\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\  #
+#                          µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ #
+#                          ZStack-CC2530-r200\Projects\SappWsn\..\..\Componen #
+#                          ts\mac\low_level\srf04\single_chip\ -I             #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\..\..\Components\mt\ -I           #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\..\..\Components\osal\include\    #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\..\Components\services\sadd #
+#                          r\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ— #
+#                          Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530 #
+#                          -r200\Projects\SappWsn\..\..\Components\services\s #
+#                          data\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ #
+#                           µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2 #
+#                          530-r200\Projects\SappWsn\..\..\Components\stack\a #
+#                          f\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ— #
+#                          Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530 #
+#                          -r200\Projects\SappWsn\..\..\Components\stack\nwk\ #
+#                           -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ #
+#                          ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r #
+#                          200\Projects\SappWsn\..\..\Components\stack\sapi\  #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\..\Components\stack\sec\    #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\..\Components\stack\sys\    #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\..\Components\stack\zdo\    #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\..\Components\zmac\ -I      #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\..\..\Components\zmac\f8w\ -Ohz   #
+#                          --require_prototypes                               #
+#    List file          =  E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\EndDeviceEB\List\UART.lst         #
+#    Object file        =  E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\EndDeviceEB\Obj\UART.r51          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap1_Basic\Ex04_PC_UART\Source\UART.c
+      1          #include "UART.h"
+
+   \                                 In  segment SFR_AN, at 0x86
+   \   unsigned char volatile __sfr U0CSR
+   \                     U0CSR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x9d
+   \   unsigned char volatile __sfr SLEEPSTA
+   \                     SLEEPSTA:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IEN0
+   \                     _A_IEN0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xbe
+   \   unsigned char volatile __sfr SLEEPCMD
+   \                     SLEEPCMD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc1
+   \   unsigned char volatile __sfr U0DBUF
+   \                     U0DBUF:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc2
+   \   unsigned char volatile __sfr U0BAUD
+   \                     U0BAUD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc5
+   \   unsigned char volatile __sfr U0GCR
+   \                     U0GCR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc6
+   \   unsigned char volatile __sfr CLKCONCMD
+   \                     CLKCONCMD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xe8
+   \   union <unnamed> volatile __sfr _A_IRCON2
+   \                     _A_IRCON2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf1
+   \   unsigned char volatile __sfr PERCFG
+   \                     PERCFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+      2          
+      3          /***********************************************************
+      4          **  ∫Ø ˝√˚≥∆: UART0_Init
+      5          **   µœ÷π¶ƒ‹: ≥ı ºªØ UART0
+      6          **  »Îø⁄≤Œ ˝: baud:≤®Ãÿ¬ …Ë÷√;
+      7          **  ∑µªÿΩ·π˚: None
+      8          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      9          void UART0_Init(BaudSel baud)
+   \                     UART0_Init:
+     10          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     11            CLKCONCMD &= ~0X40;             //æß’Ò
+   \   000000   53C6BF       ANL     0xc6,#0xbf
+     12            while(!(SLEEPSTA & 0X40))
+   \                     ??UART0_Init_0:
+   \   000003   E59D         MOV     A,0x9d
+   \   000005   A2E6         MOV     C,0xE0 /* A   */.6
+   \   000007   50FA         JNC     ??UART0_Init_0
+     13              ;                             //µ»¥˝æß’ÒŒ»∂®
+     14            CLKCONCMD &= ~0X47;             //TICHSPD128∑÷∆µ£¨CLKSPD≤ª∑÷∆µ
+   \   000009   53C6B8       ANL     0xc6,#0xb8
+     15            SLEEPCMD |= 0X04; 		  //πÿ±’≤ª”√µƒRC’Òµ¥∆˜
+   \   00000C   43BE04       ORL     0xbe,#0x4
+     16          
+     17            PERCFG = 0X00;		  //Œª÷√1 P0ø⁄
+   \   00000F   75F100       MOV     0xf1,#0x0
+     18            P0SEL |= 0X0C;		  //P0”√◊˜¥Æø⁄
+   \   000012   43F30C       ORL     0xf3,#0xc
+     19          
+     20            U0CSR |= 0X80;		  //UART∑Ω Ω
+   \   000015   438680       ORL     0x86,#0x80
+     21            switch(baud)
+   \   000018   E9           MOV     A,R1
+   \   000019   6020         JZ      ??UART0_Init_1
+   \   00001B   14           DEC     A
+   \   00001C   6025         JZ      ??UART0_Init_2
+   \   00001E   14           DEC     A
+   \   00001F   6027         JZ      ??UART0_Init_3
+   \   000021   14           DEC     A
+   \   000022   6029         JZ      ??UART0_Init_4
+   \   000024   14           DEC     A
+   \   000025   602B         JZ      ??UART0_Init_5
+   \   000027   14           DEC     A
+   \   000028   602D         JZ      ??UART0_Init_6
+   \   00002A   14           DEC     A
+   \   00002B   602F         JZ      ??UART0_Init_7
+   \   00002D   14           DEC     A
+   \   00002E   6031         JZ      ??UART0_Init_8
+   \   000030   14           DEC     A
+   \   000031   6033         JZ      ??UART0_Init_9
+   \   000033   14           DEC     A
+   \   000034   603A         JZ      ??UART0_Init_10
+   \   000036   14           DEC     A
+   \   000037   6032         JZ      ??UART0_Init_11
+   \   000039   8035         SJMP    ??UART0_Init_10
+     22            {
+     23              case BAUD_2400:      U0GCR |= 6;     U0BAUD |= 59;    break;
+   \                     ??UART0_Init_1:
+   \   00003B   43C506       ORL     0xc5,#0x6
+   \                     ??UART0_Init_12:
+   \   00003E   43C23B       ORL     0xc2,#0x3b
+   \   000041   8033         SJMP    ??UART0_Init_13
+     24              case BAUD_4800:      U0GCR |= 7;     U0BAUD |= 59;    break;
+   \                     ??UART0_Init_2:
+   \   000043   43C507       ORL     0xc5,#0x7
+   \   000046   80F6         SJMP    ??UART0_Init_12
+     25              case BAUD_9600:      U0GCR |= 8;     U0BAUD |= 59;    break;
+   \                     ??UART0_Init_3:
+   \   000048   43C508       ORL     0xc5,#0x8
+   \   00004B   80F1         SJMP    ??UART0_Init_12
+     26              case BAUD_14400:     U0GCR |= 8;     U0BAUD |= 216;   break;
+   \                     ??UART0_Init_4:
+   \   00004D   43C508       ORL     0xc5,#0x8
+   \   000050   8021         SJMP    ??UART0_Init_14
+     27              case BAUD_19200:     U0GCR |= 9;     U0BAUD |= 59;    break;
+   \                     ??UART0_Init_5:
+   \   000052   43C509       ORL     0xc5,#0x9
+   \   000055   80E7         SJMP    ??UART0_Init_12
+     28              case BAUD_28800:     U0GCR |= 9;     U0BAUD |= 216;   break;
+   \                     ??UART0_Init_6:
+   \   000057   43C509       ORL     0xc5,#0x9
+   \   00005A   8017         SJMP    ??UART0_Init_14
+     29              case BAUD_38400:     U0GCR |= 10;    U0BAUD |= 59;    break;
+   \                     ??UART0_Init_7:
+   \   00005C   43C50A       ORL     0xc5,#0xa
+   \   00005F   80DD         SJMP    ??UART0_Init_12
+     30              case BAUD_57600:     U0GCR |= 10;    U0BAUD |= 216;   break;
+   \                     ??UART0_Init_8:
+   \   000061   43C50A       ORL     0xc5,#0xa
+   \   000064   800D         SJMP    ??UART0_Init_14
+     31              case BAUD_76800:     U0GCR |= 11;    U0BAUD |= 59;    break;
+   \                     ??UART0_Init_9:
+   \   000066   43C50B       ORL     0xc5,#0xb
+   \   000069   80D3         SJMP    ??UART0_Init_12
+     32              case BAUD_115200:    U0GCR |= 11;    U0BAUD |= 216;   break;
+     33              case BAUD_230400:    U0GCR |= 12;    U0BAUD |= 216;   break;
+   \                     ??UART0_Init_11:
+   \   00006B   43C50C       ORL     0xc5,#0xc
+   \   00006E   8003         SJMP    ??UART0_Init_14
+     34              default         :    U0GCR |= 11;    U0BAUD |= 216;   break; //BAUD_115200;
+   \                     ??UART0_Init_10:
+   \   000070   43C50B       ORL     0xc5,#0xb
+   \                     ??UART0_Init_14:
+   \   000073   43C2D8       ORL     0xc2,#0xd8
+     35            }
+     36          
+     37            UTX0IF = 0;
+   \                     ??UART0_Init_13:
+   \   000076   C2E9         CLR     0xe8.1
+     38            U0CSR |= 0X40;		  //‘ –ÌΩ” ’
+   \   000078   438640       ORL     0x86,#0x40
+     39            IEN0 |= 0X84;			  //ø™◊‹÷–∂œ£¨Ω” ’÷–∂œ
+   \   00007B   43A884       ORL     0xa8,#0x84
+     40          
+     41          }
+   \   00007E   02....       LJMP    ?BRET
+   \   000081                REQUIRE CLKCONCMD
+   \   000081                REQUIRE SLEEPSTA
+   \   000081                REQUIRE SLEEPCMD
+   \   000081                REQUIRE PERCFG
+   \   000081                REQUIRE P0SEL
+   \   000081                REQUIRE U0CSR
+   \   000081                REQUIRE U0GCR
+   \   000081                REQUIRE U0BAUD
+   \   000081                REQUIRE _A_IRCON2
+   \   000081                REQUIRE _A_IEN0
+     42          
+     43          /***********************************************************
+     44          **  ∫Ø ˝√˚≥∆: UART0_Send
+     45          **   µœ÷π¶ƒ‹: UART0 ∑¢ÀÕ ˝æ›
+     46          **  »Îø⁄≤Œ ˝: Data:¥˝∑¢ÀÕ ˝æ›«¯ ◊µÿ÷∑
+     47          **            len:¥˝∑¢ÀÕ ˝æ›µƒ◊÷Ω⁄ ˝
+     48          **  ∑µªÿΩ·π˚: None
+     49          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     50          void UART0_Send(char *Data,int len)
+   \                     UART0_Send:
+     51          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+     52            int i;
+     53            for(i=0;i<len;i++)
+   \   000005   7800         MOV     R0,#0x0
+   \   000007   7900         MOV     R1,#0x0
+   \   000009   801A         SJMP    ??UART0_Send_0
+     54            {
+     55              U0DBUF = *Data++;
+   \                     ??UART0_Send_1:
+   \   00000B   8A82         MOV     DPL,R2
+   \   00000D   8B83         MOV     DPH,R3
+   \   00000F   E0           MOVX    A,@DPTR
+   \   000010   F5C1         MOV     0xc1,A
+   \   000012   A3           INC     DPTR
+   \   000013   AA82         MOV     R2,DPL
+   \   000015   AB83         MOV     R3,DPH
+     56              while(UTX0IF == 0)
+   \                     ??UART0_Send_2:
+   \   000017   A2E9         MOV     C,0xe8.1
+   \   000019   50FC         JNC     ??UART0_Send_2
+     57                ;
+     58              UTX0IF = 0;
+   \   00001B   C2E9         CLR     0xe8.1
+     59            }
+   \   00001D   E8           MOV     A,R0
+   \   00001E   2401         ADD     A,#0x1
+   \   000020   08           INC     R0
+   \   000021   E9           MOV     A,R1
+   \   000022   3400         ADDC    A,#0x0
+   \   000024   F9           MOV     R1,A
+   \                     ??UART0_Send_0:
+   \   000025   C3           CLR     C
+   \   000026   E8           MOV     A,R0
+   \   000027   9C           SUBB    A,R4
+   \   000028   E9           MOV     A,R1
+   \   000029   9D           SUBB    A,R5
+   \   00002A   A2D2         MOV     C,0xD0 /* PSW */.2
+   \   00002C   65D0         XRL     A,PSW
+   \   00002E   33           RLC     A
+   \   00002F   40DA         JC      ??UART0_Send_1
+     60          }
+   \   000031   7F01         MOV     R7,#0x1
+   \   000033   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000036                REQUIRE U0DBUF
+   \   000036                REQUIRE _A_IRCON2
+     61          /***********************************************************
+     62          **  ∫Ø ˝√˚≥∆: UART0_Dis_uNum
+     63          **   µœ÷π¶ƒ‹: UART0 “‘ ÆΩ¯÷∆∑Ω Ωœ‘ æ uint16 –Õ ˝æ›
+     64          **  »Îø⁄≤Œ ˝: uValue:–Ë“™œ‘ æµƒŒﬁ∑˚∫≈–Õ ˝æ›
+     65          **  ∑µªÿΩ·π˚: None
+     66          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     67          void UART0_Dis_uNum(uint16 uValue )
+   \                     UART0_Dis_uNum:
+     68          {
+   \   000000   74F0         MOV     A,#-0x10
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 5
+   \   000005   74FB         MOV     A,#-0x5
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   EA           MOV     A,R2
+   \   00000B   FE           MOV     R6,A
+   \   00000C   EB           MOV     A,R3
+   \   00000D   FF           MOV     R7,A
+     69            uint8 i;
+     70            char cData[5] = {'0','0','0','0','0'};
+   \   00000E   85..82       MOV     DPL,?XSP + 0
+   \   000011   85..83       MOV     DPH,?XSP + 1
+   \   000014   AC82         MOV     R4,DPL
+   \   000016   AD83         MOV     R5,DPH
+   \   000018   7583..       MOV     DPH,#(`?<Constant {48, 48, 48, 48, 48}>` >> 8) & 0xff
+   \   00001B   7582..       MOV     DPL,#`?<Constant {48, 48, 48, 48, 48}>` & 0xff
+   \   00001E   7405         MOV     A,#0x5
+   \   000020   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+     71          
+     72            cData[0] = uValue % 100000 / 10000 + '0';
+   \   000023   8E..         MOV     ?V0 + 4,R6
+   \   000025   8F..         MOV     ?V0 + 5,R7
+   \   000027   F5..         MOV     ?V0 + 6,A
+   \   000029   F5..         MOV     ?V0 + 7,A
+   \   00002B   90....       MOV     DPTR,#__Constant_186a0
+   \   00002E   78..         MOV     R0,#?V0 + 0
+   \   000030   12....       LCALL   ?L_MOV_X
+   \   000033   78..         MOV     R0,#?V0 + 4
+   \   000035   79..         MOV     R1,#?V0 + 0
+   \   000037   12....       LCALL   ?L_DIV_MOD
+   \   00003A   90....       MOV     DPTR,#__Constant_2710
+   \   00003D   78..         MOV     R0,#?V0 + 4
+   \   00003F   12....       LCALL   ?L_MOV_X
+   \   000042   78..         MOV     R0,#?V0 + 0
+   \   000044   79..         MOV     R1,#?V0 + 4
+   \   000046   12....       LCALL   ?L_DIV_MOD
+   \   000049   E5..         MOV     A,?V0 + 0
+   \   00004B   12....       LCALL   ?Subroutine1 & 0xFFFF
+     73            cData[1] = uValue % 10000 / 1000 + '0';
+   \                     ??CrossCallReturnLabel_0:
+   \   00004E   7A10         MOV     R2,#0x10
+   \   000050   7B27         MOV     R3,#0x27
+   \   000052   12....       LCALL   ?US_DIV_MOD
+   \   000055   EA           MOV     A,R2
+   \   000056   F8           MOV     R0,A
+   \   000057   EB           MOV     A,R3
+   \   000058   F9           MOV     R1,A
+   \   000059   7AE8         MOV     R2,#-0x18
+   \   00005B   7B03         MOV     R3,#0x3
+   \   00005D   12....       LCALL   ?US_DIV_MOD
+   \   000060   E8           MOV     A,R0
+   \   000061   2430         ADD     A,#0x30
+   \   000063   C0E0         PUSH    A
+   \   000065   7401         MOV     A,#0x1
+   \   000067   12....       LCALL   ?XSTACK_DISP0_8
+   \   00006A   D0E0         POP     A
+   \   00006C   12....       LCALL   ?Subroutine5 & 0xFFFF
+     74            cData[2] = uValue % 1000 / 100 + '0';
+   \                     ??CrossCallReturnLabel_8:
+   \   00006F   7AE8         MOV     R2,#-0x18
+   \   000071   7B03         MOV     R3,#0x3
+   \   000073   12....       LCALL   ?US_DIV_MOD
+   \   000076   EA           MOV     A,R2
+   \   000077   F8           MOV     R0,A
+   \   000078   EB           MOV     A,R3
+   \   000079   F9           MOV     R1,A
+   \   00007A   7A64         MOV     R2,#0x64
+   \   00007C   7B00         MOV     R3,#0x0
+   \   00007E   12....       LCALL   ?US_DIV_MOD
+   \   000081   E8           MOV     A,R0
+   \   000082   2430         ADD     A,#0x30
+   \   000084   C0E0         PUSH    A
+   \   000086   7402         MOV     A,#0x2
+   \   000088   12....       LCALL   ?XSTACK_DISP0_8
+   \   00008B   D0E0         POP     A
+   \   00008D   12....       LCALL   ?Subroutine3 & 0xFFFF
+     75            cData[3] = uValue % 100 / 10 + '0';
+   \                     ??CrossCallReturnLabel_4:
+   \   000090   12....       LCALL   ?US_DIV_MOD
+   \   000093   EA           MOV     A,R2
+   \   000094   F8           MOV     R0,A
+   \   000095   EB           MOV     A,R3
+   \   000096   F9           MOV     R1,A
+   \   000097   7A0A         MOV     R2,#0xa
+   \   000099   7B00         MOV     R3,#0x0
+   \   00009B   12....       LCALL   ?US_DIV_MOD
+   \   00009E   E8           MOV     A,R0
+   \   00009F   2430         ADD     A,#0x30
+   \   0000A1   C0E0         PUSH    A
+   \   0000A3   7403         MOV     A,#0x3
+   \   0000A5   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000A8   D0E0         POP     A
+   \   0000AA   12....       LCALL   ?Subroutine4 & 0xFFFF
+     76            cData[4] = uValue % 10 / 1 + '0';
+   \                     ??CrossCallReturnLabel_6:
+   \   0000AD   12....       LCALL   ?US_DIV_MOD
+   \   0000B0   EA           MOV     A,R2
+   \   0000B1   2430         ADD     A,#0x30
+   \   0000B3   C0E0         PUSH    A
+   \   0000B5   7404         MOV     A,#0x4
+   \   0000B7   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000BA   D0E0         POP     A
+   \   0000BC   F0           MOVX    @DPTR,A
+     77            if(0 != uValue )
+   \   0000BD   EE           MOV     A,R6
+   \   0000BE   4F           ORL     A,R7
+   \   0000BF   601B         JZ      ??UART0_Dis_uNum_0
+     78            {
+     79              for( i=0; i<5; i++)
+   \   0000C1   7800         MOV     R0,#0x0
+     80              {
+     81                if('0' != cData[i] )
+   \                     ??UART0_Dis_uNum_1:
+   \   0000C3   88..         MOV     ?V0 + 0,R0
+   \   0000C5   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   0000C8   E0           MOVX    A,@DPTR
+   \   0000C9   6430         XRL     A,#0x30
+   \   0000CB   701D         JNZ     ??UART0_Dis_uNum_2
+     82                  break;
+     83                if('0' == cData[i] )
+     84                  cData[i] = ' ';
+   \   0000CD   12....       LCALL   ?Subroutine2 & 0xFFFF
+     85              }
+   \                     ??CrossCallReturnLabel_3:
+   \   0000D0   7420         MOV     A,#0x20
+   \   0000D2   F0           MOVX    @DPTR,A
+   \   0000D3   08           INC     R0
+   \   0000D4   E8           MOV     A,R0
+   \   0000D5   C3           CLR     C
+   \   0000D6   9405         SUBB    A,#0x5
+   \   0000D8   5010         JNC     ??UART0_Dis_uNum_2
+   \   0000DA   80E7         SJMP    ??UART0_Dis_uNum_1
+     86            }
+     87            else if(0 == uValue )
+     88            {
+     89              for( i=0; i<4; i++)
+     90              {
+     91                  cData[i] = ' ';
+   \                     ??UART0_Dis_uNum_0:
+   \   0000DC   7420         MOV     A,#0x20
+   \   0000DE   85..82       MOV     DPL,?XSP + 0
+   \   0000E1   85..83       MOV     DPH,?XSP + 1
+   \   0000E4   7804         MOV     R0,#0x4
+   \                     ??UART0_Dis_uNum_3:
+   \   0000E6   F0           MOVX    @DPTR,A
+   \   0000E7   A3           INC     DPTR
+   \   0000E8   D8FC         DJNZ    R0,??UART0_Dis_uNum_3
+     92              }
+     93            }
+     94            // ˝◊÷∫Õ∆‰À˚ ‰≥ˆƒ⁄»›«∞∫Û∂º”–“ª∏ˆø’∏Òº‰æ‡
+     95            UART0_Send(" ", 1);
+   \                     ??UART0_Dis_uNum_2:
+   \   0000EA                ; Setup parameters for call to function UART0_Send
+   \   0000EA                REQUIRE ?Subroutine0
+   \   0000EA                ; // Fall through to label ?Subroutine0
+     96            UART0_Send(cData, 5);
+     97            UART0_Send(" ", 1);
+     98          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7C01         MOV     R4,#0x1
+   \   000002   7D00         MOV     R5,#0x0
+   \   000004   7A..         MOV     R2,#`?<Constant " ">` & 0xff
+   \   000006   7B..         MOV     R3,#(`?<Constant " ">` >> 8) & 0xff
+   \   000008   12....       LCALL   ??UART0_Send?relay
+   \   00000B                ; Setup parameters for call to function UART0_Send
+   \   00000B                ; Setup parameters for call to function UART0_Send
+   \   00000B   7C05         MOV     R4,#0x5
+   \   00000D   7D00         MOV     R5,#0x0
+   \   00000F   85..82       MOV     DPL,?XSP + 0
+   \   000012   85..83       MOV     DPH,?XSP + 1
+   \   000015   AA82         MOV     R2,DPL
+   \   000017   AB83         MOV     R3,DPH
+   \   000019   12....       LCALL   ??UART0_Send?relay
+   \   00001C                ; Setup parameters for call to function UART0_Send
+   \   00001C                ; Setup parameters for call to function UART0_Send
+   \   00001C   7C01         MOV     R4,#0x1
+   \   00001E   7D00         MOV     R5,#0x0
+   \   000020   7A..         MOV     R2,#`?<Constant " ">` & 0xff
+   \   000022   7B..         MOV     R3,#(`?<Constant " ">` >> 8) & 0xff
+   \   000024   12....       LCALL   ??UART0_Send?relay
+   \   000027   7405         MOV     A,#0x5
+   \   000029   12....       LCALL   ?DEALLOC_XSTACK8
+   \   00002C   7F08         MOV     R7,#0x8
+   \   00002E   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   85..82       MOV     DPL,?XSP + 0
+   \   000003   85..83       MOV     DPH,?XSP + 1
+   \   000006   E582         MOV     A,DPL
+   \   000008   25..         ADD     A,?V0 + 0
+   \   00000A   F582         MOV     DPL,A
+   \   00000C   E583         MOV     A,DPH
+   \   00000E   3400         ADDC    A,#0x0
+   \   000010   F583         MOV     DPH,A
+   \   000012   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   12....       LCALL   ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_9:
+   \   000003   7A0A         MOV     R2,#0xa
+   \   000005   7B00         MOV     R3,#0x0
+   \   000007   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   12....       LCALL   ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_10:
+   \   000003   7A64         MOV     R2,#0x64
+   \   000005   7B00         MOV     R3,#0x0
+   \   000007   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   2430         ADD     A,#0x30
+   \   000002   85..82       MOV     DPL,?XSP + 0
+   \   000005   85..83       MOV     DPH,?XSP + 1
+   \   000008   12....       LCALL   ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_11:
+   \   00000B   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   F0           MOVX    @DPTR,A
+   \   000001   EE           MOV     A,R6
+   \   000002   F8           MOV     R0,A
+   \   000003   EF           MOV     A,R7
+   \   000004   F9           MOV     R1,A
+   \   000005   22           RET
+     99          
+    100          /***********************************************************
+    101          **  ∫Ø ˝√˚≥∆: UART0_Dis_fNum
+    102          **   µœ÷π¶ƒ‹: UART0 “‘ ÆΩ¯÷∆∑Ω Ωœ‘ æ float –Õ ˝æ›
+    103          **  »Îø⁄≤Œ ˝: fValue:–Ë“™œ‘ æµƒ∏°µ„–Õ ˝æ›
+    104          **  ∑µªÿΩ·π˚: None
+    105          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    106          void UART0_Dis_fNum(float fValue )
+   \                     UART0_Dis_fNum:
+    107          {
+   \   000000   74F0         MOV     A,#-0x10
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 5
+   \   000005   74FB         MOV     A,#-0x5
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   8A..         MOV     ?V0 + 0,R2
+   \   00000C   8B..         MOV     ?V0 + 1,R3
+   \   00000E   8C..         MOV     ?V0 + 2,R4
+   \   000010   8D..         MOV     ?V0 + 3,R5
+    108            uint16 uValue = (uint16)( 100 * fValue );
+   \   000012   90....       MOV     DPTR,#__Constant_42c80000
+   \   000015   78..         MOV     R0,#?V0 + 4
+   \   000017   12....       LCALL   ?L_MOV_X
+   \   00001A   78..         MOV     R0,#?V0 + 0
+   \   00001C   79..         MOV     R1,#?V0 + 4
+   \   00001E   12....       LCALL   ?FLT_MUL
+   \   000021   78..         MOV     R0,#?V0 + 0
+   \   000023   12....       LCALL   ?FLT_TO_L
+   \   000026   AE..         MOV     R6,?V0 + 0
+   \   000028   AF..         MOV     R7,?V0 + 1
+    109            char cData[5] = {'0','0','.','0','0'};
+   \   00002A   85..82       MOV     DPL,?XSP + 0
+   \   00002D   85..83       MOV     DPH,?XSP + 1
+   \   000030   AC82         MOV     R4,DPL
+   \   000032   AD83         MOV     R5,DPH
+   \   000034   7583..       MOV     DPH,#(`?<Constant {48, 48, 46, 48, 48}>` >> 8) & 0xff
+   \   000037   7582..       MOV     DPL,#`?<Constant {48, 48, 46, 48, 48}>` & 0xff
+   \   00003A   7405         MOV     A,#0x5
+   \   00003C   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+    110          
+    111            cData[0] = uValue % 10000 / 1000 + '0';
+   \   00003F   EE           MOV     A,R6
+   \   000040   F8           MOV     R0,A
+   \   000041   EF           MOV     A,R7
+   \   000042   F9           MOV     R1,A
+   \   000043   7A10         MOV     R2,#0x10
+   \   000045   7B27         MOV     R3,#0x27
+   \   000047   12....       LCALL   ?US_DIV_MOD
+   \   00004A   EA           MOV     A,R2
+   \   00004B   F8           MOV     R0,A
+   \   00004C   EB           MOV     A,R3
+   \   00004D   F9           MOV     R1,A
+   \   00004E   7AE8         MOV     R2,#-0x18
+   \   000050   7B03         MOV     R3,#0x3
+   \   000052   12....       LCALL   ?US_DIV_MOD
+   \   000055   E8           MOV     A,R0
+   \   000056   12....       LCALL   ?Subroutine1 & 0xFFFF
+    112            cData[1] = uValue % 1000 / 100 + '0';
+   \                     ??CrossCallReturnLabel_1:
+   \   000059   7AE8         MOV     R2,#-0x18
+   \   00005B   7B03         MOV     R3,#0x3
+   \   00005D   12....       LCALL   ?US_DIV_MOD
+   \   000060   EA           MOV     A,R2
+   \   000061   F8           MOV     R0,A
+   \   000062   EB           MOV     A,R3
+   \   000063   F9           MOV     R1,A
+   \   000064   7A64         MOV     R2,#0x64
+   \   000066   7B00         MOV     R3,#0x0
+   \   000068   12....       LCALL   ?US_DIV_MOD
+   \   00006B   E8           MOV     A,R0
+   \   00006C   2430         ADD     A,#0x30
+   \   00006E   C0E0         PUSH    A
+   \   000070   7401         MOV     A,#0x1
+   \   000072   12....       LCALL   ?XSTACK_DISP0_8
+   \   000075   D0E0         POP     A
+   \   000077   F0           MOVX    @DPTR,A
+    113            cData[2] = '.';
+   \   000078   7402         MOV     A,#0x2
+   \   00007A   12....       LCALL   ?XSTACK_DISP0_8
+   \   00007D   742E         MOV     A,#0x2e
+   \   00007F   12....       LCALL   ?Subroutine3 & 0xFFFF
+    114            cData[3] = uValue % 100 / 10 + '0';
+   \                     ??CrossCallReturnLabel_5:
+   \   000082   12....       LCALL   ?US_DIV_MOD
+   \   000085   EA           MOV     A,R2
+   \   000086   F8           MOV     R0,A
+   \   000087   EB           MOV     A,R3
+   \   000088   F9           MOV     R1,A
+   \   000089   7A0A         MOV     R2,#0xa
+   \   00008B   7B00         MOV     R3,#0x0
+   \   00008D   12....       LCALL   ?US_DIV_MOD
+   \   000090   E8           MOV     A,R0
+   \   000091   2430         ADD     A,#0x30
+   \   000093   C0E0         PUSH    A
+   \   000095   7403         MOV     A,#0x3
+   \   000097   12....       LCALL   ?XSTACK_DISP0_8
+   \   00009A   D0E0         POP     A
+   \   00009C   12....       LCALL   ?Subroutine4 & 0xFFFF
+    115            cData[4] = uValue % 10 / 1 + '0';
+   \                     ??CrossCallReturnLabel_7:
+   \   00009F   12....       LCALL   ?US_DIV_MOD
+   \   0000A2   EA           MOV     A,R2
+   \   0000A3   2430         ADD     A,#0x30
+   \   0000A5   C0E0         PUSH    A
+   \   0000A7   7404         MOV     A,#0x4
+   \   0000A9   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000AC   D0E0         POP     A
+   \   0000AE   F0           MOVX    @DPTR,A
+    116          
+    117            // ˝◊÷∫Õ∆‰À˚ ‰≥ˆƒ⁄»›«∞∫Û∂º”–“ª∏ˆø’∏Òº‰æ‡
+    118            UART0_Send(" ", 1);
+   \   0000AF                ; Setup parameters for call to function UART0_Send
+   \   0000AF   02....       LJMP    ?Subroutine0 & 0xFFFF
+    119            UART0_Send(cData, 5);
+    120            UART0_Send(" ", 1);
+    121          }
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??UART0_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    UART0_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??UART0_Send?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    UART0_Send
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??UART0_Dis_uNum?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    UART0_Dis_uNum
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??UART0_Dis_fNum?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    UART0_Dis_fNum
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant {48, 48, 48, 48, 48}>`:
+   \   000000   30           DB 48
+   \   000001   30           DB 48
+   \   000002   30           DB 48
+   \   000003   30           DB 48
+   \   000004   30           DB 48
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant " ">`:
+   \   000000   2000         DB " "
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant {48, 48, 46, 48, 48}>`:
+   \   000000   30           DB 48
+   \   000001   30           DB 48
+   \   000002   2E           DB 46
+   \   000003   30           DB 48
+   \   000004   30           DB 48
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_186a0:
+   \   000000   A0860100     DD 100000
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_2710:
+   \   000000   10270000     DD 10000
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_42c80000:
+   \   000000   0000C842     DD 42C80000H
+    122          
+    123          /***********************************************************
+    124          **  ∫Ø ˝√˚≥∆: UART0_ISR
+    125          **   µœ÷π¶ƒ‹: UART0 Ω” ’÷–∂œ¥¶¿Ì∫Ø ˝
+    126          **  »Îø⁄≤Œ ˝: None
+    127          **  ∑µªÿΩ·π˚: None
+    128          ***********************************************************/
+    129          
+
+   Maximum stack usage in bytes:
+
+     Function        ISTACK PSTACK XSTACK
+     --------        ------ ------ ------
+     UART0_Dis_fNum      2      0     21
+       -> UART0_Send     0      0     42
+       -> UART0_Send     0      0     42
+       -> UART0_Send     0      0     42
+     UART0_Dis_uNum      2      0     21
+       -> UART0_Send     0      0     42
+       -> UART0_Send     0      0     42
+       -> UART0_Send     0      0     42
+     UART0_Init          0      0      0
+     UART0_Send          0      0     30
+
+
+   Segment part sizes:
+
+     Function/Label                   Bytes
+     --------------                   -----
+     U0CSR                               1
+     SLEEPSTA                            1
+     _A_IEN0                             1
+     SLEEPCMD                            1
+     U0DBUF                              1
+     U0BAUD                              1
+     U0GCR                               1
+     CLKCONCMD                           1
+     _A_IRCON2                           1
+     PERCFG                              1
+     P0SEL                               1
+     UART0_Init                        129
+     UART0_Send                         54
+     UART0_Dis_uNum                    234
+     ?Subroutine0                       49
+     ?Subroutine2                       19
+     ?Subroutine4                        8
+     ?Subroutine3                        8
+     ?Subroutine1                       12
+     ?Subroutine5                        6
+     UART0_Dis_fNum                    178
+     ??UART0_Init?relay                  6
+     ??UART0_Send?relay                  6
+     ??UART0_Dis_uNum?relay              6
+     ??UART0_Dis_fNum?relay              6
+     ?<Constant {48, 48, 48, 48, 48}>    5
+     ?<Constant " ">                     2
+     ?<Constant {48, 48, 46, 48, 48}>    5
+     __Constant_186a0                    4
+     __Constant_2710                     4
+     __Constant_42c80000                 4
+
+ 
+ 697 bytes in segment BANKED_CODE
+  24 bytes in segment BANK_RELAYS
+  11 bytes in segment SFR_AN
+  24 bytes in segment XDATA_ROM_C
+ 
+ 721 bytes of CODE  memory
+  12 bytes of CONST memory (+ 12 bytes shared)
+   0 bytes of DATA  memory (+ 11 bytes shared)
+
+Errors: none
+Warnings: none

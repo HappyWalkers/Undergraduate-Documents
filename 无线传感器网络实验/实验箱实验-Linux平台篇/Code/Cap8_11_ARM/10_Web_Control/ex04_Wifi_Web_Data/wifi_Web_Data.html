@@ -1,0 +1,85 @@
+<HTML>
+	<HEAD>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script src="jquery-1.8.3.min.js"></script>
+		<script language="javascript">
+			var auto_refresh = false;
+			function updateWifiData(data) {
+				if(data != null && data.temp != undefined && data.humi != undefined) {
+					$("#tempValue").val(data.temp);
+					$("#humiValue").val(data.humi);
+					$("#shakeValue").val(data.shake);
+					if($("#tipArea").css('display') != 'none')
+						$("#tipArea").css('display', 'none');
+				} else {
+					$("#tipLabel").html("连接失败<br />请检查实验箱综合演示程序是否正在运行!");
+					if($("#tipArea").css('display') != 'table-row')
+						$("#tipArea").css('display', 'table-row');
+				}
+			}
+			function loadWifiData() {
+				$.ajax({
+					async:true,
+					url: "/queryif/wifi",
+					dataType: "json",
+					data: null,
+					timeout: 4000,
+					success: function (json) {
+						updateWifiData(json);
+					},
+					error: function(xhr) {
+						updateWifiData(null);
+					}
+				});
+			}
+			function updateFunc() {
+				loadWifiData();
+				if(auto_update.checked) {
+					setTimeout('updateFunc()', 2000);
+				}
+			}
+		</script>
+	</HEAD>
+		<script language="javascript">
+			function startFun()
+			{
+				auto_update.checked = true;
+				updateFunc();
+			}
+		</script>
+	<BODY onload="startFun()">
+	<table width="338" border="1" align="center">
+		<tr>
+			<td colspan="2"><div align="center">wifi节点温度传感器状态</div></td>
+		</tr>
+		<tr>
+			<td>温度值：</td>
+			<td><input name="tempValue" type="text" id="tempValue"></td>
+		</tr>
+		<tr>
+			<td>湿度值：</td>
+			<td><input name="humiValue" type="text" id="humiValue"></td>
+		</tr>
+		<tr>
+			<td>振动：</td>
+			<td><input name="shakeValue" type="text" id="shakeValue"></td>
+		</tr>		
+		<tr id="tipArea" style="height:22px;background-color:red;">
+			<td colspan="2"><div align="center" id="tipLabel" style="color:white;"></div></td>
+		</tr>
+		<tr>
+		
+			<td colspan="2">
+				<div align="center">
+					<label>
+						<input type="button" id="uptate" value="更新" onClick="updateFunc();"></label>
+					<label>
+						<input type="checkbox" id="auto_update" value="checkbox" onClick="updateFunc();">
+					自动更新</label>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<p>&nbsp;</p>
+</BODY>
+</HTML>

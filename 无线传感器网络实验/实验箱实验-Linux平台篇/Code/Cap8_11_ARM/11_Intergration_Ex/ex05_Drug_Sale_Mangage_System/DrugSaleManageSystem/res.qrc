@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pic/title.png</file>
+        <file>pic/shut_down_grayed.png</file>
+        <file>pic/shut_down_normal.png</file>
+        <file>zh_CN.qm</file>
+        <file>pic/delete.png</file>
+        <file>pic/neg.png</file>
+        <file>pic/plus.png</file>
+        <file>pic/point.png</file>
+    </qresource>
+</RCC>

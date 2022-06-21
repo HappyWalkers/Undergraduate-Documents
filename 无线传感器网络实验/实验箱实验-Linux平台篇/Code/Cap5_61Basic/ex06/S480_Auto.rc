@@ -1,0 +1,25 @@
+# Begin Project
+# Begin SubItem "WifiAT  Resources"
+# Begin Source File
+SOURCE=voice\48.48k
+USEPARAM=FALSE
+PARAM=
+ID=RES_48_48K
+EXPORT=3
+# End Source File
+# Begin Source File
+SOURCE=voice\72.72k
+USEPARAM=FALSE
+PARAM=
+ID=RES_72_72K
+EXPORT=3
+# End Source File
+# Begin Source File
+SOURCE=voice\k72.72k
+USEPARAM=FALSE
+PARAM=
+ID=RES_K72_72K
+EXPORT=3
+# End Source File
+# End SubItem
+# End Project

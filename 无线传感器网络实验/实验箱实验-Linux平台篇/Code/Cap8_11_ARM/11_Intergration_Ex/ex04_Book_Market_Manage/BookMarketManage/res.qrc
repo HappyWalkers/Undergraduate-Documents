@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pic/back.png</file>
+        <file>pic/borrow.png</file>
+        <file>pic/manage.png</file>
+        <file>pic/title.png</file>
+        <file>pic/shut_down_grayed.png</file>
+        <file>pic/shut_down_normal.png</file>
+        <file>zh_CN.qm</file>
+    </qresource>
+</RCC>

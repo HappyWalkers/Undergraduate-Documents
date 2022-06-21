@@ -1,0 +1,332 @@
+// GCC for GeneralPlus u'nSP version 1.1.0.3
+// Command: C:\GENERA~1\UNSPID~1.4\toolchain\cc1.exe C:\Users\XIANGX~1.LIU\AppData\Local\Temp\ccKVyA7F.i -fkeep-inline-functions -quiet -dumpbase isr.c -mglobal-var-iram -gstabs -Wall -o .\Debug/isr.asm
+	.external __sn_func_ptr_sec
+
+// gcc2_compiled.:
+
+.debug
+	.dw '.stabs "C:/Users/xiangxiang.liu/Desktop/wifi_hflpb_shake/",0x64,0,3,',0,0,offset Ltext0,seg Ltext0,0x0d,0x0a
+.code
+.debug
+	.dw '.stabs "C:/Users/xiangxiang.liu/Desktop/wifi_hflpb_shake/isr.c",0x64,0,3,',0,0,offset Ltext0,seg Ltext0,0x0d,0x0a
+.code
+.code
+Ltext0:
+.debug
+	.dw '.stabs "int:t1=r1;-32768;32767;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "char:t2=r2;0;127;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "long int:t3=r3;-2147483648;2147483647;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "unsigned int:t4=r4;0;65535;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "long unsigned int:t5=r5;0;4294967295;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "long long int:t6=r6;-2147483648;2147483647;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "long long unsigned int:t7=r7;0;4294967295;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "short int:t8=r8;-32768;32767;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "short unsigned int:t9=r9;0;65535;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "signed char:t10=r10;-32768;32767;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "unsigned char:t11=r11;0;65535;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "float:t12=r1;2;0;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "double:t13=r1;2;0;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "long double:t14=r1;2;0;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "complex int:t15=s2real:1,0,16;imag:1,16,16;;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "complex float:t16=r16;2;0;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "complex double:t17=r17;2;0;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "complex long double:t18=r18;2;0;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "void:t19=19",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "BYTE:t20=11",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "PBYTE:t21=22=*11",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "WORD:t23=4",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "PWORD:t24=25=*4",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "DWORD:t26=5",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "PDWORD:t27=28=*5",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "PVOID:t29=30=*19",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "WaitInfo:T31=s4next:32=*31,0,16;tick:5,16,32;\\",128,0,0,0',0x0d,0x0a
+	.DW '.stabs "flag:1,48,16;;",128,0,0,0',0x0d,0x0a
+.CODE
+.debug
+	.dw '.stabs "WaitInfo:t33=31",128,0,0,0',0x0d,0x0a
+.CODE
+// ISR ATTRIBUTE FUNCTION, LOCATE in .text SECTION
+.text
+.debug
+	.dw '.stabs "IRQ0:F19",36,0,0,',0,0,offset _IRQ0,seg _IRQ0,0x0d,0x0a
+.TEXT
+.public _IRQ0
+_IRQ0:	.proc
+.debug
+	.dw '.stabn 0x44,0,14,',0,0
+	.dd LM1-_IRQ0
+	.dw 0x0d,0x0a
+.text
+LM1:
+	// ISR ATTRIBUTE FUNCTION, PUSH R1,BP
+	PUSH R1,BP to [SP]
+
+	// total=0, vars=0
+	// frame_pointer_needed: 1
+.debug
+	.dw '.stabn 0xa6,0,0,0',0x0d, 0x0a
+.text
+	BP=SP+1
+
+	R1=BP+3
+.debug
+	.dw '.stabn 0x44,0,15,',0,0
+	.dd LM2-_IRQ0
+	.dw 0x0d,0x0a
+.text
+LM2:
+	R3=[28688]	// QImode move
+	R2=R3&16384
+	CMP R2,0	// QImode test
+	NSJZ L3	//QImode EQ
+.debug
+	.dw '.stabn 0x44,0,17,',0,0
+	.dd LM3-_IRQ0
+	.dw 0x0d,0x0a
+.text
+LM3:
+	R2=1	// QImode move
+	[_ugetSensorDataFlag]=R2	// QImode move
+.debug
+	.dw '.stabn 0x44,0,18,',0,0
+	.dd LM4-_IRQ0
+	.dw 0x0d,0x0a
+.text
+LM4:
+	R2=16384	// QImode move
+	[28689]=R2	// QImode move
+L3:
+.debug
+	.dw '.stabn 0x44,0,20,',0,0
+	.dd LM5-_IRQ0
+	.dw 0x0d,0x0a
+.text
+LM5:
+.debug
+	.dw '.stabn 0x44,0,20,',0,0
+	.dd LM6-_IRQ0
+	.dw 0x0d,0x0a
+.text
+LM6:
+L2:
+
+	// ISR ATTRIBUTE FUNCTION, POP R1,BP
+	POP R1,BP from [SP]
+	RETI
+	.endp	// end of IRQ0
+
+.debug
+	.dw '.stabf ',0,0
+	.dd LME1-_IRQ0
+	.dw 0x0d,0x0a
+.text
+LME1:
+// ISR ATTRIBUTE FUNCTION, LOCATE in .text SECTION
+.text
+.debug
+	.dw '.stabs "IRQ4:F19",36,0,0,',0,0,offset _IRQ4,seg _IRQ4,0x0d,0x0a
+.TEXT
+.public _IRQ4
+_IRQ4:	.proc
+.debug
+	.dw '.stabn 0x44,0,24,',0,0
+	.dd LM7-_IRQ4
+	.dw 0x0d,0x0a
+.text
+LM7:
+	// ISR ATTRIBUTE FUNCTION, PUSH R1,BP
+	PUSH R1,BP to [SP]
+
+	// total=1, vars=1
+	// frame_pointer_needed: 1
+.debug
+	.dw '.stabn 0xa6,0,0,1',0x0d, 0x0a
+.text
+	SP-=1
+	BP=SP+1
+
+	R1=BP+4
+	[BP]=R1	// QImode move
+.debug
+	.dw '.stabn 0x44,0,25,',0,0
+	.dd LM8-_IRQ4
+	.dw 0x0d,0x0a
+.text
+LM8:
+	R2=[28688]	// QImode move
+	R1=R2&16
+	CMP R1,0	// QImode test
+	NSJZ L6	//QImode EQ
+.debug
+	.dw '.stabn 0x44,0,27,',0,0
+	.dd LM9-_IRQ4
+	.dw 0x0d,0x0a
+.text
+LM9:
+	CALL _SystemTickISR	// call without return value
+.debug
+	.dw '.stabn 0x44,0,28,',0,0
+	.dd LM10-_IRQ4
+	.dw 0x0d,0x0a
+.text
+LM10:
+	R1=16	// QImode move
+	[28689]=R1	// QImode move
+L6:
+.debug
+	.dw '.stabn 0x44,0,30,',0,0
+	.dd LM11-_IRQ4
+	.dw 0x0d,0x0a
+.text
+LM11:
+.debug
+	.dw '.stabn 0x44,0,30,',0,0
+	.dd LM12-_IRQ4
+	.dw 0x0d,0x0a
+.text
+LM12:
+L5:
+
+	SP+=1
+	// ISR ATTRIBUTE FUNCTION, POP R1,BP
+	POP R1,BP from [SP]
+	RETI
+	.endp	// end of IRQ4
+
+.debug
+	.dw '.stabf ',0,0
+	.dd LME2-_IRQ4
+	.dw 0x0d,0x0a
+.text
+LME2:
+// ISR ATTRIBUTE FUNCTION, LOCATE in .text SECTION
+.text
+.debug
+	.dw '.stabs "IRQ5:F19",36,0,0,',0,0,offset _IRQ5,seg _IRQ5,0x0d,0x0a
+.TEXT
+.public _IRQ5
+_IRQ5:	.proc
+.debug
+	.dw '.stabn 0x44,0,34,',0,0
+	.dd LM13-_IRQ5
+	.dw 0x0d,0x0a
+.text
+LM13:
+	// ISR ATTRIBUTE FUNCTION, PUSH R1,BP
+	PUSH R1,BP to [SP]
+
+	// total=0, vars=0
+	// frame_pointer_needed: 1
+.debug
+	.dw '.stabn 0xa6,0,0,0',0x0d, 0x0a
+.text
+	BP=SP+1
+
+	R1=BP+3
+.debug
+	.dw '.stabn 0x44,0,35,',0,0
+	.dd LM14-_IRQ5
+	.dw 0x0d,0x0a
+.text
+LM14:
+	R3=[28688]	// QImode move
+	R2=R3&4
+	CMP R2,0	// QImode test
+	NSJZ L9	//QImode EQ
+.debug
+	.dw '.stabn 0x44,0,37,',0,0
+	.dd LM15-_IRQ5
+	.dw 0x0d,0x0a
+.text
+LM15:
+	R2=1	// QImode move
+	[28690]=R2	// QImode move
+.debug
+	.dw '.stabn 0x44,0,38,',0,0
+	.dd LM16-_IRQ5
+	.dw 0x0d,0x0a
+.text
+LM16:
+	R2=4	// QImode move
+	[28689]=R2	// QImode move
+L9:
+.debug
+	.dw '.stabn 0x44,0,40,',0,0
+	.dd LM17-_IRQ5
+	.dw 0x0d,0x0a
+.text
+LM17:
+.debug
+	.dw '.stabn 0x44,0,40,',0,0
+	.dd LM18-_IRQ5
+	.dw 0x0d,0x0a
+.text
+LM18:
+L8:
+
+	// ISR ATTRIBUTE FUNCTION, POP R1,BP
+	POP R1,BP from [SP]
+	RETI
+	.endp	// end of IRQ5
+
+.debug
+	.dw '.stabf ',0,0
+	.dd LME3-_IRQ5
+	.dw 0x0d,0x0a
+.text
+LME3:
+.external _SystemTickISR
+.external _ugetSensorDataFlag
+	.end

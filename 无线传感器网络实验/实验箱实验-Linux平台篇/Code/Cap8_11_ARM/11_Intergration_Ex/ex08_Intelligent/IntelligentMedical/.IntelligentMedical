@@ -1,0 +1,10 @@
+INPUT(
+./.obj\main.obj
+./.obj\IntelligentMedicalWidget.obj
+./.obj\BigSpinBoxEdit.obj
+./.obj\TwinklingLabel.obj
+./.obj\moc_IntelligentMedicalWidget.obj
+./.obj\moc_BigSpinBoxEdit.obj
+./.obj\moc_TwinklingLabel.obj
+./.obj\qrc_res.obj
+);

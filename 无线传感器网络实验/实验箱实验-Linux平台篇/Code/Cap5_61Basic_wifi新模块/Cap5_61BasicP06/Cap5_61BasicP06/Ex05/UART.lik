@@ -1,0 +1,12 @@
+Version: 3.0
+Options: m37
+Obj: "C:\Generalplus\unSPIDE 3.0.4\startupcode\startupD.obj"
+Obj: "E:\光盘资料\矩阵试验箱光盘资料V1.1\实验指导书\Code\Cap5_61Basic\Ex05\Debug\main.obj"
+Obj: "E:\光盘资料\矩阵试验箱光盘资料V1.1\实验指导书\Code\Cap5_61Basic\Ex05\Debug\isr.obj"
+Obj: "E:\光盘资料\矩阵试验箱光盘资料V1.1\实验指导书\Code\Cap5_61Basic\Ex05\Debug\Resource.obj"
+Output: "E:\光盘资料\矩阵试验箱光盘资料V1.1\实验指导书\Code\Cap5_61Basic\Ex05\Debug\UART.S37"
+;Locate: unSP_StartUp in "startupD.obj" at 8009 
+;Align: unSP_StartUp in "startupD.obj" with 0 
+;Locate: CODE in "main.obj" at 806C 
+;Align: CODE in "main.obj" with 0 
+;Locate: __sn_init_table at 8000 

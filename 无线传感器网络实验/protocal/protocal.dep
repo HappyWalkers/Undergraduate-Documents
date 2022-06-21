@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>310927723</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\Debug\Exe\protocal.d51</file>
+      <file>$PROJ_DIR$\Debug\Obj\protocal.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\protocal.pbi</file>
+      <file>$PROJ_DIR$\protocal.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\protocal.r51</file>
+      <file>$PROJ_DIR$\APP_Base.c</file>
+      <file>$PROJ_DIR$\irdist.c</file>
+      <file>$PROJ_DIR$\APP_Base.h</file>
+      <file>$PROJ_DIR$\SAPP_Device.c</file>
+      <file>$PROJ_DIR$\SAPP_Device.h</file>
+      <file>$PROJ_DIR$\SAPP_FrameWork.c</file>
+      <file>$PROJ_DIR$\SAPP_FrameWork.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\APP_Base.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\irdist.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\APP_Base.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\irdist.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\SAPP_Device.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\SAPP_FrameWork.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\SAPP_Device.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\SAPP_FrameWork.pbi</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\protocal.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 14 18 19 15 2</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\protocal.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\APP_Base.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 12</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\irdist.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 13</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 15</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9 11</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\SAPP_Device.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 16</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 18</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\SAPP_FrameWork.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 17</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 0</file>
+        </tool>
+      </outputs>
+    </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

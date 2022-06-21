@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pic/gas.png</file>
+        <file>pic/human.png</file>
+        <file>pic/rainUmbrella.png</file>
+        <file>pic/hall.png</file>
+        <file>pic/min_light.png</file>
+        <file>pic/max_light.png</file>
+    </qresource>
+</RCC>

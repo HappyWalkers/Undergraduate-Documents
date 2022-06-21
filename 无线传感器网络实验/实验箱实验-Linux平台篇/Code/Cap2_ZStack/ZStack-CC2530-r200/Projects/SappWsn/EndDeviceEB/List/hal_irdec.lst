@@ -1,0 +1,382 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.10194/W32 for 8051         12/Sep/2018  10:45:47 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Components\hal\target\CC2530EB\hal_irdec.c         #
+#    Command line       =  -f E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\zstack\Tools\CC2530DB\f8wEn #
+#                          dev.cfg (-DCPU32MHZ -DROOT=__near_func             #
+#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
+#                          -DMAC_CFG_RX_MAX=3) -f E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß #
+#                          £©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZSt #
+#                          ack\ZStack-CC2530-r200\Projects\SappWsn\..\zstack\ #
+#                          Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO          #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß #
+#                          £©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZSt #
+#                          ack\ZStack-CC2530-r200\Components\hal\target\CC253 #
+#                          0EB\hal_irdec.c -D NWK_AUTO_POLL -D ZTOOL_P1 -D    #
+#                          xMT_TASK -D xMT_SYS_FUNC -D MT_ZDO_FUNC -D         #
+#                          SAPP_ZSTACK -lC E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È #
+#                          ÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZSt #
+#                          ack-CC2530-r200\Projects\SappWsn\EndDeviceEB\List\ #
+#                           -lA E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—È #
+#                          œ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530- #
+#                          r200\Projects\SappWsn\EndDeviceEB\List\            #
+#                          --diag_suppress Pe001,Pa010 -o                     #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\EndDeviceEB\Obj\ -e               #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û— #
+#                          ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZS #
+#                          tack\ZStack-CC2530-r200\Projects\SappWsn\Source\   #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\zstack\ZMain\TI2530DB\ -I   #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\..\..\Components\hal\include\ -I  #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\..\..\Components\hal\target\CC253 #
+#                          0EB\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\  #
+#                          µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC25 #
+#                          30-r200\Projects\SappWsn\..\..\Components\mac\incl #
+#                          ude\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\  #
+#                          µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC25 #
+#                          30-r200\Projects\SappWsn\..\..\Components\mac\high #
+#                          _level\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº  #
+#                          È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-C #
+#                          C2530-r200\Projects\SappWsn\..\..\Components\mac\l #
+#                          ow_level\srf04\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\  #
+#                          µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ #
+#                          ZStack-CC2530-r200\Projects\SappWsn\..\..\Componen #
+#                          ts\mac\low_level\srf04\single_chip\ -I             #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\..\..\Components\mt\ -I           #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\..\..\Components\osal\include\    #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\..\Components\services\sadd #
+#                          r\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ— #
+#                          Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530 #
+#                          -r200\Projects\SappWsn\..\..\Components\services\s #
+#                          data\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ #
+#                           µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2 #
+#                          530-r200\Projects\SappWsn\..\..\Components\stack\a #
+#                          f\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ— #
+#                          Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530 #
+#                          -r200\Projects\SappWsn\..\..\Components\stack\nwk\ #
+#                           -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ #
+#                          ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r #
+#                          200\Projects\SappWsn\..\..\Components\stack\sapi\  #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\..\Components\stack\sec\    #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\..\Components\stack\sys\    #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\..\Components\stack\zdo\    #
+#                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ #
+#                           µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r2 #
+#                          00\Projects\SappWsn\..\..\Components\zmac\ -I      #
+#                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\..\..\Components\zmac\f8w\ -Ohz   #
+#                          --require_prototypes                               #
+#    List file          =  E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\EndDeviceEB\List\hal_irdec.lst    #
+#    Object file        =  E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ— #
+#                          È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\ #
+#                          Projects\SappWsn\EndDeviceEB\Obj\hal_irdec.r51     #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r200\Components\hal\target\CC2530EB\hal_irdec.c
+      1          /***********************************************************
+      2          **  FileName:         IRDecode.c
+      3          **  Introductions:    IR Remote decode for MCU of CC2530
+      4          **  Last Modify time: 2013.05.03
+      5          **  Update:           ª˘±æΩ‚¬Î≤‚ ‘
+      6          **  Author:           GuoZhenjiang<zhenjiang.guo@sunplusapp.com>
+      7          **  Modify:
+      8          **             2013.05.03   lijian  Change File Name to hal_irdec.c
+      9          ***********************************************************/
+     10          #include <hal_board.h>
+     11          #include "hal_irdec.h"
+     12          #include <string.h>
+     13          
+     14          #if defined(HAL_IRDEC) && (HAL_IRDEC == TRUE)
+     15          static struct {
+     16              uint8 IRIntTskId;
+     17              uint8 IRIntEp;
+     18              OSALIRDecData_t IRCodeTab;
+     19          } IRDecodeRes;
+     20          
+     21          volatile uint8 IROverTimeAdd_En=FALSE, IROverTimeOvf_flg=FALSE;
+     22          volatile uint16 IROverTimeAdd_cnt=0;
+     23          volatile IRDecodeSta_t IRDeodeSta = WaitForGuideTrig1;
+     24          static uint8 cnt_Byte, cnt_bit;     // ”√”⁄øÿ÷∆Ω‚¬Îπ˝≥Ãµƒª˘±æ±‰¡ø
+     25          
+     26          /***********************************************************
+     27          **  ∫Ø ˝√˚≥∆: IRDecodeT1Init
+     28          **   µœ÷π¶ƒ‹: ÷–∂œ∑®Ω¯––∫ÏÕ‚Ω‚¬Î≥ı ºªØπ§◊˜
+     29          **  »Îø⁄≤Œ ˝: None
+     30          **  ∑µªÿΩ·π˚: None
+     31          ***********************************************************/
+     32          void IRDecodeT1Init(uint8 taskid, uint8 ep)
+     33          {
+     34              // ±£¥Ê»ŒŒÒ∫≈∫Õ∂Àµ„∫≈
+     35              IRDecodeRes.IRIntTskId = taskid;
+     36              IRDecodeRes.IRIntEp = ep;
+     37          
+     38              // ≥ı ºªØTimer1
+     39              P1SEL |= 0x04;      // ≈‰÷√P1.2Œ™Timer1µƒÕ‚…Ëπ¶ƒ‹“˝Ω≈
+     40              P1DIR &= ~0x04;     //  ‰»Î≤∂ªÒ“˝Ω≈±ÿ–Î…Ë÷√Œ™ ‰»Î
+     41              PERCFG |= 0x40;     // Timer1’º”√µ⁄2“˝Ω≈Œª÷√(Õ®µ¿0Œ™P1.2)
+     42              P2SEL |= 0x04;      // µ±USART0∫ÕTimer1∑÷≈‰¡Àœ‡Õ¨“˝Ω≈£¨Timer1”≈œ»
+     43          
+     44              // ∂® ±∆˜1≥ı ºªØ
+     45              T1CTL = (uint8)Tdiv_32 | (uint8)Tmod_stop;    // 1MHz,‘›Õ£‘À––
+     46              CLR_T1CNT;                      // «Â¡„∂® ±∆˜1
+     47          
+     48              // Timer1Õ®µ¿0…œ…˝—ÿ ‰»Î≤∂ªÒ…Ë÷√
+     49              T1CCTL0 = 0x01;                 // …œ…˝—ÿ≤∂ªÒ,Õ®µ¿0 ‰»Î≤∂ªÒ÷–∂œŒ¥ πƒ‹,≤È—Ø÷–∂œ±Í÷æº¥ø…
+     50              T1CCTL0 |= 0x40;                // T1CCTL0.IM ∂® ±∆˜1Õ®µ¿0÷–∂œø™πÿ
+     51              T1STAT = 0;
+     52              IEN1 |= 0x02;                   // IEN1.T1IE ∂® ±∆˜1÷–∂œ◊‹ø™πÿ
+     53              EA = 1;                         // IEN0.EA »´æ÷◊‹÷–∂œø™πÿ
+     54          
+     55              // ≥ı ºªØTime4
+     56              P2SEL |= 0x10;  // ∂® ±∆˜4”≈œ»º∂∏ﬂ”⁄∂® ±∆˜1
+     57              T4CTL |= 0xEC;  // 128∑÷∆µ,«Âø’º∆ ˝÷µ,‘ –Ì“Á≥ˆ÷–∂œ,◊‘”…‘À––
+     58              T4CTL |= 0x10;  // ∆Ù∂Ø∂® ±∆˜
+     59              IEN1 |= 0x10;   // ¥Úø™∂® ±∆˜4◊‹÷–∂œ
+     60          }
+     61          
+     62          /***********************************************************
+     63          **  ∫Ø ˝√˚≥∆: Timer1_ISR
+     64          **   µœ÷π¶ƒ‹: Timer1 ÷–∂œ¥¶¿Ì∫Ø ˝,¿˚”√Timer1Õ®µ¿0 ‰»Î≤∂ªÒπ¶ƒ‹ µœ÷∫ÏÕ‚Ω‚¬Î
+     65          **  »Îø⁄≤Œ ˝: None
+     66          **  ∑µªÿΩ·π˚: None
+     67          ***********************************************************/
+     68          HAL_ISR_FUNC_DECLARATION(Timer1_ISR, T1_VECTOR);
+     69          HAL_ISR_FUNCTION(Timer1_ISR, T1_VECTOR)
+     70          {
+     71          #define CLR_T1CH0_IF    T1STAT &= 0xFE
+     72          #define CLR_T1CH1_IF    T1STAT &= 0xFD
+     73          #define CLR_T1OVF_IF    T1STAT &= 0xDF
+     74          #define CLR_T1IF        IRCON &= 0xFD
+     75          
+     76              static uint8 IRdata[15];            // ”√”⁄¥Ê¥¢Ω‚Œˆµƒ∫ÏÕ‚ ˝æ›
+     77              static uint16 tCapture = 0;         // ”√”⁄¥Ê¥¢≈–∂œ√ø∏ˆ≤∂ªÒ÷‹∆⁄
+     78          
+     79              // ∫ÏÕ‚Ω‚¬Î÷–≤∂ªÒµΩ∂® ±∆˜1Õ®µ¿0…œ…˝—ÿ
+     80              if(T1STAT & 0x01)
+     81              {
+     82                  switch(IRDeodeSta)
+     83                  {
+     84                  case WaitForGuideTrig1:
+     85                      IRDeodeSta = WaitForGuideTrig2;
+     86                      CLR_T1CNT;                      // «Â¡„∂® ±∆˜1
+     87                      T1CTL = (uint8)Tdiv_32 | (uint8)Tmod_free;    // 1MHz,◊‘”…º∆ ˝ƒ£ Ω
+     88                      break;
+     89                  case WaitForGuideTrig2:
+     90                      tCapture = T1CC0L;                          // ªÒ»°µ±«∞“ª∏ˆ÷‹∆⁄÷µ
+     91                      tCapture |= (uint16)T1CC0H << 8;
+     92                      CLR_T1CNT;                                  // «Â¡„∂® ±∆˜1
+     93                      T1CTL = (uint8)Tdiv_32 | (uint8)Tmod_free;  // 1MHz,◊‘”…º∆ ˝ƒ£ Ω
+     94                      // »Áπ˚ «“˝µº¬Î4.5ms“˝µº¬ÎªÚ’ﬂ9ms“˝µº¬Î
+     95                      if(((tCapture > T_IR_GUIDE9_MIN) && (tCapture < T_IR_GUIDE9_MAX)) || ((tCapture > T_IR_GUIDE4_MIN) && (tCapture < T_IR_GUIDE4_MAX)))
+     96                      {
+     97                          IRDeodeSta = Decoding;
+     98                          // ◊º±∏Ω‚¬Îπ§◊˜
+     99                          cnt_bit = 0;
+    100                          cnt_Byte = 0;
+    101                      }
+    102                      else
+    103                          IRDeodeSta = WaitForGuideTrig1;
+    104                      IROverTimeAdd_cnt = 0;
+    105                      break;
+    106                  case Decoding:
+    107                      tCapture = T1CC0L;                          // ªÒ»°µ±«∞“ª∏ˆ÷‹∆⁄÷µ
+    108                      tCapture |= (uint16)T1CC0H << 8;
+    109                      CLR_T1CNT;                                  // «Â¡„∂® ±∆˜1
+    110                      T1CTL = (uint8)Tdiv_32 | (uint8)Tmod_free;  // 1MHz,◊‘”…º∆ ˝ƒ£ Ω
+    111                      // Ω” ’µΩŒª0?
+    112                      if((tCapture > T_IR_0_MIN) && (tCapture < T_IR_0_MAX))
+    113                      {
+    114                          IRDeodeSta = Decoding;
+    115                          IROverTimeAdd_cnt = 0;
+    116                          IRdata[cnt_Byte] &= ~(0x80 >> cnt_bit);    // ±£¥Êµ±«∞Œª0
+    117                          cnt_bit++;
+    118                          if(cnt_bit >= 8)    // Ω” ’ÕÍ±œ“ª∏ˆ◊÷Ω⁄
+    119                          {
+    120                              IRDecodeRes.IRCodeTab.irCode[cnt_Byte] = IRdata[cnt_Byte];
+    121                              cnt_bit=0;
+    122                              cnt_Byte++;
+    123                              if(cnt_Byte >= 15)  // ≥¨≥ˆ◊Ó¥ÛΩ” ’∂”¡–≥§∂»
+    124                              {
+    125                                  IRDeodeSta = Decode_BufOverflow;
+    126                                  goto OneIRpkgGot;
+    127                              }
+    128                          }
+    129                      }
+    130                      // Ω” ’µΩŒª1?
+    131                      else if((tCapture > T_IR_1_MIN) && (tCapture < T_IR_1_MAX))
+    132                      {
+    133                          IRDeodeSta = Decoding;
+    134                          IROverTimeAdd_cnt = 0;
+    135                          IRdata[cnt_Byte] |= 0x80 >> cnt_bit;    // ±£¥Êµ±«∞Œª0
+    136                          cnt_bit++;
+    137                          if(cnt_bit >= 8)    // Ω” ’ÕÍ±œ“ª∏ˆ◊÷Ω⁄
+    138                          {
+    139                              IRDecodeRes.IRCodeTab.irCode[cnt_Byte] = IRdata[cnt_Byte];
+    140                              cnt_bit=0;
+    141                              cnt_Byte++;
+    142                              if(cnt_Byte >= 15)  // ≥¨≥ˆ◊Ó¥ÛΩ” ’∂”¡–≥§∂»
+    143                              {
+    144                                  IRDeodeSta = Decode_BufOverflow;
+    145                                  goto OneIRpkgGot;
+    146                              }
+    147                          }
+    148                      }
+    149                      // √ª”–≥¨ ±,≤ª «Œª0,≤ª «Œª1,≥ˆ¥Ì???
+    150                      else
+    151                      {
+    152                          IRDeodeSta = Decode_OverUnknow;
+    153                          goto OneIRpkgGot;
+    154                      }
+    155                      break;
+    156                  default :
+    157                      IRDeodeSta = WaitForGuideTrig1;
+    158                      break;
+    159                  }
+    160              OneIRpkgGot:
+    161                  {
+    162                      switch(IRDeodeSta)     // “ª¥Œ∫ÏÕ‚Ω‚¬ÎΩ· ¯
+    163                      {
+    164                          // ¥¶¿Ì Ω” ’∂”¡–“Á≥ˆµº÷¬Ω‚¬ÎΩ· ¯
+    165                      case Decode_BufOverflow:
+    166                          // ¥¶¿Ì Œ¥÷™‘≠“Úµº÷¬Ω‚¬ÎΩ· ¯
+    167                      case Decode_OverUnknow:
+    168                          IROverTimeAdd_cnt = 0;
+    169                          IRDecodeRes.IRCodeTab.irLen = cnt_Byte;
+    170                          cnt_bit = 0;
+    171                          cnt_Byte = 0;
+    172                          OSALIRDecIntData_t* T1Ch0IntData;
+    173                          T1Ch0IntData = (OSALIRDecIntData_t *)osal_msg_allocate(sizeof(OSALIRDecIntData_t));
+    174                          T1Ch0IntData->hdr.event = IRDEC_INT_EVENT;
+    175                          T1Ch0IntData->endPoint = IRDecodeRes.IRIntEp;
+    176                          T1Ch0IntData->data = &IRDecodeRes.IRCodeTab;
+    177                          osal_msg_send(IRDecodeRes.IRIntTskId, (uint8*)(T1Ch0IntData));
+    178                          IRDeodeSta = WaitForGuideTrig1;
+    179                          break;
+    180                      default :
+    181                          break;
+    182                      }
+    183                  }
+    184                  CLR_T1CH0_IF;         // «Â≥˝Õ®µ¿0 ‰»Î≤∂ªÒ÷–∂œ±Í÷æ
+    185              }
+    186              CLR_T1IF;         // «Â≥˝T1IF
+    187           }
+    188          
+    189          /***********************************************************
+    190          **  ∫Ø ˝√˚≥∆: Timer4_ISR
+    191          **   µœ÷π¶ƒ‹: Timer4 ÷–∂œ¥¶¿Ì∫Ø ˝,¿˚”√Timer1Õ®µ¿0 ‰»Î≤∂ªÒπ¶ƒ‹ µœ÷∫ÏÕ‚Ω‚¬Î
+    192          **  »Îø⁄≤Œ ˝: None
+    193          **  ∑µªÿΩ·π˚: None
+    194          ***********************************************************/
+    195          HAL_ISR_FUNC_DECLARATION(Timer4_ISR, T4_VECTOR);
+    196          HAL_ISR_FUNCTION(Timer4_ISR, T4_VECTOR)
+    197          {
+    198              // (32MHz / 128) T = 4us; f = 250000Hz;
+    199              switch(IRDeodeSta)
+    200              {
+    201                  // µ»¥˝µ⁄∂˛¥Œ¥•∑¢,ºÏ≤‚“˝µº¬Î «∑Ò≥¨ ±
+    202              case WaitForGuideTrig2:
+    203                  IROverTimeAdd_cnt++;
+    204                  if(IROverTimeAdd_cnt >= 16)   // ‘º16msƒ⁄√ª”–«Â¡„
+    205                  {
+    206                      IROverTimeAdd_cnt = 0;
+    207                      IRDeodeSta = WaitForGuideTrig1;
+    208                  }
+    209                  break;
+    210                  // Œª0 Œª1 Ω‚¬Î÷–,ºÏ≤‚ «∑ÒΩ‚¬Î≥¨ ±
+    211              case Decoding:
+    212                  IROverTimeAdd_cnt++;
+    213                  if(IROverTimeAdd_cnt >= 5)   // 4msƒ⁄√ª”–«Â¡„
+    214                  {
+    215                      IROverTimeAdd_cnt = 0;
+    216                      IRDecodeRes.IRCodeTab.irLen = cnt_Byte;
+    217                      cnt_bit = 0;
+    218                      cnt_Byte = 0;
+    219                      OSALIRDecIntData_t* T4OvfIntData;
+    220                      T4OvfIntData = (OSALIRDecIntData_t *)osal_msg_allocate(sizeof(OSALIRDecIntData_t));
+    221                      T4OvfIntData->hdr.event = IRDEC_INT_EVENT;
+    222                      T4OvfIntData->endPoint = IRDecodeRes.IRIntEp;
+    223                      T4OvfIntData->data = &IRDecodeRes.IRCodeTab;
+    224                      osal_msg_send(IRDecodeRes.IRIntTskId, (uint8*)(T4OvfIntData));
+    225                      IRDeodeSta = WaitForGuideTrig1;
+    226                  }
+    227                  break;
+    228              default :
+    229                  IROverTimeAdd_cnt = 0;
+    230                  break;
+    231              }
+    232              T4OVFIF = 0;    // «Â≥˝∂® ±∆˜4“Á≥ˆ÷–∂œ±Í÷æ
+    233              T4IF = 0;       // «Â≥˝∂® ±∆˜4◊‹÷–∂œ±Í÷æ
+    234          }
+    235          #endif  //#if defined(HAL_IRDEC) && (HAL_IRDEC == TRUE)
+
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

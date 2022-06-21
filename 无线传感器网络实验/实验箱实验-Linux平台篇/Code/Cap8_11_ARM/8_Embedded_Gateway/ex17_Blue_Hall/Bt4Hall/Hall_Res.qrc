@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pic/secure.png</file>
+        <file>pic/hall.png</file>
+    </qresource>
+</RCC>

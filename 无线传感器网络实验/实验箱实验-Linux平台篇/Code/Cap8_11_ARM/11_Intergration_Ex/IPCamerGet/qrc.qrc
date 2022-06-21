@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>src/kuang.png</file>
+    </qresource>
+</RCC>

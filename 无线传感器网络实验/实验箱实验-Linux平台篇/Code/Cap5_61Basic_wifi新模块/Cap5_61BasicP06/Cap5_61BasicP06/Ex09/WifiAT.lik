@@ -1,0 +1,176 @@
+Version: 3.0
+Options: m37
+Obj: "C:\Generalplus\unSPIDE 3.0.4\startupcode\startupD.obj"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\Resource.obj"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\main.obj"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\isr.obj"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\uart.obj"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\wifi.obj"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\SystemTime.obj"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\isr_yuyin.obj"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\Sound.obj"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\hardware.obj"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\at_finish_72k.res"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\fail_72k.res"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\lianjie_72k.res"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\success_72k.res"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\status_inq_72k.res"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\ass_72k.res"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\cur_net_72k.res"
+Obj: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\no_ass_72k.res"
+Lib: "C:\Generalplus\unSPIDE 3.0.4\library\CMacro\CMacro1016.lib"
+Lib: "C:\Generalplus\unSPIDE 3.0.4\library\CLib16\lib\CLib.lib"
+Lib: "C:\Users\xiangxiang.liu\Desktop\Ex09\.\sacmv26e.lib"
+Lib: "C:\Generalplus\unSPIDE 3.0.4\library\CLib16\lib\libmem.lib"
+Output: "C:\Users\xiangxiang.liu\Desktop\Ex09\Debug\WifiAT.S37"
+;Locate: unSP_StartUp in "startupD.obj" at 8009 
+;Align: unSP_StartUp in "startupD.obj" with 0 
+;Locate: IRAM in "uart.obj" at B9C8  linkat 1A4 
+;Align: IRAM in "uart.obj" with 0 
+;Locate: IRAM in "wifi.obj" at B9C9  linkat 1A5 
+;Align: IRAM in "wifi.obj" with 0 
+;Locate: IRAM in "SystemTime.obj" at BCF3  linkat 4CF 
+;Align: IRAM in "SystemTime.obj" with 0 
+;Locate: IRAM in "hardware.obj" at BCF6  linkat 4D2 
+;Align: IRAM in "hardware.obj" with 0 
+;Locate: IRAM in "S480" of "sacmv26e.lib"  at BD88  linkat 564 
+;Align: IRAM in "S480" of "sacmv26e.lib"  with 0 
+;Locate: IRAM in "./reent/impure" of "CLib.lib"  at BD8A  linkat 566 
+;Align: IRAM in "./reent/impure" of "CLib.lib"  with 0 
+;Locate: IRAM in "./memory/malloc" of "libmem.lib"  at BD8F  linkat 56B 
+;Align: IRAM in "./memory/malloc" of "libmem.lib"  with 0 
+;Locate: IRAM in "./memory/init_heap" of "libmem.lib"  at BD90  linkat 56C 
+;Align: IRAM in "./memory/init_heap" of "libmem.lib"  with 0 
+;Locate: OVERLAP_RAM_BLOCK in "S480" of "sacmv26e.lib"  at 1 
+;Align: OVERLAP_RAM_BLOCK in "S480" of "sacmv26e.lib"  with 0 
+;Locate: CODE in "main.obj" at AFFF 
+;Align: CODE in "main.obj" with 0 
+;Locate: CODE in "uart.obj" at B0B8 
+;Align: CODE in "uart.obj" with 0 
+;Locate: CODE in "wifi.obj" at 8758 
+;Align: CODE in "wifi.obj" with 0 
+;Locate: CODE in "SystemTime.obj" at A4D4 
+;Align: CODE in "SystemTime.obj" with 0 
+;Locate: CODE in "Sound.obj" at B799 
+;Align: CODE in "Sound.obj" with 0 
+;Locate: CODE in "hardware.obj" at A8B3 
+;Align: CODE in "hardware.obj" with 0 
+;Locate: __sn_section_RES_AT_FINISH_72K in "at_finish_72k.res" at BD92 
+;Align: __sn_section_RES_AT_FINISH_72K in "at_finish_72k.res" with 0 
+;Locate: __sn_section_RES_FAIL_72K in "fail_72k.res" at CE00 
+;Align: __sn_section_RES_FAIL_72K in "fail_72k.res" with 0 
+;Locate: __sn_section_RES_LIANJIE_72K in "lianjie_72k.res" at CAF4 
+;Align: __sn_section_RES_LIANJIE_72K in "lianjie_72k.res" with 0 
+;Locate: __sn_section_RES_SUCCESS_72K in "success_72k.res" at CC7A 
+;Align: __sn_section_RES_SUCCESS_72K in "success_72k.res" with 0 
+;Locate: __sn_section_RES_STATUS_INQ_72K in "status_inq_72k.res" at C1E8 
+;Align: __sn_section_RES_STATUS_INQ_72K in "status_inq_72k.res" with 0 
+;Locate: __sn_section_RES_ASS_72K in "ass_72k.res" at C953 
+;Align: __sn_section_RES_ASS_72K in "ass_72k.res" with 0 
+;Locate: __sn_section_RES_CUR_NET_72K in "cur_net_72k.res" at C4CD 
+;Align: __sn_section_RES_CUR_NET_72K in "cur_net_72k.res" with 0 
+;Locate: __sn_section_RES_NO_ASS_72K in "no_ass_72k.res" at C7A9 
+;Align: __sn_section_RES_NO_ASS_72K in "no_ass_72k.res" with 0 
+;Locate: CODE in "./blockcopy" of "CMacro1016.lib"  at B9AB 
+;Align: CODE in "./blockcopy" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./string/strncpy" of "CLib.lib"  at B8D7 
+;Align: CODE in "./string/strncpy" of "CLib.lib"  with 0 
+;Locate: CODE in "./string/strcpy" of "CLib.lib"  at B985 
+;Align: CODE in "./string/strcpy" of "CLib.lib"  with 0 
+;Locate: CODE in "./string/strchr" of "CLib.lib"  at B918 
+;Align: CODE in "./string/strchr" of "CLib.lib"  with 0 
+;Locate: CODE in "./string/strncmp" of "CLib.lib"  at B8A7 
+;Align: CODE in "./string/strncmp" of "CLib.lib"  with 0 
+;Locate: CODE in "./string/strlen" of "CLib.lib"  at B99F 
+;Align: CODE in "./string/strlen" of "CLib.lib"  with 0 
+;Locate: CODE in "./stdio/sprintf" of "CLib.lib"  at B92A 
+;Align: CODE in "./stdio/sprintf" of "CLib.lib"  with 0 
+;Locate: CODE in "./string/memset" of "CLib.lib"  at B93C 
+;Align: CODE in "./string/memset" of "CLib.lib"  with 0 
+;Locate: CODE in "./string/strncasecmp" of "CLib.lib"  at B7F1 
+;Align: CODE in "./string/strncasecmp" of "CLib.lib"  with 0 
+;Locate: CODE in "S480" of "sacmv26e.lib"  at 9ADE 
+;Align: CODE in "S480" of "sacmv26e.lib"  with 0 
+;Locate: CODE in "./stdio/vsprintf" of "CLib.lib"  at B8EE 
+;Align: CODE in "./stdio/vsprintf" of "CLib.lib"  with 0 
+;Locate: CODE in "./stdio/vsnprintf" of "CLib.lib"  at B1F4 
+;Align: CODE in "./stdio/vsnprintf" of "CLib.lib"  with 0 
+;Locate: CODE in "./stdio/__v_printf" of "CLib.lib"  at 9231 
+;Align: CODE in "./stdio/__v_printf" of "CLib.lib"  with 0 
+;Locate: CODE in "./stdio/__dtostrex" of "CLib.lib"  at A6D2 
+;Align: CODE in "./stdio/__dtostrex" of "CLib.lib"  with 0 
+;Locate: CODE in "./stdlib/__ltostr" of "CLib.lib"  at B162 
+;Align: CODE in "./stdlib/__ltostr" of "CLib.lib"  with 0 
+;Locate: CODE in "./stdlib/strtol" of "CLib.lib"  at AA8C 
+;Align: CODE in "./stdlib/strtol" of "CLib.lib"  with 0 
+;Locate: CODE in "./stdlib/strtoul" of "CLib.lib"  at AEB2 
+;Align: CODE in "./stdlib/strtoul" of "CLib.lib"  with 0 
+;Locate: CODE in "./cmpf2" of "CMacro1016.lib"  at B51C 
+;Align: CODE in "./cmpf2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./memory/free" of "libmem.lib"  at B4D1 
+;Align: CODE in "./memory/free" of "libmem.lib"  with 0 
+;Locate: CODE in "./libm/sf_isinf" of "CLib.lib"  at B73D 
+;Align: CODE in "./libm/sf_isinf" of "CLib.lib"  with 0 
+;Locate: CODE in "./libm/sf_isnan" of "CLib.lib"  at B70D 
+;Align: CODE in "./libm/sf_isnan" of "CLib.lib"  with 0 
+;Locate: CODE in "./stdlib/cvt" of "CLib.lib"  at A1E7 
+;Align: CODE in "./stdlib/cvt" of "CLib.lib"  with 0 
+;Locate: CODE in "./divi1" of "CMacro1016.lib"  at B462 
+;Align: CODE in "./divi1" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./modi1" of "CMacro1016.lib"  at B3ED 
+;Align: CODE in "./modi1" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./string/memmove" of "CLib.lib"  at B5AF 
+;Align: CODE in "./string/memmove" of "CLib.lib"  with 0 
+;Locate: CODE in "./divu2" of "CMacro1016.lib"  at B300 
+;Align: CODE in "./divu2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./modu2" of "CMacro1016.lib"  at B377 
+;Align: CODE in "./modu2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./ctype/isupper" of "CLib.lib"  at B94C 
+;Align: CODE in "./ctype/isupper" of "CLib.lib"  with 0 
+;Locate: CODE in "./ctype/isalpha" of "CLib.lib"  at B903 
+;Align: CODE in "./ctype/isalpha" of "CLib.lib"  with 0 
+;Locate: CODE in "./ctype/isdigit" of "CLib.lib"  at B978 
+;Align: CODE in "./ctype/isdigit" of "CLib.lib"  with 0 
+;Locate: CODE in "./ctype/isspace" of "CLib.lib"  at B95B 
+;Align: CODE in "./ctype/isspace" of "CLib.lib"  with 0 
+;Locate: CODE in "./muliu2" of "CMacro1016.lib"  at B8C0 
+;Align: CODE in "./muliu2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./memory/malloc" of "libmem.lib"  at B284 
+;Align: CODE in "./memory/malloc" of "libmem.lib"  with 0 
+;Locate: CODE in "./libm/frexp" of "CLib.lib"  at B76B 
+;Align: CODE in "./libm/frexp" of "CLib.lib"  with 0 
+;Locate: CODE in "./mulf2" of "CMacro1016.lib"  at ABF0 
+;Align: CODE in "./mulf2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./addsubf2" of "CMacro1016.lib"  at AD52 
+;Align: CODE in "./addsubf2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./cvi1f2" of "CMacro1016.lib"  at B66B 
+;Align: CODE in "./cvi1f2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./cvf2i1" of "CMacro1016.lib"  at B5F2 
+;Align: CODE in "./cvf2i1" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./negf2" of "CMacro1016.lib"  at B9C1 
+;Align: CODE in "./negf2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./clz" of "CMacro1016.lib"  at B566 
+;Align: CODE in "./clz" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./__divi16_n" of "CMacro1016.lib"  at B9B7 
+;Align: CODE in "./__divi16_n" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./lshiu1" of "CMacro1016.lib"  at B864 
+;Align: CODE in "./lshiu1" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./rshu1" of "CMacro1016.lib"  at B842 
+;Align: CODE in "./rshu1" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./__divi32_n" of "CMacro1016.lib"  at B81A 
+;Align: CODE in "./__divi32_n" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./lshiu2" of "CMacro1016.lib"  at B631 
+;Align: CODE in "./lshiu2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./__modi32_n" of "CMacro1016.lib"  at B7C5 
+;Align: CODE in "./__modi32_n" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./mul_r_r_uu" of "CMacro1016.lib"  at B96A 
+;Align: CODE in "./mul_r_r_uu" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./memory/init_heap" of "libmem.lib"  at B992 
+;Align: CODE in "./memory/init_heap" of "libmem.lib"  with 0 
+;Locate: CODE in "./__rshu2_r" of "CMacro1016.lib"  at B6A3 
+;Align: CODE in "./__rshu2_r" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./__u2fd1bit" of "CMacro1016.lib"  at B886 
+;Align: CODE in "./__u2fd1bit" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./rshu2" of "CMacro1016.lib"  at B6DA 
+;Align: CODE in "./rshu2" of "CMacro1016.lib"  with 0 
+;Locate: __sn_init_table at 8000 

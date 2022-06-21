@@ -1,0 +1,20 @@
+#include "ioCC2530.h"
+
+void main(){
+    P1SEL=0;
+    P1DIR=2;
+    P2SEL=0;
+    P2DIR=1;
+    while(1){
+        P1_1=0;
+        P2_0=1;
+        for(int i=1;i<100;i++){
+          for(int b=1;b<1000;b++){} 
+        }
+        P1_1=1;
+        P2_0=0;
+        for(int i=1;i<100;i++){
+          for(int b=1;b<1000;b++){} 
+        }
+    }
+}

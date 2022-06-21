@@ -1,0 +1,146 @@
+Version: 3.0
+Options: m37
+Obj: "C:\Generalplus\unSPIDE 3.0.4\startupcode\startupD.obj"
+Obj: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic_wifi新模块\Cap5_61BasicP06\Cap5_61BasicP06\wifi_hflpb_shake\Debug\Resource.obj"
+Obj: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic_wifi新模块\Cap5_61BasicP06\Cap5_61BasicP06\wifi_hflpb_shake\Debug\main.obj"
+Obj: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic_wifi新模块\Cap5_61BasicP06\Cap5_61BasicP06\wifi_hflpb_shake\Debug\isr.obj"
+Obj: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic_wifi新模块\Cap5_61BasicP06\Cap5_61BasicP06\wifi_hflpb_shake\Debug\uart.obj"
+Obj: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic_wifi新模块\Cap5_61BasicP06\Cap5_61BasicP06\wifi_hflpb_shake\Debug\wifi.obj"
+Obj: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic_wifi新模块\Cap5_61BasicP06\Cap5_61BasicP06\wifi_hflpb_shake\Debug\SystemTime.obj"
+Obj: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic_wifi新模块\Cap5_61BasicP06\Cap5_61BasicP06\wifi_hflpb_shake\Debug\wifi_pkgman.obj"
+Obj: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic_wifi新模块\Cap5_61BasicP06\Cap5_61BasicP06\wifi_hflpb_shake\Debug\shake.obj"
+Lib: "C:\Generalplus\unSPIDE 3.0.4\library\CLib16\lib\clib.lib"
+Lib: "C:\Generalplus\unSPIDE 3.0.4\library\CMacro\CMacro1016.lib"
+Lib: "C:\Generalplus\unSPIDE 3.0.4\library\CLib16\lib\libmem.lib"
+Output: "E:\光盘资料V1.2.0（中南大学）\实验指导书\实验箱实验-Linux平台篇\Code\Cap5_61Basic_wifi新模块\Cap5_61BasicP06\Cap5_61BasicP06\wifi_hflpb_shake\Debug\wifi_hflpb_shake.S37"
+;Locate: unSP_StartUp in "startupD.obj" at 8009 
+;Align: unSP_StartUp in "startupD.obj" with 0 
+;Locate: IRAM in "main.obj" at AEF0  linkat 1 
+;Align: IRAM in "main.obj" with 0 
+;Locate: IRAM in "uart.obj" at AEF2  linkat 3 
+;Align: IRAM in "uart.obj" with 0 
+;Locate: IRAM in "wifi.obj" at AEF3  linkat 4 
+;Align: IRAM in "wifi.obj" with 0 
+;Locate: IRAM in "SystemTime.obj" at B21D  linkat 32E 
+;Align: IRAM in "SystemTime.obj" with 0 
+;Locate: IRAM in "wifi_pkgman.obj" at B220  linkat 331 
+;Align: IRAM in "wifi_pkgman.obj" with 0 
+;Locate: IRAM in "./memory/malloc" of "libmem.lib"  at B2E8  linkat 3F9 
+;Align: IRAM in "./memory/malloc" of "libmem.lib"  with 0 
+;Locate: IRAM in "./memory/init_heap" of "libmem.lib"  at B2E9  linkat 3FA 
+;Align: IRAM in "./memory/init_heap" of "libmem.lib"  with 0 
+;Locate: IRAM in "./reent/impure" of "clib.lib"  at B2EB  linkat 3FC 
+;Align: IRAM in "./reent/impure" of "clib.lib"  with 0 
+;Locate: CODE in "main.obj" at 9A7E 
+;Align: CODE in "main.obj" with 0 
+;Locate: CODE in "uart.obj" at A5D7 
+;Align: CODE in "uart.obj" with 0 
+;Locate: CODE in "wifi.obj" at 8C62 
+;Align: CODE in "wifi.obj" with 0 
+;Locate: CODE in "SystemTime.obj" at 9C85 
+;Align: CODE in "SystemTime.obj" with 0 
+;Locate: CODE in "wifi_pkgman.obj" at 93EF 
+;Align: CODE in "wifi_pkgman.obj" with 0 
+;Locate: CODE in "shake.obj" at ABF9 
+;Align: CODE in "shake.obj" with 0 
+;Locate: CODE in "./string/strncasecmp" of "clib.lib"  at AD19 
+;Align: CODE in "./string/strncasecmp" of "clib.lib"  with 0 
+;Locate: CODE in "./blockcopy" of "CMacro1016.lib"  at AED3 
+;Align: CODE in "./blockcopy" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./string/strncpy" of "clib.lib"  at ADE8 
+;Align: CODE in "./string/strncpy" of "clib.lib"  with 0 
+;Locate: CODE in "./string/strcpy" of "clib.lib"  at AEAD 
+;Align: CODE in "./string/strcpy" of "clib.lib"  with 0 
+;Locate: CODE in "./string/strchr" of "clib.lib"  at AE40 
+;Align: CODE in "./string/strchr" of "clib.lib"  with 0 
+;Locate: CODE in "./string/strncmp" of "clib.lib"  at ADCF 
+;Align: CODE in "./string/strncmp" of "clib.lib"  with 0 
+;Locate: CODE in "./stdio/sprintf" of "clib.lib"  at AE52 
+;Align: CODE in "./stdio/sprintf" of "clib.lib"  with 0 
+;Locate: CODE in "./string/memset" of "clib.lib"  at AE64 
+;Align: CODE in "./string/memset" of "clib.lib"  with 0 
+;Locate: CODE in "./memory/free" of "libmem.lib"  at A9F0 
+;Align: CODE in "./memory/free" of "libmem.lib"  with 0 
+;Locate: CODE in "./stdio/vsprintf" of "clib.lib"  at AE2B 
+;Align: CODE in "./stdio/vsprintf" of "clib.lib"  with 0 
+;Locate: CODE in "./memory/malloc" of "libmem.lib"  at A7A3 
+;Align: CODE in "./memory/malloc" of "libmem.lib"  with 0 
+;Locate: CODE in "./stdio/vsnprintf" of "clib.lib"  at A713 
+;Align: CODE in "./stdio/vsnprintf" of "clib.lib"  with 0 
+;Locate: CODE in "./memory/init_heap" of "libmem.lib"  at AEBA 
+;Align: CODE in "./memory/init_heap" of "libmem.lib"  with 0 
+;Locate: CODE in "./stdio/__v_printf" of "clib.lib"  at 83B5 
+;Align: CODE in "./stdio/__v_printf" of "clib.lib"  with 0 
+;Locate: CODE in "./stdio/__dtostrex" of "clib.lib"  at 9E83 
+;Align: CODE in "./stdio/__dtostrex" of "clib.lib"  with 0 
+;Locate: CODE in "./stdlib/__ltostr" of "clib.lib"  at A681 
+;Align: CODE in "./stdlib/__ltostr" of "clib.lib"  with 0 
+;Locate: CODE in "./string/strlen" of "clib.lib"  at AEC7 
+;Align: CODE in "./string/strlen" of "clib.lib"  with 0 
+;Locate: CODE in "./stdlib/strtol" of "clib.lib"  at A064 
+;Align: CODE in "./stdlib/strtol" of "clib.lib"  with 0 
+;Locate: CODE in "./stdlib/strtoul" of "clib.lib"  at A48A 
+;Align: CODE in "./stdlib/strtoul" of "clib.lib"  with 0 
+;Locate: CODE in "./cmpf2" of "CMacro1016.lib"  at AA3B 
+;Align: CODE in "./cmpf2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./libm/sf_isinf" of "clib.lib"  at AC91 
+;Align: CODE in "./libm/sf_isinf" of "clib.lib"  with 0 
+;Locate: CODE in "./libm/sf_isnan" of "clib.lib"  at AC61 
+;Align: CODE in "./libm/sf_isnan" of "clib.lib"  with 0 
+;Locate: CODE in "./stdlib/cvt" of "clib.lib"  at 9791 
+;Align: CODE in "./stdlib/cvt" of "clib.lib"  with 0 
+;Locate: CODE in "./divi1" of "CMacro1016.lib"  at A981 
+;Align: CODE in "./divi1" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./modi1" of "CMacro1016.lib"  at A90C 
+;Align: CODE in "./modi1" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./string/memmove" of "clib.lib"  at AACE 
+;Align: CODE in "./string/memmove" of "clib.lib"  with 0 
+;Locate: CODE in "./divu2" of "CMacro1016.lib"  at A81F 
+;Align: CODE in "./divu2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./modu2" of "CMacro1016.lib"  at A896 
+;Align: CODE in "./modu2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./ctype/isupper" of "clib.lib"  at AE83 
+;Align: CODE in "./ctype/isupper" of "clib.lib"  with 0 
+;Locate: CODE in "./ctype/isalpha" of "clib.lib"  at AE16 
+;Align: CODE in "./ctype/isalpha" of "clib.lib"  with 0 
+;Locate: CODE in "./ctype/isdigit" of "clib.lib"  at AEA0 
+;Align: CODE in "./ctype/isdigit" of "clib.lib"  with 0 
+;Locate: CODE in "./ctype/isspace" of "clib.lib"  at AE74 
+;Align: CODE in "./ctype/isspace" of "clib.lib"  with 0 
+;Locate: CODE in "./muliu2" of "CMacro1016.lib"  at ADFF 
+;Align: CODE in "./muliu2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./libm/frexp" of "clib.lib"  at ACBF 
+;Align: CODE in "./libm/frexp" of "clib.lib"  with 0 
+;Locate: CODE in "./mulf2" of "CMacro1016.lib"  at A1C8 
+;Align: CODE in "./mulf2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./addsubf2" of "CMacro1016.lib"  at A32A 
+;Align: CODE in "./addsubf2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./cvi1f2" of "CMacro1016.lib"  at AB8A 
+;Align: CODE in "./cvi1f2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./cvf2i1" of "CMacro1016.lib"  at AB11 
+;Align: CODE in "./cvf2i1" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./negf2" of "CMacro1016.lib"  at AEE9 
+;Align: CODE in "./negf2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./clz" of "CMacro1016.lib"  at AA85 
+;Align: CODE in "./clz" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./__divi16_n" of "CMacro1016.lib"  at AEDF 
+;Align: CODE in "./__divi16_n" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./lshiu1" of "CMacro1016.lib"  at AD8C 
+;Align: CODE in "./lshiu1" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./rshu1" of "CMacro1016.lib"  at AD6A 
+;Align: CODE in "./rshu1" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./__divi32_n" of "CMacro1016.lib"  at AD42 
+;Align: CODE in "./__divi32_n" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./lshiu2" of "CMacro1016.lib"  at AB50 
+;Align: CODE in "./lshiu2" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./__modi32_n" of "CMacro1016.lib"  at ACED 
+;Align: CODE in "./__modi32_n" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./mul_r_r_uu" of "CMacro1016.lib"  at AE92 
+;Align: CODE in "./mul_r_r_uu" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./__rshu2_r" of "CMacro1016.lib"  at ABC2 
+;Align: CODE in "./__rshu2_r" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./__u2fd1bit" of "CMacro1016.lib"  at ADAE 
+;Align: CODE in "./__u2fd1bit" of "CMacro1016.lib"  with 0 
+;Locate: CODE in "./rshu2" of "CMacro1016.lib"  at AC2E 
+;Align: CODE in "./rshu2" of "CMacro1016.lib"  with 0 
+;Locate: __sn_init_table at 8000 

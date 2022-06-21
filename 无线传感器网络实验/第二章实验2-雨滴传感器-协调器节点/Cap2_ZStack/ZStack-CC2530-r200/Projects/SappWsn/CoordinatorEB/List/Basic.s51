@@ -1,0 +1,1188 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V8.10.1.10194/W32 for 8051        04/Jun/2021  11:36:49 /
+// Copyright 2004-2011 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap1_Basic\Ex04_PC_UART\Sourc /
+//                          e\Basic.c                                         /
+//    Command line       =  -f E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ /
+//                          ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530- /
+//                          r200\Projects\SappWsn\..\zstack\Tools\CC2530DB\f8 /
+//                          wCoord.cfg (-DCPU32MHZ -DROOT=__near_func         /
+//                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                  /
+//                          -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8        /
+//                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)   /
+//                          -f E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ /
+//                          ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530- /
+//                          r200\Projects\SappWsn\..\zstack\Tools\CC2530DB\f8 /
+//                          wConfig.cfg (-DZIGBEEPRO -DSECURE=0               /
+//                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                 /
+//                          -DDEFAULT_CHANLIST=0x00000800                     /
+//                          -DZDAPP_CONFIG_PAN_ID=0x4327                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=100             /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DLINK_STATUS_JITTER_MASK=0x007F                  /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07, 0x09,     /
+//                          0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08,   /
+//                          0x0A, 0x0C, 0x0D}" -DMAC_MAX_FRAME_SIZE=116       /
+//                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
+//                          __code" -DGENERIC=__generic                       /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
+//                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
+//                          -DREJOIN_POLL_RATE=440 E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û— /
+//                          ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap1_B /
+//                          asic\Ex04_PC_UART\Source\Basic.c -D ZTOOL_P1 -D   /
+//                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D          /
+//                          SAPP_ZSTACK -lC E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ— /
+//                          È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\Z /
+//                          Stack-CC2530-r200\Projects\SappWsn\CoordinatorEB\ /
+//                          List\ -lA E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº  /
+//                          È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack- /
+//                          CC2530-r200\Projects\SappWsn\CoordinatorEB\List\  /
+//                          --diag_suppress Pe001,Pa010 -o                    /
+//                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\CoordinatorEB\Obj\ -e          /
+//                          --no_code_motion --debug --core=plain             /
+//                          --dptr=16,1 --data_model=large                    /
+//                          --code_model=banked --calling_convention=xdata_re /
+//                          entrant --place_constants=data_rom                /
+//                          --nr_virtual_regs 16 -I                           /
+//                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û— /
+//                          ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_Z /
+//                          Stack\ZStack-CC2530-r200\Projects\SappWsn\Source\ /
+//                           -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—È /
+//                          œ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530 /
+//                          -r200\Projects\SappWsn\..\zstack\ZMain\TI2530DB\  /
+//                          -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ /
+//                          ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530- /
+//                          r200\Projects\SappWsn\..\..\Components\hal\includ /
+//                          e\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ /
+//                          —Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC25 /
+//                          30-r200\Projects\SappWsn\..\..\Components\hal\tar /
+//                          get\CC2530EB\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ /
+//                          —È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ /
+//                          ZStack-CC2530-r200\Projects\SappWsn\..\..\Compone /
+//                          nts\mac\include\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£© /
+//                          \ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZSta /
+//                          ck\ZStack-CC2530-r200\Projects\SappWsn\..\..\Comp /
+//                          onents\mac\high_level\ -I                         /
+//                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\..\..\Components\mac\low_level /
+//                          \srf04\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº /
+//                           È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack /
+//                          -CC2530-r200\Projects\SappWsn\..\..\Components\ma /
+//                          c\low_level\srf04\single_chip\ -I                 /
+//                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\..\..\Components\mt\ -I        /
+//                          E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\..\..\Components\osal\include\ /
+//                           -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—È /
+//                          œ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530 /
+//                          -r200\Projects\SappWsn\..\..\Components\services\ /
+//                          saddr\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº  /
+//                          È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack- /
+//                          CC2530-r200\Projects\SappWsn\..\..\Components\ser /
+//                          vices\sdata\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ— /
+//                          È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\Z /
+//                          Stack-CC2530-r200\Projects\SappWsn\..\..\Componen /
+//                          ts\stack\af\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ— /
+//                          È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\Z /
+//                          Stack-CC2530-r200\Projects\SappWsn\..\..\Componen /
+//                          ts\stack\nwk\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ /
+//                          —È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ /
+//                          ZStack-CC2530-r200\Projects\SappWsn\..\..\Compone /
+//                          nts\stack\sapi\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ /
+//                           µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStac /
+//                          k\ZStack-CC2530-r200\Projects\SappWsn\..\..\Compo /
+//                          nents\stack\sec\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£© /
+//                          \ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZSta /
+//                          ck\ZStack-CC2530-r200\Projects\SappWsn\..\..\Comp /
+//                          onents\stack\sys\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£ /
+//                          ©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZSt /
+//                          ack\ZStack-CC2530-r200\Projects\SappWsn\..\..\Com /
+//                          ponents\stack\zdo\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß /
+//                          £©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZS /
+//                          tack\ZStack-CC2530-r200\Projects\SappWsn\..\..\Co /
+//                          mponents\zmac\ -I E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\  /
+//                          µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack /
+//                          \ZStack-CC2530-r200\Projects\SappWsn\..\..\Compon /
+//                          ents\zmac\f8w\ -Ohz --require_prototypes          /
+//    List file          =  E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ /
+//                          —È-Linux∆ΩÃ®∆™\Code\Cap2_ZStack\ZStack-CC2530-r20 /
+//                          0\Projects\SappWsn\CoordinatorEB\List\Basic.s51   /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME Basic
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+        EXTERN ?S_SHL
+        EXTERN ?V0
+
+        PUBLIC ??Delay?relay
+        FUNCTION ??Delay?relay,0203H
+        PUBLIC ??GetCh08bitADC?relay
+        FUNCTION ??GetCh08bitADC?relay,0203H
+        PUBLIC ??GetIOLevel?relay
+        FUNCTION ??GetIOLevel?relay,0203H
+        PUBLIC ??LEDPortInit?relay
+        FUNCTION ??LEDPortInit?relay,0203H
+        PUBLIC ??SetIOInput?relay
+        FUNCTION ??SetIOInput?relay,0203H
+        PUBLIC ??SetIOLevel?relay
+        FUNCTION ??SetIOLevel?relay,0203H
+        PUBLIC ??SetIOOutput?relay
+        FUNCTION ??SetIOOutput?relay,0203H
+        PUBLIC ??delay?relay
+        FUNCTION ??delay?relay,0203H
+        PUBWEAK ADCCFG
+        PUBWEAK ADCCON1
+        PUBWEAK ADCCON2
+        PUBWEAK ADCH
+        PUBWEAK ADCL
+        PUBLIC Delay
+        FUNCTION Delay,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC GetCh08bitADC
+        FUNCTION GetCh08bitADC,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBLIC GetIOLevel
+        FUNCTION GetIOLevel,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC LEDPortInit
+        FUNCTION LEDPortInit,0203H
+        ARGFRAME XSTACK, 0, STACK
+        PUBWEAK P0DIR
+        PUBWEAK P0INP
+        PUBWEAK P0SEL
+        PUBWEAK P1DIR
+        PUBWEAK P1INP
+        PUBWEAK P1SEL
+        PUBWEAK P2DIR
+        PUBWEAK P2INP
+        PUBWEAK P2SEL
+        PUBLIC SetIOInput
+        FUNCTION SetIOInput,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC SetIOLevel
+        FUNCTION SetIOLevel,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC SetIOOutput
+        FUNCTION SetIOOutput,0203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBWEAK _A_P0
+        PUBWEAK _A_P1
+        PUBWEAK _A_P2
+        PUBLIC delay
+        FUNCTION delay,0203H
+        ARGFRAME XSTACK, 0, STACK
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA_SP SP IDATA
+        CFI StackFrame CFA_PSP16 PSP16 XDATA
+        CFI StackFrame CFA_XSP16 XSP16 XDATA
+        CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+        CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+        CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+        CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+        CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+        CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+        CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+        CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+        CFI Resource V8:8, V9:8, V10:8, V11:8, V12:8, V13:8, V14:8, V15:8, SP:8
+        CFI Resource PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+        CFI VirtualResource ?RET:24
+        CFI Resource ?BRET_EXT:8
+        CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+        CFI ResourceParts PSP16 PSPH, PSPL
+        CFI ResourceParts XSP16 XSPH, XSPL
+        CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-3
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B Undefined
+        CFI A Undefined
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 Undefined
+        CFI R5 Undefined
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI V8 SameValue
+        CFI V9 SameValue
+        CFI V10 SameValue
+        CFI V11 SameValue
+        CFI V12 SameValue
+        CFI V13 SameValue
+        CFI V14 SameValue
+        CFI V15 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT Frame(CFA_SP, 3)
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon0
+        
+        
+        CFI Common cfiCommon1 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-2
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B SameValue
+        CFI A SameValue
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 SameValue
+        CFI R1 SameValue
+        CFI R2 SameValue
+        CFI R3 SameValue
+        CFI R4 SameValue
+        CFI R5 SameValue
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI V8 SameValue
+        CFI V9 SameValue
+        CFI V10 SameValue
+        CFI V11 SameValue
+        CFI V12 SameValue
+        CFI V13 SameValue
+        CFI V14 SameValue
+        CFI V15 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT SameValue
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon1
+        
+Delay               SYMBOL "Delay"
+??Delay?relay       SYMBOL "?relay", Delay
+GetCh08bitADC       SYMBOL "GetCh08bitADC"
+??GetCh08bitADC?relay SYMBOL "?relay", GetCh08bitADC
+GetIOLevel          SYMBOL "GetIOLevel"
+??GetIOLevel?relay  SYMBOL "?relay", GetIOLevel
+LEDPortInit         SYMBOL "LEDPortInit"
+??LEDPortInit?relay SYMBOL "?relay", LEDPortInit
+SetIOInput          SYMBOL "SetIOInput"
+??SetIOInput?relay  SYMBOL "?relay", SetIOInput
+SetIOLevel          SYMBOL "SetIOLevel"
+??SetIOLevel?relay  SYMBOL "?relay", SetIOLevel
+SetIOOutput         SYMBOL "SetIOOutput"
+??SetIOOutput?relay SYMBOL "?relay", SetIOOutput
+delay               SYMBOL "delay"
+??delay?relay       SYMBOL "?relay", delay
+
+// E:\π‚≈Ã◊ ¡œV1.2.0£®÷–ƒœ¥Û—ß£©\ µ—È÷∏µº È\ µ—Èœ‰ µ—È-Linux∆ΩÃ®∆™\Code\Cap1_Basic\Ex04_PC_UART\Source\Basic.c
+//    1 
+//    2 #include "Basic.h"
+
+        ASEGN SFR_AN:DATA:NOROOT,080H
+// union <unnamed> volatile __sfr _A_P0
+_A_P0:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,08fH
+// unsigned char volatile __sfr P0INP
+P0INP:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,090H
+// union <unnamed> volatile __sfr _A_P1
+_A_P1:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0a0H
+// union <unnamed> volatile __sfr _A_P2
+_A_P2:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0b4H
+// unsigned char volatile __sfr ADCCON1
+ADCCON1:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0b5H
+// unsigned char volatile __sfr ADCCON2
+ADCCON2:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0baH
+// unsigned char volatile __sfr ADCL
+ADCL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0bbH
+// unsigned char volatile __sfr ADCH
+ADCH:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f2H
+// unsigned char volatile __sfr ADCCFG
+ADCCFG:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f3H
+// unsigned char volatile __sfr P0SEL
+P0SEL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f4H
+// unsigned char volatile __sfr P1SEL
+P1SEL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f5H
+// unsigned char volatile __sfr P2SEL
+P2SEL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f6H
+// unsigned char volatile __sfr P1INP
+P1INP:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f7H
+// unsigned char volatile __sfr P2INP
+P2INP:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0fdH
+// unsigned char volatile __sfr P0DIR
+P0DIR:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0feH
+// unsigned char volatile __sfr P1DIR
+P1DIR:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0ffH
+// unsigned char volatile __sfr P2DIR
+P2DIR:
+        DATA8
+        DS 1
+//    3 
+//    4 /***********************************************************
+//    5 **  ∫Ø ˝√˚≥∆: delay
+//    6 **   µœ÷π¶ƒ‹: Œ¢√Îº∂∂Ã‘›—” ±∫Ø ˝
+//    7 **  »Îø⁄≤Œ ˝: n:—” ±÷µ;
+//    8 **  ∑µªÿΩ·π˚: None
+//    9 ***********************************************************/
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   10 void delay(uint n)
+delay:
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI Function delay
+        CODE
+//   11 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//   12   uint i;
+//   13   for(i=0;i<n;i++);
+        MOV     R0,#0x0
+        MOV     R1,#0x0
+        SJMP    ??CrossCallReturnLabel_0
+??delay_0:
+        LCALL   ?Subroutine1 & 0xFFFF
+??CrossCallReturnLabel_0:
+        CLR     C
+        MOV     A,R0
+        SUBB    A,R2
+        MOV     A,R1
+        SUBB    A,R3
+        JC      ??delay_0
+//   14   for(i=0;i<n;i++);
+        MOV     R0,#0x0
+        MOV     R1,#0x0
+        SJMP    ??CrossCallReturnLabel_1
+??delay_1:
+        LCALL   ?Subroutine1 & 0xFFFF
+??CrossCallReturnLabel_1:
+        CLR     C
+        MOV     A,R0
+        SUBB    A,R2
+        MOV     A,R1
+        SUBB    A,R3
+        JC      ??delay_1
+//   15   for(i=0;i<n;i++);
+        MOV     R0,#0x0
+        MOV     R1,#0x0
+        SJMP    ??CrossCallReturnLabel_2
+??delay_2:
+        LCALL   ?Subroutine1 & 0xFFFF
+??CrossCallReturnLabel_2:
+        CLR     C
+        MOV     A,R0
+        SUBB    A,R2
+        MOV     A,R1
+        SUBB    A,R3
+        JC      ??delay_2
+//   16   for(i=0;i<n;i++);
+        MOV     R0,#0x0
+        MOV     R1,#0x0
+        SJMP    ??CrossCallReturnLabel_3
+??delay_3:
+        LCALL   ?Subroutine1 & 0xFFFF
+??CrossCallReturnLabel_3:
+        CLR     C
+        MOV     A,R0
+        SUBB    A,R2
+        MOV     A,R1
+        SUBB    A,R3
+        JC      ??delay_3
+//   17   for(i=0;i<n;i++);
+        MOV     R0,#0x0
+        MOV     R1,#0x0
+        SJMP    ??CrossCallReturnLabel_4
+??delay_4:
+        LCALL   ?Subroutine1 & 0xFFFF
+??CrossCallReturnLabel_4:
+        CLR     C
+        MOV     A,R0
+        SUBB    A,R2
+        MOV     A,R1
+        SUBB    A,R3
+        JC      ??delay_4
+//   18 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock0
+//   19 
+//   20 /***********************************************************
+//   21 **  ∫Ø ˝√˚≥∆: Delay
+//   22 **   µœ÷π¶ƒ‹: ‘º 10_ms —” ±∫Ø ˝
+//   23 **  »Îø⁄≤Œ ˝: n:–Ë“™—” ±µƒ 10ms  ˝;
+//   24 **  ∑µªÿΩ·π˚: None
+//   25 ***********************************************************/
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   26 void Delay(uint n)
+Delay:
+        CFI Block cfiBlock1 Using cfiCommon0
+        CFI Function Delay
+        CODE
+//   27 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//   28   uint i,j,k;
+//   29   for(i=0;i<n;i++)
+        MOV     R0,#0x0
+        MOV     R1,#0x0
+        SJMP    ??CrossCallReturnLabel_5
+//   30     for(j=0;j<100;j++)
+//   31       for(k=0;k<100;k++)
+??Delay_0:
+        LCALL   ?Subroutine1 & 0xFFFF
+??CrossCallReturnLabel_5:
+        CLR     C
+        MOV     A,R0
+        SUBB    A,R2
+        MOV     A,R1
+        SUBB    A,R3
+        JC      ??Delay_0
+//   32         ;
+//   33 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock1
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine1:
+        CFI Block cfiCond2 Using cfiCommon0
+        CFI NoFunction
+        CFI Conditional ??CrossCallReturnLabel_0
+        CFI Block cfiCond3 Using cfiCommon0
+        CFI (cfiCond3) NoFunction
+        CFI (cfiCond3) Conditional ??CrossCallReturnLabel_1
+        CFI Block cfiCond4 Using cfiCommon0
+        CFI (cfiCond4) NoFunction
+        CFI (cfiCond4) Conditional ??CrossCallReturnLabel_2
+        CFI Block cfiCond5 Using cfiCommon0
+        CFI (cfiCond5) NoFunction
+        CFI (cfiCond5) Conditional ??CrossCallReturnLabel_3
+        CFI Block cfiCond6 Using cfiCommon0
+        CFI (cfiCond6) NoFunction
+        CFI (cfiCond6) Conditional ??CrossCallReturnLabel_4
+        CFI Block cfiCond7 Using cfiCommon0
+        CFI (cfiCond7) NoFunction
+        CFI (cfiCond7) Conditional ??CrossCallReturnLabel_5
+        CFI Block cfiPicker8 Using cfiCommon1
+        CFI (cfiPicker8) NoFunction
+        CFI (cfiPicker8) Picker
+        MOV     A,R0
+        ADD     A,#0x1
+        INC     R0
+        MOV     A,R1
+        ADDC    A,#0x0
+        MOV     R1,A
+        RET
+        CFI EndBlock cfiCond2
+        CFI EndBlock cfiCond3
+        CFI EndBlock cfiCond4
+        CFI EndBlock cfiCond5
+        CFI EndBlock cfiCond6
+        CFI EndBlock cfiCond7
+        CFI EndBlock cfiPicker8
+//   34 
+//   35 /***********************************************************
+//   36 **  ∫Ø ˝√˚≥∆: LEDPortInit
+//   37 **   µœ÷π¶ƒ‹: ≥ı ºªØ LED_D8_D9(P2_0.P1_1)
+//   38 **  »Îø⁄≤Œ ˝: None
+//   39 **  ∑µªÿΩ·π˚: None
+//   40 ***********************************************************/
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   41 void LEDPortInit(void)
+LEDPortInit:
+        CFI Block cfiBlock9 Using cfiCommon0
+        CFI Function LEDPortInit
+        CODE
+//   42 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//   43   P1SEL &= ~0X02;
+        ANL     0xf4,#0xfd
+//   44   P2SEL &= ~0X01;
+        ANL     0xf5,#0xfe
+//   45 
+//   46   P1DIR |= 0X02;
+        ORL     0xfe,#0x2
+//   47   P2DIR |= 0X01;
+        ORL     0xff,#0x1
+//   48 
+//   49   CLR_LED_D8;
+        SETB    0xa0.0
+//   50   CLR_LED_D9;
+        SETB    0x90.1
+//   51 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock9
+        REQUIRE P1SEL
+        REQUIRE P2SEL
+        REQUIRE P1DIR
+        REQUIRE P2DIR
+        REQUIRE _A_P2
+        REQUIRE _A_P1
+//   52 
+//   53 /***********************************************************
+//   54 **  ∫Ø ˝√˚≥∆: GetCh08bitADC
+//   55 **   µœ÷π¶ƒ‹: ªÒ»° ADC Õ®µ¿0 µƒ8Œª ADC  ‰»Î÷µ
+//   56 **  »Îø⁄≤Œ ˝: None
+//   57 **  ∑µªÿΩ·π˚: 1 Byte ADC÷µ
+//   58 ***********************************************************/
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   59 uint8 GetCh08bitADC(void)
+GetCh08bitADC:
+        CFI Block cfiBlock10 Using cfiCommon0
+        CFI Function GetCh08bitADC
+        CODE
+//   60 {
+        ; Saved register size: 0
+        ; Auto size: 0
+//   61     uint8 v = 0;
+//   62     ADCCFG = 0x01;
+        MOV     0xf2,#0x1
+//   63     ADCCON1 = 0x33;
+        MOV     0xb4,#0x33
+//   64     ADCCON2 = 0xB0;
+        MOV     0xb5,#-0x50
+//   65     ADCCON1 |= 0x40;
+        ORL     0xb4,#0x40
+//   66     while(!(ADCCON1 & 0x80));
+??GetCh08bitADC_0:
+        MOV     A,0xb4
+        MOV     C,0xE0 /* A   */.7
+        JNC     ??GetCh08bitADC_0
+//   67     v = ADCL;
+        MOV     A,0xba
+//   68     v = ADCH;
+//   69     return(v);
+        MOV     R1,0xbb
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock10
+        REQUIRE ADCCFG
+        REQUIRE ADCCON1
+        REQUIRE ADCCON2
+        REQUIRE ADCL
+        REQUIRE ADCH
+//   70 }
+//   71 
+//   72 /***********************************************************
+//   73 **  ∫Ø ˝√˚≥∆: SetIOInput
+//   74 **   µœ÷π¶ƒ‹: …Ë÷√∂Àø⁄Œ™»˝Ã¨ ‰»Î(≤ª∆Ù”√ƒ⁄≤ø…œœ¬¿≠µÁ◊Ë)
+//   75 **  »Îø⁄≤Œ ˝: group:Port
+//   76 **            bit:Bit in Port
+//   77 **  ∑µªÿΩ·π˚: None
+//   78 ***********************************************************/
+//   79 // pull: 0 - disable, 1 - pulldown, 2 - pullup
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   80 void SetIOInput(uint8 group, uint8 bit)
+SetIOInput:
+        CFI Block cfiBlock11 Using cfiCommon0
+        CFI Function SetIOInput
+        CODE
+//   81 {
+        PUSH    ?V0 + 0
+        CFI V0 Frame(CFA_SP, 4)
+        CFI CFA_SP SP+-4
+        PUSH    ?V0 + 1
+        CFI V1 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//   82    switch(group)
+        MOV     A,R1
+        JZ      ??SetIOInput_0
+        DEC     A
+        JZ      ??SetIOInput_1
+        DEC     A
+        JZ      ??SetIOInput_2
+        SJMP    ??SetIOInput_3
+//   83    {
+//   84    case 0: P0DIR &= ~(1 << bit); P0SEL &= ~(1 << bit); P0INP |=(1 << bit); break;
+??SetIOInput_0:
+        MOV     ?V0 + 0,#0x1
+        MOV     ?V0 + 1,#0x0
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     R0,?V0 + 0
+        MOV     A,R0
+        CPL     A
+        ANL     0xfd,A
+        ANL     0xf3,A
+        MOV     A,R0
+        ORL     0x8f,A
+        SJMP    ??SetIOInput_3
+//   85    case 1: P1DIR &= ~(1 << bit); P1SEL &= ~(1 << bit); P1INP |=(1 << bit); break;
+??SetIOInput_1:
+        MOV     ?V0 + 0,#0x1
+        MOV     ?V0 + 1,#0x0
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     R0,?V0 + 0
+        MOV     A,R0
+        CPL     A
+        ANL     0xfe,A
+        ANL     0xf4,A
+        MOV     A,R0
+        ORL     0xf6,A
+        SJMP    ??SetIOInput_3
+//   86    case 2: P2DIR &= ~(1 << bit); P2SEL &= ~(1 << bit); P2INP |=(1 << bit); break;
+??SetIOInput_2:
+        MOV     ?V0 + 0,#0x1
+        MOV     ?V0 + 1,#0x0
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     R0,?V0 + 0
+        MOV     A,R0
+        CPL     A
+        ANL     0xff,A
+        ANL     0xf5,A
+        MOV     A,R0
+        ORL     0xf7,A
+//   87    }
+//   88 }
+??SetIOInput_3:
+        LJMP    ?Subroutine0 & 0xFFFF
+        CFI EndBlock cfiBlock11
+        REQUIRE P0DIR
+        REQUIRE P0SEL
+        REQUIRE P0INP
+        REQUIRE P1DIR
+        REQUIRE P1SEL
+        REQUIRE P1INP
+        REQUIRE P2DIR
+        REQUIRE P2SEL
+        REQUIRE P2INP
+//   89 
+//   90 /***********************************************************
+//   91 **  ∫Ø ˝√˚≥∆: SetIOOutput
+//   92 **   µœ÷π¶ƒ‹: …Ë÷√∂Àø⁄Œ™Õ®”√ ‰≥ˆIOø⁄
+//   93 **  »Îø⁄≤Œ ˝: group:Port
+//   94 **            bit:Bit in Port
+//   95 **  ∑µªÿΩ·π˚: None
+//   96 ***********************************************************/
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   97 void SetIOOutput(uint8 group, uint8 bit)
+SetIOOutput:
+        CFI Block cfiBlock12 Using cfiCommon0
+        CFI Function SetIOOutput
+        CODE
+//   98 {
+        PUSH    ?V0 + 0
+        CFI V0 Frame(CFA_SP, 4)
+        CFI CFA_SP SP+-4
+        PUSH    ?V0 + 1
+        CFI V1 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//   99    switch(group)
+        MOV     A,R1
+        JZ      ??SetIOOutput_0
+        DEC     A
+        JZ      ??SetIOOutput_1
+        DEC     A
+        JZ      ??SetIOOutput_2
+        SJMP    ??SetIOOutput_3
+//  100    {
+//  101    case 0: P0DIR |= (1 << bit); P0SEL &= ~(1 << bit); break;
+??SetIOOutput_0:
+        MOV     ?V0 + 0,#0x1
+        MOV     ?V0 + 1,#0x0
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     A,?V0 + 0
+        ORL     0xfd,A
+        CPL     A
+        ANL     0xf3,A
+        SJMP    ??SetIOOutput_3
+//  102    case 1: P1DIR |= (1 << bit); P1SEL &= ~(1 << bit); break;
+??SetIOOutput_1:
+        MOV     ?V0 + 0,#0x1
+        MOV     ?V0 + 1,#0x0
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     A,?V0 + 0
+        ORL     0xfe,A
+        CPL     A
+        ANL     0xf4,A
+        SJMP    ??SetIOOutput_3
+//  103    case 2: P2DIR |= (1 << bit); P2SEL &= ~(1 << bit); break;
+??SetIOOutput_2:
+        MOV     ?V0 + 0,#0x1
+        MOV     ?V0 + 1,#0x0
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     A,?V0 + 0
+        ORL     0xff,A
+        CPL     A
+        ANL     0xf5,A
+//  104    }
+//  105 }
+??SetIOOutput_3:
+        SJMP    ?Subroutine0
+        CFI EndBlock cfiBlock12
+        REQUIRE P0DIR
+        REQUIRE P0SEL
+        REQUIRE P1DIR
+        REQUIRE P1SEL
+        REQUIRE P2DIR
+        REQUIRE P2SEL
+//  106 
+//  107 /***********************************************************
+//  108 **  ∫Ø ˝√˚≥∆: GetIOLevel
+//  109 **   µœ÷π¶ƒ‹: ªÒ»°∂‘”¶∂Àø⁄…œµƒ ‰»ÎµÁ∆Ω
+//  110 **  »Îø⁄≤Œ ˝: group:Port
+//  111 **            bit:Bit in Port
+//  112 **  ∑µªÿΩ·π˚:  1 Byte(1 : ‰»ÎŒ™∏ﬂµÁ∆Ω; 0 : ‰»ÎŒ™µÕµÁ∆Ω;)
+//  113 ***********************************************************/
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  114 uint8 GetIOLevel(uint8 group, uint8 bit)
+GetIOLevel:
+        CFI Block cfiBlock13 Using cfiCommon0
+        CFI Function GetIOLevel
+        CODE
+//  115 {
+        PUSH    ?V0 + 0
+        CFI V0 Frame(CFA_SP, 4)
+        CFI CFA_SP SP+-4
+        PUSH    ?V0 + 1
+        CFI V1 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+        MOV     A,R1
+//  116     switch(group)
+        JZ      ??GetIOLevel_0
+        DEC     A
+        JZ      ??GetIOLevel_1
+        DEC     A
+        JZ      ??GetIOLevel_2
+        SJMP    ??GetIOLevel_3
+//  117     {
+//  118     case 0: return !!(P0 & (1 << bit));
+??GetIOLevel_0:
+        MOV     ?V0 + 0,#0x1
+        MOV     ?V0 + 1,#0x0
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     A,?V0 + 0
+        ANL     A,0x80
+        JZ      ??GetIOLevel_3
+??GetIOLevel_4:
+        MOV     R1,#0x1
+        SJMP    ??GetIOLevel_5
+//  119     case 1: return !!(P1 & (1 << bit));
+??GetIOLevel_1:
+        MOV     ?V0 + 0,#0x1
+        MOV     ?V0 + 1,#0x0
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     A,?V0 + 0
+        ANL     A,0x90
+        JZ      ??GetIOLevel_3
+        SJMP    ??GetIOLevel_4
+//  120     case 2: return !!(P2 & (1 << bit));
+??GetIOLevel_2:
+        MOV     ?V0 + 0,#0x1
+        MOV     ?V0 + 1,#0x0
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     A,?V0 + 0
+        ANL     A,0xa0
+        JNZ     ??GetIOLevel_4
+//  121     }
+//  122     return 0;
+??GetIOLevel_3:
+        MOV     R1,#0x0
+        CFI EndBlock cfiBlock13
+??GetIOLevel_5:
+        REQUIRE ?Subroutine0
+        REQUIRE _A_P0
+        REQUIRE _A_P1
+        REQUIRE _A_P2
+        ; // Fall through to label ?Subroutine0
+//  123 }
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+?Subroutine0:
+        CFI Block cfiBlock14 Using cfiCommon0
+        CFI NoFunction
+        CFI CFA_SP SP+-5
+        CFI V0 Frame(CFA_SP, 4)
+        CFI V1 Frame(CFA_SP, 5)
+        POP     ?V0 + 1
+        CFI CFA_SP SP+-4
+        CFI V1 SameValue
+        POP     ?V0 + 0
+        CFI CFA_SP SP+-3
+        CFI V0 SameValue
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock14
+//  124 
+//  125 /***********************************************************
+//  126 **  ∫Ø ˝√˚≥∆: SetIOLevel
+//  127 **   µœ÷π¶ƒ‹: …Ë÷√IOø⁄ ‰≥ˆµÁ∆Ω
+//  128 **  »Îø⁄≤Œ ˝: group:Port
+//  129 **            bit:Bit in Port
+//  130 **            value:(1 : ‰≥ˆ∏ﬂµÁ∆Ω; 0 : ‰≥ˆµÕµÁ∆Ω;)
+//  131 **  ∑µªÿΩ·π˚: None
+//  132 ***********************************************************/
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//  133 void SetIOLevel(uint8 group, uint8 bit, uint8 value)
+SetIOLevel:
+        CFI Block cfiBlock15 Using cfiCommon0
+        CFI Function SetIOLevel
+        CODE
+//  134 {
+        PUSH    ?V0 + 0
+        CFI V0 Frame(CFA_SP, 4)
+        CFI CFA_SP SP+-4
+        PUSH    ?V0 + 1
+        CFI V1 Frame(CFA_SP, 5)
+        CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//  135     switch(group)
+        MOV     A,R1
+        JZ      ??SetIOLevel_0
+        DEC     A
+        JZ      ??SetIOLevel_1
+        DEC     A
+        JZ      ??SetIOLevel_2
+        SJMP    ??SetIOLevel_3
+//  136     {
+//  137     case 0:
+//  138         if(value)
+??SetIOLevel_0:
+        MOV     A,R3
+        MOV     ?V0 + 0,#0x1
+        MOV     ?V0 + 1,#0x0
+        JZ      ??SetIOLevel_4
+//  139           P0 |= (1 << bit);
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     A,?V0 + 0
+        ORL     0x80,A
+        SJMP    ??SetIOLevel_3
+//  140         else
+//  141           P0 &=~(1 << bit);
+??SetIOLevel_4:
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     A,?V0 + 0
+        CPL     A
+        ANL     0x80,A
+        SJMP    ??SetIOLevel_3
+//  142         break;
+//  143     case 1:
+//  144         if(value)
+??SetIOLevel_1:
+        MOV     A,R3
+        MOV     ?V0 + 0,#0x1
+        MOV     ?V0 + 1,#0x0
+        JZ      ??SetIOLevel_5
+//  145           P1 |= (1 << bit);
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     A,?V0 + 0
+        ORL     0x90,A
+        SJMP    ??SetIOLevel_3
+//  146         else
+//  147           P1 &=~(1 << bit);
+??SetIOLevel_5:
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     A,?V0 + 0
+        CPL     A
+        ANL     0x90,A
+        SJMP    ??SetIOLevel_3
+//  148         break;
+//  149     case 2:
+//  150         if(value)
+??SetIOLevel_2:
+        MOV     A,R3
+        MOV     ?V0 + 0,#0x1
+        MOV     ?V0 + 1,#0x0
+        JZ      ??SetIOLevel_6
+//  151           P2 |= (1 << bit);
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     A,?V0 + 0
+        ORL     0xa0,A
+        SJMP    ??SetIOLevel_3
+//  152         else
+//  153           P2 &=~(1 << bit);
+??SetIOLevel_6:
+        MOV     A,R2
+        MOV     R0,#?V0 + 0
+        LCALL   ?S_SHL
+        MOV     A,?V0 + 0
+        CPL     A
+        ANL     0xa0,A
+//  154         break;
+//  155     }
+//  156 }
+??SetIOLevel_3:
+        SJMP    ?Subroutine0
+        CFI EndBlock cfiBlock15
+        REQUIRE _A_P0
+        REQUIRE _A_P1
+        REQUIRE _A_P2
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??delay?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    delay
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??Delay?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    Delay
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??LEDPortInit?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    LEDPortInit
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??GetCh08bitADC?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    GetCh08bitADC
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??SetIOInput?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    SetIOInput
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??SetIOOutput?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    SetIOOutput
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??GetIOLevel?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    GetIOLevel
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??SetIOLevel?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    SetIOLevel
+
+        END
+// 
+// 525 bytes in segment BANKED_CODE
+//  48 bytes in segment BANK_RELAYS
+//  17 bytes in segment SFR_AN
+// 
+// 573 bytes of CODE memory
+//   0 bytes of DATA memory (+ 17 bytes shared)
+//
+//Errors: none
+//Warnings: none

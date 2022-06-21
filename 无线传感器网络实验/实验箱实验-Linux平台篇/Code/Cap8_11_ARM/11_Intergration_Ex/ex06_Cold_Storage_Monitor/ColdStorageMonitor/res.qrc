@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pic/title.png</file>
+        <file>pic/shut_down_grayed.png</file>
+        <file>pic/shut_down_normal.png</file>
+        <file>pic/temp_code.png</file>
+        <file>pic/temp_hot.png</file>
+        <file>pic/point.png</file>
+        <file>pic/neg.png</file>
+        <file>pic/plus.png</file>
+        <file>pic/alert.png</file>
+    </qresource>
+</RCC>

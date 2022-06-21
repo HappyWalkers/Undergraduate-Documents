@@ -1,0 +1,12 @@
+INPUT(
+./main.obj
+./Widget.obj
+./MjpgWidget.obj
+./HttpClientService.obj
+./moc_Widget.obj
+./moc_MjpgWidget.obj
+./moc_HttpClientService.obj
+./moc_serializerrunnable.obj
+./moc_parserrunnable.obj
+./qrc_qrc.obj
+);
