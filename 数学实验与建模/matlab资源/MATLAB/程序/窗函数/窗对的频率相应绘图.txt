@@ -1,0 +1,95 @@
+功能：降低旁瓣水平
+参数： 
+--------------------------------------------------------------------------- 
+%}
+%N =51 
+%==========================================================================
+%求矩形窗的频率响应图  
+%==========================================================================
+W = linspace(-pi,pi,4096);
+wn0 = rectwin(51)   %矩形窗函数 
+%20*log10(abs(WN))  
+[h1,w0] = freqz(wn0,1,W); 
+%subplotfigure(5,1,1);  
+subplot(511);
+plot(w0/pi,20*log10(abs(h1/max(h1))));  
+axis([-1 1 -100 0]); 
+xlabel('归一化频率 /\pi');  
+ylabel('20log_{10}|W(e^{j\omega})| /dB');  
+title('矩形窗的傅里叶变换'); 
+set(gca,'YTick',[-100 -80 -60 -40 -20 0])  
+set(gca,'XTick',[-1 :0.2: 1])   
+%set(gca,'XAxisLocation','top');%设置X轴在上方  
+%set(gca,'XAxisLocation','buttom');%设置X轴在下方  
+set(gca,'YAxisLocation','left'); %设置Y轴在左方  
+text(1,-124,'\pi');%gtext('\pi');
+
+%==========================================================================
+%求三角窗的频率响应图  
+%==========================================================================
+wn1 = bartlett(51)
+[h1,w1] = freqz(wn1,1,W);  
+%figure(5,1,2); 
+subplot(512);
+plot(w1/pi,20*log10(abs(h1/max(h1))));  
+%plot(w/pi,20*log10(h1/max(h1))); % 警告: 复数 X 和/或 Y 参数的虚部已忽略 
+axis([-1 1 -100 0]); 
+xlabel('归一化频率 /\pi');  
+ylabel('20log_{10}|W(e^{j\omega})| /dB'); 
+title('三角窗的傅里叶变换');   
+set(gca,'YTick',[-100 -80 -60 -40 -20 0]) 
+set(gca,'XTick',[-1 :0.2: 1])  
+%set(gca,'XAxisLocation','top');%设置X轴在上方  
+set(gca,'YAxisLocation','left'); %设置Y轴在左方  
+text(1,-124,'\pi');%gtext('\pi');
+%==========================================================================
+%hanning 窗的频率响应图   
+%==========================================================================
+wn2 = hanning(51)  
+[h1,w2] = freqz(wn2,1,W);  
+%figure(5,1,3); 
+subplot(513);
+plot(w2/pi,20*log10(abs(h1/max(h1))));  
+axis([-1 1 -100 0]); 
+xlabel('归一化频率 /\pi');  
+ylabel('20log_{10}|W(e^{j\omega})| /dB');  
+title('Hanning的傅里叶变换');
+set(gca,'YTick',[-100 -80 -60 -40 -20 0]);  
+set(gca,'XTick',[-1 :0.2: 1]);  
+%set(gca,'XAxisLocation','top');%设置X轴在上方  
+set(gca,'YAxisLocation','left'); %设置Y轴在左方 
+text(1,-124,'\pi');%gtext('\pi');
+%==========================================================================
+%hamming 窗的频率响应图    
+%==========================================================================
+wn3 = hamming(51) 
+[h1,w3] = freqz(wn3,1,W); %离散系统频响特性的函数freqz()
+%figure(5,1,4);  
+subplot(514);
+plot(w3/pi,20*log10(abs(h1/max(h1)))); 
+axis([-1 1 -100 0]); 
+xlabel('归一化频率 /\pi'); 
+ylabel('20log_{10}|W(e^{j\omega})| /dB');  
+title('Hamming的傅里叶变换');
+set(gca,'YTick',[-100 -80 -60 -40 -20 0])  
+set(gca,'XTick',[-1 :0.2: 1])  
+%set(gca,'XAxisLocation','top');%设置X轴在上方  
+set(gca,'YAxisLocation','left'); %设置Y轴在左方 
+text(1,-124,'\pi');%gtext('\pi');
+%==========================================================================
+%Blackman   wn1 = blackman(51) 
+%==========================================================================
+wn4 = blackman(51)
+[h1,w4] = freqz(wn4,1,W); 
+%figure(5,1,5); 
+subplot(515);
+plot(w4/pi,20*log10(abs(h1/max(h1))));   
+axis([-1 1 -100 0]);  
+xlabel('归一化频率 /\pi'); 
+ylabel('20log_{10}|W(e^{j\omega})| /dB');  
+title('Blackman的傅里叶变换'); 
+set(gca,'YTick',[-100 -80 -60 -40 -20 0]) 
+set(gca,'XTick',[-1 :0.2: 1]) 
+%set(gca,'XAxisLocation','top');%设置X轴在上方  
+set(gca,'YAxisLocation','left'); %设置Y轴在左方 
+text(1,-124,'\pi');%gtext('\pi');

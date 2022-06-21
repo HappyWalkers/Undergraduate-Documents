@@ -1,0 +1,1 @@
+syms y mu; y=dsolve('D2y+mu*(y^2-1)*Dy+y')

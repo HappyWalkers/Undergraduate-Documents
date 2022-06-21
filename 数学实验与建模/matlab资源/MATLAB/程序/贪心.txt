@@ -1,0 +1,67 @@
+files = dir('E:\数学建模论文\暑假数模培训\暑假作业\2013年B题碎纸片\附件1\*.bmp');    %批量载入图像
+image = cell(1, size(files, 1))   % 定义一个元组
+
+for n=1:numel(files)
+ image{n} = imread(['E:\数学建模论文\暑假数模培训\暑假作业\2013年B题碎纸片\附件1\', files(n).name]);
+end
+
+[h,z] = size(image{1,1});            % 计算一张图片矩阵的大小(行，列)
+
+% 只取最左和最右列进行灰色关联分析
+% byz 存放 n 张图片的，最左列 (1980行, n列)
+for k=1:n
+   byz(:, k) = image{1, k}(: , 1);      % 将第k张图片的最左边一列放入矩阵byz的第k列                     
+   byy(:, k) = image{1, k}(: , z);      % 将第k张图片的最右边一列放入矩阵byy的第k列
+end
+
+%利用页边距寻找第一张图片
+for i=1:n                                     % 遍历附件1的所有图片 
+    sum=0;
+    for j=1:h                                 % 遍历 图片最左列 的所有行
+        if byz(j,i) == 255                 % 计算255的个数 
+            sum=sum+1;
+        else
+            break;
+        end
+    end
+    if sum==h                             % 如果 最左列255个数和行数一样，说明他属于第一张图片
+        f=i;
+    end
+end
+
+paixu=zeros(1,n);                       % 定义 n列向量，用来排序
+index=1;
+paixu(index) = f;                        % 选择第一张图片
+
+%依据连续性模型需找匹配点
+for i=2:n                                   % n - 1 张图片
+    max=0;                                
+    for j=1:n                               % n 张图片
+        sumofbp = 0;                   % 选取非白色点进行匹配，匹配过程中，非白色点的总数记为sumofb
+        xishu = 0;                         % 用来计算 灰色关联系数 (最大匹配率)
+        for k = 2 : h-1                  % 一张图片(2, h-1)行
+            if byy(k, paixu(index)) ~= 255       %最右一列(第k行, 当前一张图片0~18) != 255 ==> 非白色
+                if byz(k,j) < 255 || byz(k-1,j) < 255 || byz(k+1, j) < 255     % 最左一列(k附近三行, j张图片) => 非白色
+                    xishu = xishu+1;                                                        
+                else
+                    xishu = xishu;
+                end;
+            end
+        end
+    if xishu > max                     
+       max = xishu;
+       signal = j;
+    end
+  end
+    index=index+1;
+    paixu(index)=signal;                       %存放排好序的图片序号
+end
+
+temp = image{ paixu(1) };
+
+for i=2:n
+    temp=[temp image{ paixu(i)}];       %将排序好的图片存放与temp       
+end
+
+imshow(temp)                                    %完整显示整张纸片
+etails/89506822

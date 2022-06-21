@@ -1,0 +1,106 @@
+clear
+clc
+W=[0.4673 0.2272 0.1601 0.0954];        %因素的权重向量
+    %因素的模糊关系矩阵
+R=[0.3 0.3 0.1 0.3 ;0.6 0.1 0.1 0.2;1.0 0.1 0.1 0.2 ;0.9 0.0 0.1 0.0 ];   %A
+%R=[0.9091 0.0909 0.0 0.0 ;0.8182 0.0909 0.0 0.0909;1.0 0.0 0.0 0.0 ;1.0 0.0 0.0 0.0 ];  %B
+%R=[1.0 0.0 0.0 0.0 ;1.0 0.0 0.0 0.0;0.5 0.5 0.0 0.0 ;1.0 0.0 0.0 0.0 ]; %C
+%R=[0.25 0.5 0.0 0.25 ;0.25 0.25 0.0 0.5;1.0 0.0 0.0 0.0 ;0.5 0.0 0.0 0.5 ]; %D
+%R=[1.0 0.0 0.0 0.0 ;1.0 0.0 0.0 0.0;1.0 0.0 0.0 0.0 ;1.0 0.0 0.0 0.0 ]; %E
+%R=[1.0 0.0 0.0 0.0 ;1.0 0.0 0.0 0.0;1.0 0.0 0.0 0.0 ;1.0 0.0 0.0 0.0 ];%F
+%R=[1.0 0.0 0.0 0.0 ;1.0 0.0 0.0 0.0;1.0 0.0 0.0 0.0 ;1.0 0.0 0.0 0.0 ];%G
+%R=[0.0 0.3333 0.0 0.6667 ;0.3333 0.0 0.3333 0.3334;1.0 0.0 0.0 0.0 ;1.0 0.0 0.0 0.0 ];%H
+%R=[0.0 0.0 0.0 1.0 ;0.5 0.0 0.0 0.5;1.0 0.0 0.0 0.0 ;1.0 0.0 0.0 0.0 ];%I
+
+a=size(W);
+b=size(R);
+i=0;
+y0=[];
+y=[];
+for i=1:b(2)
+    j=1;
+    for j=1:b(1)
+        if W(j)>=R(j,i)
+            y0(j)=R(j,i);
+        else
+            y0(j)=W(j);
+        end
+    end
+    y(i)=max(y0);
+end
+y2=y;
+
+a=size(y);
+for i=1:a(2)
+    y(i)=y2(i)/(sum(y2'));
+end
+input('评判结果为：      （回车）')
+y               %评判结果
+input('等级值为：      （回车）')
+y*[4;3;2;1]    %等级值
+
+%附录四：%--washall enclosure algorithm--%
+clear
+clc
+X=[0.4318288	0.3232164	0.3         1
+0.0978636       1           0.3636364	0
+0.049163        0.0399033	1           0
+1               0.7614873   0.25        0.555556
+0.067811        0.0133011	0           0
+0.1233312       0           1           0
+0               0.0399033   0           0
+0.9171435       0.7492946	0.3333333	0
+0.8349227       0.3125756	0.5         0]; %标准化后的矩阵
+%--------------计算模糊关系矩阵------------%
+R=[];
+a=size(X);
+xlong=a(1);
+for i=1:xlong
+    for j=1:xlong
+        if  i==j
+            R(i,j)=1;
+        else
+            temp=0;
+            for k=1:4
+                temp=temp+abs(X(i,k)-X(j,k));
+            end
+            R(i,j)=1-0.25*temp;
+        end
+    end
+
+end
+R
+%--------------计算模糊关系矩阵的等价矩阵------------%
+unchanged=0;
+cArr=R;
+b=size(R);
+  cArrSize=b(1);
+while unchanged==0
+    unchanged=1; 
+    %--sigma:i=1:n(combine(conj(cArr(i,k),cArr(k,j))))
+       for i=1:cArrSize
+              for j=1:cArrSize
+            mergeVal=0;
+                     for k=1:cArrSize
+                         if(cArr(i,k)<=cArr(k,j)&&cArr(i,k)>mergeVal)           
+                                          mergeVal=cArr(i,k);
+                            elseif(cArr(i,k)>cArr(k,j)&&cArr(k,j)>mergeVal)
+                                          mergeVal=cArr(k,j);
+                end
+                     end
+                     if(mergeVal>cArr(i,j))
+                            copyCArr(i,j)=mergeVal;
+                            unchanged=0;
+                     else
+                            copyCArr(i,j)=cArr(i,j);
+                     end
+              end
+       end
+    %--copy back--%
+    for i=1:cArrSize
+        for j=1:cArrSize
+            cArr(i,j)=copyCArr(i,j); 
+        end
+    end
+end
+cArr

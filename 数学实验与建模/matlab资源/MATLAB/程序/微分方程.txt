@@ -1,0 +1,14 @@
+%一阶微分方程  y'=cost  y(0)=2
+f = @(t,y) cos(t); % 定义函数 dy/dt=f(t,y)=cos(t) 
+ tspan = [0, 2*pi]; % 时间范围 
+ y0 = 2; % 初值 
+ [t, y] = ode23(f, tspan, y0); % 注意调用格式 
+
+%高阶微分方程转化为一阶微分
+
+% 将高阶转为一阶: y1 = y , y2 = y'                 y''=-siny+sin5t   y(0)=1  y'(0)=0
+  % y1'= y2, y2'= -sin(y1) + sin(5t) 
+  f = @(t,y) [y(2); -sin(y(1))+sin(5*t)]; 
+  tspan = [0, 20]; % 时间范围 
+  y0 = [1; 0]; % 初值 
+  [t, y] = ode23(f, tspan, y0); % 注意调用格式

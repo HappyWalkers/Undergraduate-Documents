@@ -1,0 +1,27 @@
+% 从excel读取数据
+%rdata.xls,第一列为因变量y,列标题在第一行
+
+
+% MATLAB从Excel中读取数据的函数为xlsread，xlsread函数是使用频率较高的函数之一。
+% 输入参数：Filename：目标文件地址（若文件在MATLAB当前的工作目录中，Filename为’文件名’，如果文件不在MATLAB当前的工作目录中，filename为’文件路径\文件名’）  
+% 输出参数：Data: 数值数据
+filename = 'C:\Users\tinysoft\Desktop\rdata.XLS';
+data = xlsread(filename);
+
+
+y = data(2:end,1);
+x = data(2:end,2:end);
+
+
+k = 0:1e-5:5e-3;
+
+
+%输出x对y的岭迹
+b = ridge(y,x,k);
+figure;
+plot(k,b);
+grid on;
+xlabel('k');
+ylabel('{\beta}');
+title('{\bf 岭迹}');
+legend('x1','x2','x3','x4','x5','x6');

@@ -1,0 +1,50 @@
+
+//多重小波变换
+
+I=imread('66.jpg');
+
+subplot(2,2,1);
+
+imshow(I);
+
+title('原始图像');
+
+J=rgb2gray(I);
+
+ [cA1,cH1,cV1,cD1] = dwt2(J,'bior3.7');    
+
+A1 = upcoef2('a',cA1,'bior3.7',1); 
+
+H1 = upcoef2('h',cH1,'bior3.7',1);
+
+V1 = upcoef2('v',cV1,'bior3.7',1);
+
+D1 = upcoef2('d',cD1,'bior3.7',1);
+
+Y=idwt2(A1,H1,V1,D1,'bior3.7');
+
+subplot(2,2,2);image(Y);title('一重小波重构图像');
+
+A1 = upcoef2('a',cA1,'bior3.7',2); 
+
+H1 = upcoef2('h',cH1,'bior3.7',2);
+
+V1 = upcoef2('v',cV1,'bior3.7',2);
+
+D1 = upcoef2('d',cD1,'bior3.7',2);
+
+Y=idwt2(A1,H1,V1,D1,'bior3.7');
+
+subplot(2,2,3);image(Y);title('二重小波重构图像');
+
+A1 = upcoef2('a',cA1,'bior3.7',3); 
+
+H1 = upcoef2('h',cH1,'bior3.7',3);
+
+V1 = upcoef2('v',cV1,'bior3.7',3);
+
+D1 = upcoef2('d',cD1,'bior3.7',3);
+
+Y=idwt2(A1,H1,V1,D1,'bior3.7');
+
+subplot(2,2,4);image(Y);title('三重小波重构图像');

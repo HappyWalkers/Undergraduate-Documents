@@ -1,0 +1,67 @@
+clear,clc
+X1=xlsread('B.xls', 'Sheet1', 'B4:B34')';%2000一月
+X2=xlsread('B.xls', 'Sheet1', 'B370:B400')';%2001一月
+X3=xlsread('B.xls', 'Sheet1', 'B735:B765')';%2002一月
+X4=xlsread('B.xls', 'Sheet1', 'B1100:B1130')';%2003一月
+X5=xlsread('B.xls', 'Sheet1', 'B1465:B1495')';%2004一月
+X6=xlsread('B.xls', 'Sheet1', 'B1831:B1861')';%2005一月
+X7=xlsread('B.xls', 'Sheet1', 'B2196:B2226')';%2006一月
+input=[X1;X2;X3;X4;X5;X6];%一列表示一个样本
+output=[X7];%一列表示一个样本
+%随机数种子
+rng(22)
+%找出训练数据和预测数据
+input_train=input(:,1:21);%输入数据矩阵
+output_train=output(1:21);%目标数据矩阵
+input_test=input(:,22:31);
+output_test=output(22:31);
+%选连样本输入输出数据归一化
+[inputn,inputps]=mapminmax(input_train,0,1);
+[outputn,outputps]=mapminmax(output_train,0,1);
+%% BP网络训练
+% %初始化网络结构
+net=newff(inputn,outputn,3);      %分类net=newff(inputn,outputn,[5,2],{'logsig','logsig'}); %初始化网络  分2类选2
+net.trainParam.lr=0.1;                 %学习速度为0.1
+net.trainParam.epochs=200;           %最大训练轮回为1000次
+net.trainParam.goal=0.1*10^(-4);     %均方误差
+%net.divideFcn = '';
+net.trainParam.max_fail=100;  %避免过拟合，样本数小时用，大时用上一句
+net.trainParam.mc = 0.9;  %附加动量因子
+net.divideParam.trainRatio = 80/100;  
+net.divideParam.valRatio = 20/100;
+net.divideParam.testRatio = 0/100;
+
+%网络训练
+net=train(net,inputn,outputn);
+%% BP网络预测
+%预测数据归一化
+inputn_test=mapminmax('apply',input_test,inputps);
+%网络预测输出
+an=sim(net,inputn_test);
+%网络输出反归一化
+BPoutput=mapminmax('reverse',an,outputps);
+%% 结果分析
+figure(1)
+plot(BPoutput,':og')
+hold on
+plot(output_test,'-*');
+legend('预测输出','期望输出')
+title('BP网络预测输出','fontsize',12)
+ylabel('函数输出','fontsize',12)
+xlabel('样本','fontsize',12)
+%预测误差
+error=BPoutput-output_test;
+figure(2)
+plot(error,'-*')
+title('BP网络预测误差','fontsize',12)
+ylabel('误差','fontsize',12)
+xlabel('样本','fontsize',12)
+figure(3)
+plot((output_test-BPoutput)./BPoutput,'-*');
+title('神经网络预测误差百分比')
+errorsum=sum(abs(error));
+%预测
+pnew=[X2;X3;X4;X5;X6;X7];           %2010年和2011年的相关数据；
+pnewn = mapminmax('apply',pnew,inputps);
+anewn = sim(net,pnewn);            %利用归一化后的数据进行仿真；
+anew = mapminmax('reverse',anewn,outputps) %把仿真得到的数据还原为原始的数量级；

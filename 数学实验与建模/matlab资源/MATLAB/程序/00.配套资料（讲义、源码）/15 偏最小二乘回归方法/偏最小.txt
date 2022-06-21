@@ -1,0 +1,133 @@
+
+x = xlsread('1511.xls'); %导入数据
+%  z=diff(x,2);二阶导数
+% z = diff(x,1);一阶导数 
+% z=sgolayfilt(x,3,5);sg  3次  5点平滑
+% z = filter([0.2,0.2,0.2,0.2,0.2],1,x); 5点移动平滑
+
+
+%%归一化偏最小二乘法程序
+
+ 
+
+close all;
+
+clear;
+
+clc;
+
+format short
+
+pzz=xlsread('4123');%每一列为一个指标，每一行为一个样本
+
+A = [];
+
+ncv = size(pzz,2);%读出样本数量
+
+for i=1:1:ncv   %留一交叉验证，循环次数由样本数确定
+
+    pz=pzz';
+
+    y_out = pz(i,1);
+
+    data_train = pz(i,2:end);
+
+    pz(i,:) = [];
+
+    [data,data_mean,d_std]=zscore(pz); %数据标准化
+
+    n=1; % n 是因变量的个数
+
+    y=data(:,1:n);x=data(:,n+1:end);%定义因变量含氮浓度为第一列，自变量光谱数据为2到最后一列
+
+    [xl,yl,xs,ys,beta,pctvar,mse,stats] = plsregress(x,y,7); 
+
+    plot(1:7,cumsum(100*pctvar(2,:)),'-bo');
+
+    % xlabel('Number of PLS components');
+
+    % ylabel('Percent Variance Explained in y'); 
+
+    data_trainn = (data_train - data_mean(1,2:end))./d_std(1,2:end);
+
+    yfit = [ones(size(data_train,1),1) data_trainn]*beta;
+
+    yfi = yfit.*d_std(1,1) + data_mean(1,1);
+
+    A(i,1) = yfi;
+
+    A(i,2) = y_out;
+
+    A(i,3)=  abs( yfi - y_out);
+
+    
+
+    
+
+end
+
+xlswrite('42',A)
+
+
+%未归一化  偏最小二乘结合留一交叉验证
+
+ 
+
+close all;
+
+clear;
+
+clc;
+
+format short
+
+pzz=xlsread('4123');%每一列为一个指标，每一行为一个样本
+
+A = [];
+
+ncv = size(pzz,2);
+
+for i=1:1:ncv
+
+    pz=pzz';
+
+    y_out = pz(i,1);
+
+    data_train = pz(i,2:end);
+
+    pz(i,:) = [];
+
+    %[data,data_mean,d_std]=zscore(pz); %数据标准化
+
+    n=1; % n 是因变量的个数
+
+    y=pz(:,1:n);x=pz(:,n+1:end);%定义因变量为第一列
+
+    [xl,yl,xs,ys,beta,pctvar,mse,stats] = plsregress(x,y,4); 
+
+    plot(1:4,cumsum(100*pctvar(2,:)),'-bo');
+
+    % xlabel('Number of PLS components');
+
+    % ylabel('Percent Variance Explained in y'); 
+
+    %data_trainn = (data_train - data_mean(1,2:end))./d_std(1,2:end);
+
+    yfit = [ones(size(data_train,1),1) data_train]*beta;
+
+   % yfi = yfit.*d_std(1,1) + data_mean(1,1);
+
+    A(i,1) = yfit;
+
+    A(i,2) = y_out;
+
+    A(i,3)=  abs( yfit - y_out);
+
+     
+
+end
+
+ 
+
+xlswrite('31',A)
+

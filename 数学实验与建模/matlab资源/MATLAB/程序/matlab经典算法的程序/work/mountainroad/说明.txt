@@ -1,0 +1,9 @@
+                      逢山开路问题
+    用的逐步定线方法，在解决这个问题中并不是一个很有效的方法，我想最好的方法为Dijkstra，但Dijkstra编起来比较简单（已有源程序，只须改变权矩阵），没有再进行练习。
+程序编制的比一些比赛论文中的要精细一些，但结果不是很好。
+    mountainxyz  山区地形信息
+    加载后，运行主程序mutiline
+    结果在mountainoutput中
+    图像mountainroad2  mountainroad3  mountainroad3+
+
+    其实这个程序会由于参数unit（unit=100)等的选取而陷入死循环，我不愿再细化程序了。运行15秒后按ctrl+c可结束程序.

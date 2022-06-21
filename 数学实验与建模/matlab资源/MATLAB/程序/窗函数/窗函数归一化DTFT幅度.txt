@@ -1,0 +1,134 @@
+function [ X ] = dtft( x,n,w )  
+%%%%DTFT函数（dtft.m）
+%   Computes Discrete-time Fourier Transform
+%   [X] = dtft(x,n,w)
+%    X = DTFT values computed at w.frequencies
+%    x = finite duration sequence over n
+%    n = sample position vector
+%    w = frequency location vector
+X = x*exp(-j*n'*w);
+%
+end
+
+%%%%%%%%%矩形窗:
+%DTFT of a Rectangular Window, M=10,25,50,101
+clc; close all;
+Hf_1=figure; set(Hf_1,'NumberTitle','off','Name','P0304a');
+w=linspace(-pi,pi,501); wtick=[-1:0.5:1]; magtick=[0:0.5:1.1];
+% M=10
+M=10; n=0:M; x=ones(1,length(n));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,1); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+ylabel('|X|'); title(['M=10']);
+set(gca,'XTick',wtick,'YTick',magtick);
+% M=25
+M=25; n=0:M; x=ones(1,length(n));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,2); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+title(['M=25']); set(gca,'XTick',wtick,'YTick',magtick);
+% M=50
+M=50; n=0:M; x=ones(1,length(n));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,3); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+xlabel('\omega/\pi'); ylabel('|X|'); 
+title('M=50'); set(gca,'XTick',wtick,'YTick',magtick);
+% M=101
+M=101; n=0:M; x=ones(1,length(n));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,4); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+xlabel('\omega/\pi'); ylabel('|X|');
+title(['M=101']);
+%%%%%%%%%
+
+%%%%%%%%%%%三角窗:
+% Triangular Window: 
+% DTFT of a Triangular Window,M = 10,25,50,101
+clc; close all;
+Hf_1=figure; set(Hf_1,'NumberTitle','off','Name','P0304b');
+w=linspace(-pi,pi,501); wtick=[-1:0.5:1]; magtick=[0:0.5:1.1];
+% M = 10
+M=10; n=0:M; x=(1-(abs(M-1-(2*n))/(M+1)));
+x=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,1); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+ylabel('|X|'); title(['M = 10']);
+set(gca,'XTick',wtick,'YTick',magtick);
+% M = 25
+M=25; n=0:M; x=(1-(abs(M-1-(2*n))/(M+1)));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,2); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+title(['M = 25']); set(gca,'XTick',wtick,'YTick',magtick);
+% M = 50
+M=50; n=0:M; x=(1-(abs(M-1-(2*n))/(M+1)));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,3); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+xlabel('\omega/\pi'); ylabel('|X|'); title(['M = 50']); 
+set(gca,'XTick',wtick,'YTick',magtick);
+% M = 100
+M=101;n=0:M; x=(1-(abs(M-1-(2*n))/(M+1)));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,4); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+xlabel('\omega/\pi'); title(['M = 101']); 
+set(gca,'XTick',wtick,'YTick',magtick);
+%%%%%%%%%%
+
+%%%%%%%%%%%%%海宁窗:
+% Hann Window
+% DTFT of a Hann Window, M = 10,25,50,101
+clc;close all;
+Hf_1 = figure; set(Hf_1,'NumberTitle','off','Name','P0304c');
+w=linspace(-pi,pi,501); wtick=[-1:0.5:1]; magtick=[0:0.5:1.1];
+% M = 10
+M=10;n=0:M; x=0.5*(1-cos((2*pi*n)/(M-1)));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,1); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+ylabel('|X|'); title(['M = 10']);
+set(gca,'XTick',wtick,'YTick',magtick);
+% M = 25
+M=25;n=0:M; x=0.5*(1-cos((2*pi*n)/(M-1)));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,2); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+ title(['M = 25']);
+set(gca,'XTick',wtick,'YTick',magtick);
+% M = 50
+M=50;n=0:M; x=0.5*(1-cos((2*pi*n)/(M-1)));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,3); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+xlabel('\omega/\pi'); ylabel('|X|'); title(['M = 50']);
+set(gca,'XTick',wtick,'YTick',magtick);
+% M = 101
+M=101;n=0:M; x=0.5*(1-cos((2*pi*n)/(M-1)));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,4); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+xlabel('\omega/\pi'); title(['M = 101']);
+set(gca,'XTick',wtick,'YTick',magtick);
+%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%哈明窗:
+% Hamming Window:
+clc; close all;
+Hf_1=figure; set(Hf_1,'NumberTitle','off','Name','P0304d');
+w=linspace(-pi,pi,501); wtick=[-1:0.5:1]; magtick=[0:0.5:1.1];
+% M = 10
+M=10; n=0:M; x=(0.54-0.46*cos((2*pi*n)/(M-1)));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,1); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+ ylabel('|X|'); title(['M = 10']);
+set(gca,'XTick',wtick,'YTick',magtick);
+% M = 25
+M=25; n=0:M; x=(0.54-0.46*cos((2*pi*n)/(M-1)));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,2); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+title(['M = 25']);
+set(gca,'XTick',wtick,'YTick',magtick);
+% M = 50
+M=50; n=0:M; x=(0.54-0.46*cos((2*pi*n)/(M-1)));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,3); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+xlabel('\omega/\pi'); ylabel('|X|'); title(['M=50']);
+set(gca,'XTick',wtick,'YTick',magtick);
+% M = 101
+M=101; n=0:M; x=(0.54-0.46*cos((2*pi*n)/(M-1)));
+X=dtft(x,n,w); magX=abs(X); magX=magX/max(magX);
+subplot(2,2,4); plot(w/pi,magX,'LineWidth',1.5); axis([-1 1 0 1.1]);
+xlabel('\omega/\pi');title(['M=101']);
+set(gca,'XTick',wtick,'YTick',magtick);

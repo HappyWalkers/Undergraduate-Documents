@@ -1,0 +1,58 @@
+clc
+clear
+%%数据导入
+%data=importdata('A');  %A为数据格式，如cd.xlsx、cd.txt，其中cd为文件名，假设样本个数200，特征个数为30，200*31，第31列表示分类标签，这里分为0-3共4类
+k=rand(1,200);         %生成样本个数的随机数，以200为例
+[m,n]=sort(k);         %若k为二维矩阵，则sort（k）表示对每列进行升序排序,m为移动后矩阵，n为移动顺序。
+%上两步的操作是为了生成随机数，之后按比例随机挑选样本；
+%输入输出数据
+input=data(:,1:30);
+output=data(:,31);           %第21列为标签列
+%随机抽取160个样本为训练样本，40个样本为预测样本
+input_train=input(n(1:160),:)';  %行为样本列为特征点
+label_train=output(n(1:160),:)';%类似于标签
+input_test=input(n(161:200),:)';
+label_test=output(n(161:200),:)';
+%输入数据归一化处理
+[inputn,inputps]=mapminmax(input_train);
+%%BP网络训练
+% %初始化网络结构
+net=newff(inputn,label_train,13,{'tansig','purelin'});%隐含层节点数设置为13
+net.trainParam.epochs=300;
+net.trainParam.lr=0.1;
+net.trainParam.goal=0.001;
+%网络训练
+net=train(net,inputn,label_train);
+%%BP网络预测
+%预测数据归一化
+inputn_test=mapminmax('apply',input_test,inputps);
+%net预测标签输出
+y=sim(net,inputn_test);%y=sim(net,x);net表示已训练好的网络，x表示输入数据，y表示网络预测数据。表示用训练好的网络预测输出函数
+
+%根据网络输出获得预测类别的种类
+y(find(y<0.5))=0;
+y(find(y>0.5&y<1.5))=1;
+y(find(yt>1.5&y<2.5))=2;
+y(find(y>2.5&y<3.5))=3
+
+%制图_预测分类标签和实际分类标签对比图
+figure(1)
+plot(y,'og')
+hold on
+plot(label_test,'r*');
+legend('预测标签','实际标签')
+title('BP神经网络预测分类与实际类别比对','fontsize',12)
+ylabel('类别标签','fontsize',12)
+xlabel('样本数目','fontsize',12)
+ylim([-0.5 3.5])
+%精度评价
+rightnumber=0;
+for i=1:size(label_test,2)
+    if BPoutput(i)==label_test(i)
+        rightnumber=rightnumber+1;
+    end
+end
+rightratio=rightnumber/size(label_test,2)*100;
+
+sprintf('测试准确率=%0.2f',rightratio)
+

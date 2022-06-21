@@ -1,0 +1,39 @@
+%%%%%不断对信号进行小波分解，
+信号s经过一次小波分解后得到平均cA1和细节cD1，然后将cA1作为输入进行下一次小波分解得到平均cA2和细节cD2,然后将cA2作为输入进行下一次小波分解得到平均cA3和细节cD3…。假如进行3个尺度的分解，得到的C即为：
+C=[cA3,cD3,cD2,cD1]C=[cA3,cD3,cD2,cD1]      C=\lbrack cA3,cD3,cD2,cD1\rbrackC=[cA3,cD3,cD2,cD1]
+令不要的层的系数变为0，向上重构，例如如果需要去除基线漂移的话，就是细节部分cA3令为0，然后用令为0的cA3和cD3重构一次得到重构的cA2，cA2和cD2重构得到cA1，cA1和cD1重构得到信号s。
+%%%%%%%%%%%%%%%%%%%%
+x = [0:500];
+subplot(211)
+plot(x,'-');hold on;
+subplot(212)
+[C,L] = wavedec(x,6,'sym7');
+a = wrcoef('a',C,L,'sym7',6);
+r1 = x - a;
+plot(r1,'b');
+
+%% 第二种方式
+C(1:L(1)) = zeros(1,L(1));
+r2 = waverec(C,L,'sym7');
+plot(r2,'k');
+%% 第三种方式
+[C1,L1] = wavedec(x,1,'sym7');
+[C2,L2] = wavedec(C1(1:L1(1)),1,'sym7');
+[C3,L3] = wavedec(C2(1:L2(1)),1,'sym7');
+[C4,L4] = wavedec(C3(1:L3(1)),1,'sym7');
+[C5,L5] = wavedec(C4(1:L4(1)),1,'sym7');
+[C6,L6] = wavedec(C5(1:L5(1)),1,'sym7');
+
+C6(1:L6(1)) = zeros(1,L6(1));
+x5 = waverec(C6,L6,'sym7');
+C5(1:L5(1)) = x5;
+x4 = waverec(C5,L5,'sym7');
+C4(1:L4(1)) = x4;
+x3 = waverec(C4,L4,'sym7');
+C3(1:L3(1)) = x3;
+x2 = waverec(C3,L3,'sym7');
+C2(1:L2(1)) = x2;
+x1 = waverec(C2,L2,'sym7');
+C1(1:L1(1)) = x1;
+r3 = waverec(C1,L1,'sym7');
+plot(r3,'r');

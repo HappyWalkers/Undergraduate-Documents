@@ -1,0 +1,1 @@
+[t,x]=sim('c7mdde2',[0,10]); plot(t,x)

@@ -1,0 +1,11 @@
+X=12*rand(1000,1000)-6;
+Y=12*rand(1000,1000)-6;
+C1=sqrt(X.^2/9+Y.^2/36);
+C2=sqrt(X.^2/36+Y.^2);
+C3=sqrt((X-2).^2/9+(Y+1).^2/9);
+D1=logical(C1<=1);
+D2=logical(C2<=1);
+D3=logical(C3<=1);
+D=D1&D2&D3;
+F=sum(D(:));
+area_shade=F/numel(X)*12*12

@@ -1,0 +1,64 @@
+@bin(x) 表示x为0或1
+@gin(x) 表示x为整数
+@free(x) 表示x为任意实数
+@bnd(l,x,u) 表示x为[l,u]之间的实数
+
+
+Model:         ！模型；
+                    ！集合定义   s是1-6   T是1-2  U是双下标 Ust   a，b有6个分量；
+sets:
+S/1..6/: a,b ,d  ;   
+T/1..2/: e ,x,y ;
+U（S,T）：c ；
+endsets
+
+                          ！数据；
+data:
+a=1 2 3          ;
+b=1 2 3         ;
+d=1 2 3          ;
+x=1 2 3          ;
+y=1 2 3          ;
+e=1 2 3          ;
+enddata
+
+min=@sum( T( j )  : @sum( S ( i )  : c(i,j)*@sqrt( ( x( j ) - a( i ) )^2 + ( y( j ) - b( i ) )^2 ) ) );
+@for( S(i) :        !对所有的i来说;
+  @sum( T(j) : c(i,j) )  = d(i) );
+@for(T(j) :
+  @sum(S(i) : c(i,j) ) <=e(j) );
+end
+
+
+
+
+MODEL:
+sets:
+  person/1..5/;
+  position/1..4/;
+  link(person,position): c, x;
+endsets
+data:
+    c=  66.8, 75.6, 87, 58.6,
+    57.2,  66, 66.4, 53,
+     78, 67.8, 84.6, 59.4,
+     70, 74.2, 69.6, 57.2,
+     67.4, 71, 83.8, 62.4;
+
+enddata
+
+min=@sum(link: c*x);
+@for(person(i):  
+   @sum(position(j):x(i,j))<=1);
+@for(position(j):
+   @sum(person(i):x(i,j))=1);
+@for(link: @bin(x));
+END 
+
+
+x 为-5 到 5 的整数
+@free(x);
+@bnd(-5,x,5);
+@gin(x);
+
+

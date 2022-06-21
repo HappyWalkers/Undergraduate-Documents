@@ -1,0 +1,1 @@
+x=0:0.002:2; y=exp(-x).*sin(5*x); r=0.05*randn(size(x)); y1=y+r; plot(x,y1)

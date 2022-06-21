@@ -1,0 +1,99 @@
+%% 此程序用提升法实现第二代小波变换
+%% 我用的是非整数阶小波变换
+%% 采用时域实现,步骤先列后行
+%% 正变换：分裂，预测，更新；
+%% 反变换：更新，预测，合并
+%% 只做一层（可以多层，而且每层的预测和更新方程不同） clear;clc; %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+
+% 1.调原始图像矩阵 load wbarb; % 下载图像
+f=X; % 原始图像
+% f=[0 0 0 0 0 0 0 0 ;...
+% 0 0 0 1 1 0 0 0 ;...
+% 0 0 2 4 4 2 0 0 ;...
+% 0 1 4 8 8 4 1 0 ;...
+% 0 1 4 8 8 4 1 0 ;...
+% 0 0 2 4 4 2 0 0 ;...
+% 0 0 0 1 1 0 0 0 ;...
+% 0 0 0 0 0 0 0 0 ;]; % 原始图像矩阵 N=length(f); % 图像维数
+T=N/2;
+
+% 子图像维数 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%正变换%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% 1.列变换
+
+% A.分裂（奇偶分开） f1=f([1:2:N-1],:); % 奇数
+f2=f([2:2:N],:); % 偶数 % f1(:,T+1)=f1(:,1); % 补列
+% f2(T+1,:)=f2(1,:); % 补行 % B.预测 for i_hc=1:T;
+high_frequency_column(i_hc,:)=f1(i_hc,:)-f2(i_hc,:);
+end; % high_frequency_column(T+1,:)=high_frequency_column(1,:); % 补行 % C.更新 for i_lc=1:T;
+low_frequency_column(i_lc,:)=f2(i_lc,:)+1/2*high_frequency_column(i_lc,:);
+end; % D.合并
+f_column([1:1:T],:)=low_frequency_column([1:T],:);
+f_column([T+1:1:N],:)=high_frequency_column([1:T],:);
+
+
+figure(1)
+colormap(map);
+image(f); figure(2)
+colormap(map);
+image(f_column);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% 2.行变换
+
+% A.分裂（奇偶分开） f1=f_column(:,[1:2:N-1]); % 奇数
+f2=f_column(:,[2:2:N]); % 偶数
+% f2(:,T+1)=f2(:,1); % 补行 % B.预测 for i_hr=1:T;
+high_frequency_row(:,i_hr)=f1(:,i_hr)-f2(:,i_hr);
+end; % high_frequency_row(:,T+1)=high_frequency_row(:,1); % 补行 % C.更新 for i_lr=1:T;
+low_frequency_row(:,i_lr)=f2(:,i_lr)+1/2*high_frequency_row(:,i_lr);
+end; % D.合并
+f_row(:,[1:1:T])=low_frequency_row(:,[1:T]);
+f_row(:,[T+1:1:N])=high_frequency_row(:,[1:T]);
+figure(3)
+colormap(map);
+image(f_row);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%反变换%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% 1.行变换
+% A.提取（低频高频分开） f1=f_row(:,[T+1:1:N]); % 奇数
+f2=f_row(:,[1:1:T]); % 偶数
+% f2(:,T+1)=f2(:,1); % 补行 % B.更新 for i_lr=1:T;
+low_frequency_row(:,i_lr)=f2(:,i_lr)-1/2*f1(:,i_lr);
+end; % C.预测 for i_hr=1:T;
+high_frequency_row(:,i_hr)=f1(:,i_hr)+low_frequency_row(:,i_hr);
+end; % high_frequency_row(:,T+1)=high_frequency_row(:,1); % 补行
+% D.合并(奇偶分开合并)
+f_row(:,[2:2:N])=low_frequency_row(:,[1:T]);
+f_row(:,[1:2:N-1])=high_frequency_row(:,[1:T]);
+figure(4)
+colormap(map);
+image(f_row);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% 2.列变换
+
+% A.提取（低频高频分开） f1=f_row([T+1:1:N],:); % 奇数
+f2=f_row([1:1:T],:); % 偶数 % f1(:,T+1)=f1(:,1); % 补列
+% f2(T+1,:)=f2(1,:); % 补行 % B.更新 for i_lc=1:T;
+low_frequency_column(i_lc,:)=f2(i_lc,:)-1/2*f1(i_lc,:);
+end; % C.预测 for i_hc=1:T;
+high_frequency_column(i_hc,:)=f1(i_hc,:)+low_frequency_column(i_hc,:);
+end; % high_frequency_column(T+1,:)=high_frequency_column(1,:); % 补行 % D.合并(奇偶分开合并）
+f_column([2:2:N],:)=low_frequency_column([1:T],:);
+f_column([1:2:N-1],:)=high_frequency_column([1:T],:);
+
+
+figure(5)
+colormap(map);
+image(f_column);

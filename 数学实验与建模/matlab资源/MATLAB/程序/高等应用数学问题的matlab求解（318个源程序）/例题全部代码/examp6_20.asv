@@ -1,0 +1,4 @@
+f=-[2 1 4 3 1]'; A=[0 2 1 4 2; 3 4 5 -1 -1]; intlist=ones(5,1);
+      B=[54; 62]; ctype=[-1; -1]; xm=[0,0,3.32,0.678,2.57]; xM=inf*ones(5,1);
+      [res,b]=ipslv_mex(f,A,B,intlist,xM,xm,ctype)  % 因为返回的 b=0，表示优化成功
+      
