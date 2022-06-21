@@ -1,0 +1,5 @@
+Dependencies for Project 'asm_1a', Target 'asm1': (DO NOT MODIFY !)
+F (.\asm1_a.s)(0x576259A2)(--cpu ARM920T --pd "__EVAL SETA 1" -g --apcs=interwork -IE:\MDK\ARM\RV31\INC-IE:\MDK\ARM\CMSIS\Include-IE:\MDK\ARM\Inc\Samsung--pd "__UVISION_VERSION SETA 521"--list .\lst\asm1_a.lst --xref -o .\obj\asm1_a.o --depend .\obj\asm1_a.d)
+F (.\DebugINRam.ini)(0x46DCA978)()
+F (.\readme.txt)(0x473BAD94)()
+F (..\..\common\ReadMeCommon.txt)(0x46DCA980)()

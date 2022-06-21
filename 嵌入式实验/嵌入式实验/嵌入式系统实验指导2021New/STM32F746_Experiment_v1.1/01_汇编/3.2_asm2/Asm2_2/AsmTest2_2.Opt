@@ -1,0 +1,44 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+ cExt (*.c)
+ aExt (*.s*; *.src; *.a*)
+ oExt (*.obj)
+ lExt (*.lib)
+ tExt (*.txt; *.h; *.inc)
+ pExt (*.plm)
+ CppX (*.cpp)
+ DaveTm { 0,0,0,0,0,0,0,0 }
+
+Target (AsmTest2_2), 0x0004 // Tools: 'ARM-ADS'
+GRPOPT 1,(Source),0,0,0
+GRPOPT 2,(Include),0,0,0
+GRPOPT 3,(Script),0,0,0
+GRPOPT 4,(Common),0,0,0
+GRPOPT 5,(ReadMe),0,0,0
+
+OPTFFF 1,1,2,0,0,0,0,0,<.\asm_code2.s><asm_code2.s> 
+OPTFFF 3,2,5,0,0,0,0,0,<.\DebugInRam.ini><DebugInRam.ini> 
+OPTFFF 5,3,5,234881026,0,1,12,0,<.\readme.txt><readme.txt> { 44,0,0,0,2,0,0,0,3,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,226,255,255,255,0,0,0,0,0,0,0,0,155,2,0,0,52,1,0,0 }
+OPTFFF 5,4,5,0,0,1,19,0,<..\..\common\ReadMeCommon.txt><ReadMeCommon.txt> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,226,255,255,255,22,0,0,0,29,0,0,0,181,2,0,0,82,1,0,0 }
+
+ExtF <D:\come_on\最新任务2\武汉_071108\武汉_071108\EduKit2410_for_MDK\3.2_asm2\Asm2_2\readme.txt> 1,12,0,{ 44,0,0,0,2,0,0,0,3,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,226,255,255,255,0,0,0,0,0,0,0,0,155,2,0,0,52,1,0,0 }
+ExtF <D:\come_on\最新任务2\武汉_071108\武汉_071108\EduKit2410_for_MDK\common\ReadMeCommon.txt> 1,19,0,{ 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,226,255,255,255,22,0,0,0,29,0,0,0,181,2,0,0,82,1,0,0 }
+
+TARGOPT 1, (AsmTest2_2)
+ ADSCLK=12000000
+  OPTTT 0,1,1,0
+  OPTHX 1,65535,0,0,0
+  OPTLX 79,66,8,<.\lst\>
+  OPTOX 16
+  OPTLT 1,1,1,0,1,1,0,1,0,0,0,0
+  OPTXL 1,1,1,1,1,1,1,0,0
+  OPTFL 1,0,1
+  OPTAX 0
+  OPTDL (SARM.DLL)()(DARMST9.DLL)(-pS3C2410A)(SARM.DLL)()(TARMSS9.DLL)(-pS3C2410A)
+  OPTDBG 48125,0,()()()()(.\DebugInRam.ini)()()()()(.\DebugInRam.ini) (BIN\UL2ARM.DLL)()()()
+  OPTDF 0x0
+  OPTLE <>
+  OPTLC <>
+EndOpt
+

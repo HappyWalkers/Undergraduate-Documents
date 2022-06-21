@@ -1,0 +1,128 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;*******************************************************
+                       **************************************
+    2 00000000         ; NAME:  asm1_a.s                                       
+                                                *
+    3 00000000         ; Author:   TYW /WUHAN R&D Center,Embest                
+                                                  *
+    4 00000000         ; Desc:  ARM instruction examples                       
+                                                    *
+    5 00000000         ; History:  2007.5.1                                    
+                                               *
+    6 00000000         ;*******************************************************
+                       **************************************
+    7 00000000         
+    8 00000000         ;/*-----------------------------------------------------
+                       ------------------------------------*/
+    9 00000000         ;/*          constant define                            
+                                                */
+   10 00000000         ;/*-----------------------------------------------------
+                       ------------------------------------*/
+   11 00000000 0000002D 
+                       x       EQU              45          ;  x=45
+   12 00000000 00000040 
+                       y       EQU              64          ;  y=64/
+   13 00000000 30200000 
+                       stack_top
+                               EQU              0x30200000  ; define the top ad
+                                                            dress for stacks 
+   14 00000000         
+   15 00000000                 export           Reset_Handler
+   16 00000000         
+   17 00000000         ;/*---------- ------------------------------------------
+                       ------------------------------------*/
+   18 00000000         ;/*       code            */
+   19 00000000         ;/*-----------------------------------------------------
+                       ------------------------------------*/
+   20 00000000                 AREA             text,CODE,READONLY
+   21 00000000                 export
+   22 00000000         Reset_Handler                        ; code start */
+   23 00000000 E59FD018        ldr              sp, =stack_top
+   24 00000004 E3A0002D        mov              r0, #x      ; put x value into 
+                                                            R0
+   25 00000008 E58D0000        str              r0, [sp]    ; save the value of
+                                                             R0 into stacks
+   26 0000000C E3A00040        mov              r0, #y      ; put y value into 
+                                                            R0
+   27 00000010 E59D1000        ldr              r1, [sp]    ; read the data fro
+                                                            m stack,and put it 
+                                                            into R1
+   28 00000014 E0800001        add              r0, r0, r1  ;R0=R0+R1 
+   29 00000018 E58D0000        str              r0, [sp]
+   30 0000001C         stop
+   31 0000001C EAFFFFFE        b                stop        ; end the code £¬cy
+                                                            cling
+   32 00000020                 end
+              30200000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM920T --apcs=interwor
+k --depend=.\obj\asm1_a.d -o.\obj\asm1_a.o -IE:\MDK\ARM\RV31\INC -IE:\MDK\ARM\C
+MSIS\Include -IE:\MDK\ARM\Inc\Samsung --predefine="__EVAL SETA 1" --predefine="
+__UVISION_VERSION SETA 521" --list=.\lst\asm1_a.lst asm1_a.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 22 in file asm1_a.s
+   Uses
+      At line 15 in file asm1_a.s
+Comment: Reset_Handler used once
+stop 0000001C
+
+Symbol: stop
+   Definitions
+      At line 30 in file asm1_a.s
+   Uses
+      At line 31 in file asm1_a.s
+Comment: stop used once
+text 00000000
+
+Symbol: text
+   Definitions
+      At line 20 in file asm1_a.s
+   Uses
+      None
+Comment: text unused
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+stack_top 30200000
+
+Symbol: stack_top
+   Definitions
+      At line 13 in file asm1_a.s
+   Uses
+      At line 23 in file asm1_a.s
+Comment: stack_top used once
+x 0000002D
+
+Symbol: x
+   Definitions
+      At line 11 in file asm1_a.s
+   Uses
+      At line 24 in file asm1_a.s
+Comment: x used once
+y 00000040
+
+Symbol: y
+   Definitions
+      At line 12 in file asm1_a.s
+   Uses
+      At line 26 in file asm1_a.s
+Comment: y used once
+3 symbols
+340 symbols in table

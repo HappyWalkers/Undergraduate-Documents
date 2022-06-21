@@ -1,0 +1,22 @@
+把该文件call_int.s添加到工程，并修改中断入口及工程配置：
+
+/* For the fault of GNU GCC for ARM compiler to compile the interrupt function as:
+    void user_handle(void) __attribute__ ((interrupt ("IRQ"))); // NOT RECOMMEND
+    void user_handle(void); // RECOMMEND
+#------------------------------------------------------------------------------
+#- Entry function:	void	irqEntry(void)
+#- Extern function:	void	isrHandle(void)
+#------------------------------------------------------------------------------
+/* Examples showed as following:
+@ void TSInt (void); ---> The interrupt handle function write as C program, it is user application func.
+@ isrEINT2           ---> It is the interrupt vactor entry function to jump here, call by INTERRUPT  VECTOR TABLE.
+@ TSP_INT            ---> modify Project ->Settings >Assembler >General category >Predefines: set as
+								TSP_INT=1 
+						  OR '#define TSP_INT' or '.EQU TSP_INT' in source file (except this file).
+       .extern TSInt
+       .global isrEINT2	
+isrEINT2:
+.ifdef TSP_INT
+       IRQHandle TSInt
+.endif
+*/

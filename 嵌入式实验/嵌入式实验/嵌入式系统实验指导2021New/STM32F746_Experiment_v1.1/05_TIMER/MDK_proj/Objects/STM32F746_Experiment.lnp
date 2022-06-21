@@ -1,0 +1,27 @@
+--cpu Cortex-M7.fp.sp
+".\objects\startup_stm32f756xx.o"
+".\objects\stm32756g_eval.o"
+".\objects\stm32756g_eval_io.o"
+".\objects\stm32f7xx_hal_gpio.o"
+".\objects\stm32f7xx_hal.o"
+".\objects\stm32f7xx_hal_cortex.o"
+".\objects\stm32f7xx_hal_dma.o"
+".\objects\stm32f7xx_hal_i2c.o"
+".\objects\stm32f7xx_hal_i2c_ex.o"
+".\objects\stm32f7xx_hal_pwr_ex.o"
+".\objects\stm32f7xx_hal_rcc.o"
+".\objects\stm32f7xx_hal_rcc_ex.o"
+".\objects\stm32f7xx_hal_uart.o"
+".\objects\stm32f7xx_hal_msp.o"
+".\objects\stm32f7xx_hal_tim.o"
+".\objects\stm32f7xx_hal_tim_ex.o"
+".\objects\system_init.o"
+".\objects\system_stm32f7xx.o"
+".\objects\mfxstm32l152.o"
+".\objects\main.o"
+".\objects\config.o"
+".\objects\stm32f7xx_it.o"
+--library_type=microlib --strict --scatter ".\Objects\STM32F746_Experiment.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\STM32F746_Experiment.map" -o .\Objects\STM32F746_Experiment.axf
