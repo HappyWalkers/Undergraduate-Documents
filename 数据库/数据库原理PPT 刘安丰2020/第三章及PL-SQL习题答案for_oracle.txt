@@ -1,0 +1,223 @@
+drop table score;
+drop table course;
+drop table student; 
+drop table teacher;
+create table student(sno int,sname char(12),sex char(4),birthday date,class char(10) );
+insert into student values(108,'曾化','男',to_date('09/01/77','mm/dd/yy'),'95033');
+insert into student values(105,'明化','男',to_date('09/01/77','mm/dd/yy'),'95033');
+insert into student values(107,'王丽','女',to_date('09/01/77','mm/dd/yy'),'95033');
+insert into student values(101,'李军','男',to_date('09/01/77','mm/dd/yy'),'95033');
+insert into student values(109,'王芳','女',to_date('09/01/77','mm/dd/yy'),'95033');
+insert into student values(103,'叶军','男',to_date('09/01/77','mm/dd/yy'),'95033');
+
+create table teacher(tno int ,tname char(12),sex char(4),birthday date,proff char(10),depart char(20) );
+insert into teacher values(804,'张化','男',to_date('09/01/70','mm/dd/yy'),'付教授','计算机系');
+insert into teacher values(856,'王化','男',to_date('09/01/70','mm/dd/yy'),'付教授','电子系');
+insert into teacher values(825,'刘化','男',to_date('09/01/70','mm/dd/yy'),'付教授','计算机系');
+insert into teacher values(831,'离化','男',to_date('09/01/70','mm/dd/yy'),'付教授','工程系');
+insert into teacher values(854,'中化','男',to_date('09/01/70','mm/dd/yy'),'付教授','计算机系');
+
+create table course(cno char(8) ,cname char(12),tno int);
+insert into course values('3_105','计算机导论',825);
+insert into course values('3_245','操作系统',804);
+insert into course values('6_166','数字导论',8565);
+insert into course values('9_888','高等数学',825);
+
+create table score(sno int,cno char(8), degree number(8,2));
+insert into score values(103,'3_245',86);
+insert into score values(109,'3_245',96);
+insert into score values(105,'3_245',76);
+insert into score values(103,'3_105',80);
+insert into score values(105,'3_105',36);
+insert into score values(109,'3_105',76);
+insert into score values(101,'6_166',96);
+insert into score values(107,'6_166',89);
+insert into score values(108,'6_166',87);
+insert into score values(101,'6_166',80);
+insert into score values(107,'6_166',85);
+
+insert into score values(107,'3_105',99);
+insert into score values(108,'3_105',99);
+
+insert into score values(107,'3_245',69);
+insert into score values(108,'3_245',79);
+
+commit;
+
+
+/*触发器before_del, 当要在teacher表中删除一个老师时*/
+/*判断老师是否已经授课，如果有的话，引发一个例外，返回*/
+/*给用户无法删除的消息*/
+
+create or replace trigger before_del 
+before delete on teacher
+for each row
+declare
+	temp course%rowtype;
+	cannot_delete exception;
+	cursor judge is select * from course where tno=:OLD.tno;
+begin
+	open judge;
+	fetch judge into temp;
+	if judge%found then raise cannot_delete;
+	end if;
+	close judge;
+exception
+	when cannot_delete then
+	raise_application_error(-20002,'You can not delete this teacher!');
+	close judge;
+end;
+/
+
+/*存储函数update_stu，两个参数：学号，课程号。作用：将指定的某班的学生*/
+/*成绩改为100分,如果学生不存在，引发例外*/
+
+create or replace function 
+update_stu(sno_p in score.sno%type,cno_p in score.cno%type) return number
+as
+	not_exist exception;
+	temp score%rowtype;
+	cursor judge is select * from score where cno=cno_p and sno=sno_p;
+begin
+	open judge;
+	fetch judge into temp;
+	if judge%notfound then raise not_exist;
+	end if;
+	update score set degree=100 
+		where sno=sno_p and cno=cno_p;	
+	close judge;
+            return 1;
+exception
+	when not_exist then
+	DBMS_OUTPUT.PUT_LINE('student is not found!');
+	close judge;
+          return -1;
+
+end;
+/
+
+declare
+i number;
+begin
+i:=update_stu(107,'3_105') ;
+end;
+/
+
+create or replace procedure get_news
+as
+aa number;
+     begin
+     select count(*) into aa from student;
+ end;
+/　　
+
+/*存储过程query_stu，作用：实现对student表的查询，要求*/
+/*输入学号，得到学生的具体情况*/
+
+
+set serveroutput on;
+create or replace procedure query_stu(sno_p in student.sno%type)
+as
+   not_exist exception;
+   temp student%rowtype;
+   cursor judge is select * from student where sno=sno_p;
+   i number; 
+ begin
+  open judge;
+  fetch judge into temp;
+  if judge%notfound then 
+      raise not_exist;
+  end if;
+DBMS_OUTPUT.PUT_LINE('sno'||'    '||'sname'||'    '||'sex'||'    '||'birthday'||'    '||'class');
+DBMS_OUTPUT.PUT_LINE(temp.sno||'    '||temp.sname||'    '||temp.sex||'         '||temp.birthday||'    '||temp.class);
+  close judge;
+exception
+  when not_exist then
+  DBMS_OUTPUT.PUT_LINE('student is not found!');
+  close judge;
+end;
+/
+
+
+begin
+query_stu(107) ;
+end;
+/
+
+
+
+
+
+
+
+/*触发器check_update_for_emp, 当要在emp表中更新一个职工的工资时*/
+/*判断更新的工资是否比原来的工资>1000，如果>1000的话,就不让更新*/
+
+create or replace trigger check_update_for_emp
+before update on emp 
+for each row
+declare
+	--cannot_update exception;
+begin
+       if(:New.sal-:old.sal>1000) then 
+     --           raise cannot_updtate;
+       end if;
+       
+exception
+	--when cannot_update then
+	--raise_application_error(-20005,'You can not update this emp!');
+end;
+/
+
+
+
+
+create or replace trigger check_update_for_emp
+before update on emp 
+for each row
+declare
+ i int;
+ cannot_update exception;
+ cursor judge is select * from emp where :New.sal-:old.sal>1000;
+begin
+     if judge%found then raise cannot_update;
+	end if;
+       
+exception
+	when cannot_update then
+	raise_application_error(-20005,'You can not update this emp!');
+end;
+/
+
+
+create or replace trigger check_update_for_emp
+before update on emp 
+for each row
+declare
+ i int;
+ cannot_update exception;
+ cursor judge is select * from emp where :New.sal-:old.sal>1000;
+begin
+     if judge%found then raise cannot_update;
+	end if;
+       
+exception
+	when cannot_update then
+	raise_application_error(-20005,'You can not update this emp!');
+end;
+/
+
+
+
+
+
+
+select empno,sal from emp;
+
+ update emp set sal=50000 where empno=7369;
+
+
+
+
+
+

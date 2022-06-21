@@ -1,0 +1,81 @@
+ --触发器
+select * from sc
+--创建一个表，表中存储的
+--是每一个同学的平均成绩
+create table avgsc(
+sno char(10),
+agrade int 
+)
+go
+
+---把每个同学的平均成绩存入这个表
+insert into avgsc(sno,agrade)
+select sno,avg(grade) from sc
+group by sno
+go
+select * from avgsc
+--如果在随后，我们在sc表中
+--插入一条成绩
+select * from sc where sno='111'
+--插入一条成绩
+insert into sc(sno,cno,grade)
+values('111','001',61)  
+go
+drop  trigger trisc
+go
+--创建触发器
+create trigger trisc on sc 
+        for insert
+as
+ if exists(select grade from 
+     inserted where grade>100 
+     or grade<0
+     )
+ begin 
+   print '你插入的成绩不在0-100之间'
+   rollback
+ end
+else
+begin 
+ delete from avgsc
+ insert into avgsc(sno,agrade)
+ select sno,avg(grade) from sc
+group by sno
+end 
+go
+--插入一条成绩
+insert into sc(sno,cno,grade)
+values('111','003',23)
+go
+insert into sc(sno,cno,grade)
+values('110','002',90)
+go
+select * from avgsc
+select * from sc
+
+--创建一个触发器，记录用户对sc的插入与删除的操作
+--创建一个日志来存储记录
+create table logsc(
+opdate datetime,
+grade  int)
+go
+
+create trigger trilog on sc 
+        for insert,delete
+as 
+  insert into logsc 
+   select getdate(),grade from 
+   inserted
+insert into logsc 
+   select getdate(),grade from
+ deleted
+go
+
+select * from logsc
+
+ insert into sc(sno,cno,grade)
+values('110','003',100)
+
+delete from sc where sno='110' and cno='003'
+
+

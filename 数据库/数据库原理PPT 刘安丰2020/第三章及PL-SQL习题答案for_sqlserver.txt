@@ -1,0 +1,105 @@
+ drop table student
+go
+create table student(sno int,sname char(12),sex char(4),birthday datetime,class char(10) )
+go
+insert into student values(108,'曾化','男','77/09/01','95033');
+insert into student values(105,'明化','男','77/09/01','95033');
+insert into student values(107,'王丽','女','77/09/01','95033');
+insert into student values(101,'李军','男','77/09/01','95033');
+insert into student values(109,'王芳','女','77/09/01','95033');
+insert into student values(103,'叶军','男','77/09/01','95033');
+go
+
+drop table teacher
+go
+create table teacher(tno int ,tname char(12),sex char(4),birthday datetime,proff char(10),depart char(20) );
+insert into teacher values(804,'张化','男','70/09/01','付教授','计算机系');
+insert into teacher values(856,'王化','男','70/09/01','付教授','电子系');
+insert into teacher values(825,'刘化','男','70/09/01','付教授','计算机系');
+insert into teacher values(831,'离化','男','70/09/01','付教授','工程系');
+insert into teacher values(854,'中化','男','70/09/01','付教授','计算机系');
+drop table course
+create table course(cno char(8) ,cname char(12),tno int);
+insert into course values('3_105','计算机导论',825);
+insert into course values('3_245','操作系统',804);
+insert into course values('6_166','数字导论',8565);
+insert into course values('9_888','高等数学',825);
+
+go
+drop table score
+create table score(sno int,cno char(8), degree int);
+insert into score values(103,'3_245',86);
+insert into score values(109,'3_245',96);
+insert into score values(105,'3_245',76);
+insert into score values(103,'3_105',80);
+insert into score values(105,'3_105',36);
+insert into score values(109,'3_105',76);
+insert into score values(101,'6_166',96);
+insert into score values(107,'6_166',89);
+insert into score values(108,'6_166',87);
+insert into score values(101,'6_166',80);
+insert into score values(107,'6_166',85);
+
+insert into score values(107,'3_105',99);
+insert into score values(108,'3_105',99);
+
+insert into score values(107,'3_245',69);
+insert into score values(108,'3_245',79);
+
+go
+
+
+drop trigger dletestudent
+go
+create trigger dletestudent on student
+for  delete 
+as
+declare
+@counter int
+select  @counter=count(*) from score where sno in(SELECT sno  FROM deleted )
+
+if(@counter>0)
+  begin
+  rollback
+ end
+go
+
+delete from student where sno=108
+select * from student
+
+
+drop proc changeteacher  
+go
+
+CREATE proc changeteacher  (@tno1 int)
+
+AS 
+begin
+declare  @counter int
+declare  @returnvalue int
+ set @returnvalue=0
+ select  @counter=count(*) from teacher where tno=@tno1
+ if(@counter>0)
+ BEGIN
+  set @returnvalue=1
+   update teacher set proff='tno1'  where tno=@tno1
+
+ end
+ 
+return @returnvalue
+end
+go
+
+EXECUTE changeteacher 804
+
+
+
+
+
+
+
+
+
+
+
+

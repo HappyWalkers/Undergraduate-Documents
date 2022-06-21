@@ -1,0 +1,51 @@
+/********************************** 
+*
+*proc 最简单的例子
+*连接数据库，建立一个表，插入一条记录；
+*
+**********************************/
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <conio.h>
+EXEC SQL INCLUDE sqlca;
+EXEC SQL BEGIN DECLARE SECTION;
+     VARCHAR  username [20];
+     VARCHAR  password[20];
+EXEC SQL END DECLARE SECTION;
+
+void sqlerror();
+main()
+{
+   
+  printf("用户名:");
+  scanf("%s",username.arr);
+  username.len=strlen(username.arr);
+  printf("密码  :");
+  scanf("%s",password.arr);
+  password.len=strlen(password.arr);
+  printf("\n连接到ORACLE...");
+  EXEC SQL CONNECT :username IDENTIFIED BY :password;
+ printf("\n连接到ORACLE成功.");
+ EXEC SQL WHENEVER SQLERROR DO sqlerror();
+EXEC SQL CREATE TABLE CLASS(CNAME CHAR(12));
+printf("\n创建class表成功.");
+ EXEC SQL INSERT INTO CLASS(CNAME) VALUES('COMPUTER');
+  printf("\n插入数据成功.");
+
+
+printf("\n HAVAE INSERT INTO ORACLE \n");
+EXEC SQL COMMIT WORK RELEASE;
+exit(0);
+}
+void sqlerror()
+{
+EXEC SQL WHENEVER SQLERROR CONTINUE;
+printf("\n HAVAE at least one ERROR! \n");
+EXEC SQL ROLLBACK RELEASE;
+exit(1);
+}
+
+
+
+

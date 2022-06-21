@@ -1,0 +1,54 @@
+ drop table tongjifeng
+go
+create table tongjifeng (
+sdept char(20),
+cname char(20),
+fengshu char(20),
+geishu int
+)
+drop proc xxx 
+go
+create proc xxx
+as
+delete from tongjifeng
+
+insert into tongjifeng
+(sdept,cname,fengshu,geishu)
+ select sdept,cname,'90-100',count(*) from student
+join sc on sc.sno=student.sno join course on
+course.cno=sc.cno where grade between 90 and 100
+group by sdept,cname
+
+insert into tongjifeng
+(sdept,cname,fengshu,geishu)
+ select sdept,cname,'80-89',count(*) from student
+join sc on sc.sno=student.sno join course on
+course.cno=sc.cno where grade between 80 and 89
+group by sdept,cname
+
+insert into tongjifeng
+(sdept,cname,fengshu,geishu)
+ select sdept,cname,'70-79',count(*) from student
+join sc on sc.sno=student.sno join course on
+course.cno=sc.cno where grade between 70 and 79
+group by sdept,cname
+
+
+insert into tongjifeng
+(sdept,cname,fengshu,geishu)
+ select sdept,cname,'60-69',count(*) from student
+join sc on sc.sno=student.sno join course on
+course.cno=sc.cno where grade between 60 and 69
+group by sdept,cname
+
+insert into tongjifeng
+(sdept,cname,fengshu,geishu)
+ select sdept,cname,'<60',count(*) from student
+join sc on sc.sno=student.sno join course on
+course.cno=sc.cno where grade <60
+group by sdept,cname
+go
+
+exec xxx
+
+select * from tongjifeng order by sdept,cname

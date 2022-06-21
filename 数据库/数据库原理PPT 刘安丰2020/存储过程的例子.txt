@@ -1,0 +1,14 @@
+ CREATE proc fractaltongji   --将脉厚数据分维的统计  
+AS 
+begin
+declare  @counter int
+declare  @i float
+declare  @j float
+declare  @returnvalue int
+set @i=0.2;
+while(@i<5.0) --统计脉厚分段统计有多少个样品
+ begin 
+   insert into ftong(maihou,tong) select @i ,count(*)from fractal1 where maihou<@i
+  set  @i=@i+0.2
+ end
+end

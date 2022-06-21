@@ -1,0 +1,21 @@
+ select * from student;
+select * from sc;
+select * from course;
+Select sno,sname from student where sno in (select distinct sno from sc where grade>90)
+select  student.sno,sname from student join
+sc on sc.sno=student.sno where grade>90
+--例69:查询计算机系选修了数据库原理的学生的学号和姓名
+Select sno,sname from student where sno in 
+(select sno from sc where cno in
+ (select cno from course where cname='数据库原理'))
+   and sdept ='计算机系'
+
+select distinct student.sno,sname from student join
+sc on sc.sno =student.sno join course 
+on sc.cno=course.cno where sdept='计算机系' 
+and cname='数据库原理'
+
+Select sname,sdept  from student s join
+ sc on s.sno=sc.sno where cno='002'
+ and grade =(select max(grade) from sc where cno='002')
+

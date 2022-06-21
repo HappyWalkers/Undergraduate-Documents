@@ -1,0 +1,16 @@
+void cHc(HuffmanTree ht,int index,string code){
+    if(ht[index].lchild==0 && ht[index].rchild==0){
+        // cout<<ht[index].ch<<"\t"<<code<<endl;
+        outfile<<ht[index].ch<<"\t"<<code<<endl;
+        return;
+    }
+    cHc(ht,ht[index].lchild,code+"0");
+    cHc(ht,ht[index].rchild,code+"1");
+}
+
+void calcHuffmanCode(HuffmanTree ht,int n){ 
+    string left="0";
+    string right="1";
+    cHc(ht,ht[2*n-1].lchild,left);
+    cHc(ht,ht[2*n-1].rchild,right);
+}

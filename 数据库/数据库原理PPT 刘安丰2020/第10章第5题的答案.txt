@@ -1,0 +1,81 @@
+10小题:在第5章建立的学生表、课程表和修课表上完成如下操作。
+1：除主码约束外，删除其它约束
+2：在选课表中定义一个更新和插入的触发器，保证插入的成绩在0-100之内
+3:在sc表中定义一个保证课程号在课程表的课程范围内的插入触发器
+4:在sc表上定义一个限制学生选课门数不能超5门的触发器
+5:在course表上定义一个限制删除有学生选课程的触发器.
+
+---2题
+create trigger de_or_upsc on sc 
+ for insert,update
+as 
+  declare @c int
+  select @c=count(*) from inserted
+  where grade<0 or grade>100
+  if @c>0 
+    begin
+    print '你插入或者修改的成绩不在0-100之间'
+    rollback
+   end 
+go 
+---2题的另外一种解
+create trigger de_or_upsc1 on sc
+ for insert,update
+as 
+  if exists(select * from inserted
+  where grade<0 or grade>100)
+   begin
+    print '你插入或者修改的成绩不在0-100之间'
+   rollback
+   end 
+go 
+--3题
+create trigger checkcno on sc
+for insert
+as
+ if not exists
+(select * from course where cno in
+  (select cno from inserted))
+  begin
+  print '你插入的课程编号是课程表中没有的课程编号，请重新插入！'
+  rollback 
+end
+
+--4题
+drop trigger uppercourse
+go
+create trigger  uppercourse on sc
+for insert
+as
+ declare @c1 int
+ select @c1=count(*) from sc where sno in
+(select sno from inserted)
+if @c1>5
+  begin
+  print '这个同学已经选了5门课以上了，再也不能选课了'
+  rollback
+  end
+
+
+create trigger checkdeletecourse on course
+for delete
+as
+declare @dd int
+select @dd=count(*) from sc where cno in(
+ select cno from deleted)
+if @dd>0
+  begin
+  print '这门课已经有人选了，你不能删除这门课'
+  rollback
+  end
+go
+create trigger checkdeletecourse1 on course
+for delete
+as
+if exists(select * from sc where cno in(
+ select cno from deleted))
+ begin
+  print '这门课已经有人选了，你不能删除这门课'
+  rollback
+  end
+go

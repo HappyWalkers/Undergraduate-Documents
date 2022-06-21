@@ -1,0 +1,58 @@
+ --9章习题答案
+--1题
+--(1)
+drop proc total_sc1
+go
+
+create proc total_sc1 as
+  select sno,sum(credit) from course join 
+sc on  course.cno=sc.cno group by sno
+--(2)
+drop proc query_student
+go
+create proc query_student @dept char(20)
+as
+ select student.sno,sname,sc.cno,cname,grade
+from student join sc on sc.sno=student.sno 
+join course on sc.cno=course.cno 
+ where sdept=@dept
+exec query_student '计算机系'
+--(3)
+drop proc total_sum
+go
+create proc total_sum(@up int)
+as 
+ declare @j int
+ declare @sum int
+ select @j=1,@sum=0
+while(@j<@up)
+begin
+  set @sum=@sum+@j
+  set @j=@j+1
+end
+print @sum
+go
+exec total_sum 100
+go
+drop proc deletesno
+go
+create proc deletesno @sno1 char(10)
+as
+ delete from sc where sno=@sno1
+go
+exec deletesno 100
+--(5)
+drop proc modify_course
+go
+create proc modify_course @cno1 char(10),
+ @credit1 int=3
+as
+ update course set credit=@credit1 where
+ cno=@cno1
+go
+exec modify_course '001',4
+go
+
+select * from course
+
+
