@@ -1,0 +1,5 @@
+   while (true) {
+                String str = new String();
+                try {
+                    str = br.readLine();
+                } catch (Excep

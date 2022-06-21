@@ -1,0 +1,5 @@
+Line();
+                } catch (Exception ex) {
+                    // System.out.println(account);
+                    linkedHashSet.remove(account);// 断开连接抛出java.net.SocketException: Connectionreset，移除该用户连接
+                }
