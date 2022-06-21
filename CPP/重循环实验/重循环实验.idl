@@ -1,0 +1,20 @@
+// 重循环实验.idl : IDL source for 重循环实验.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (重循环实验.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(716AC943-9C28-4CC2-97D6-1FF7C91DE749),
+	version(1.0),
+	helpstring("重循环实验 1.0 Type Library")
+]
+library MYLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+};

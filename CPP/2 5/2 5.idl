@@ -1,0 +1,20 @@
+// 2 5.idl : IDL source for 2 5.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (2 5.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(7D0771CD-5EC8-4E27-B657-65A69AD26B3A),
+	version(1.0),
+	helpstring("2 5 1.0 Type Library")
+]
+library MY25Lib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+};

@@ -1,0 +1,33 @@
+﻿生成启动时间为 2019/12/11 15:03:31。
+     1>项目“F:\C++\teacher\teacher\teacher.vcxproj”在节点 2 上(build 个目标)。
+     1>PrepareForBuild:
+         正在创建目录“F:\C++\teacher\Debug\”。
+       InitializeBuildStatus:
+         正在创建“Debug\teacher.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         E:\visual studio 2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\teacher.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         E:\visual studio 2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\teacher.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt teacher.cpp
+         teacher.cpp
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\teacher.exe.embed.manifest.res" Debug\teacher_manifest.rc 
+       Link:
+         E:\visual studio 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\C++\teacher\Debug\teacher.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\teacher.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\C++\teacher\Debug\teacher.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\C++\teacher\Debug\teacher.lib" /MACHINE:X86 Debug\teacher.exe.embed.manifest.res
+         Debug\stdafx.obj
+         Debug\teacher.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\teacher.exe.embed.manifest" /manifest Debug\teacher.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\teacher.exe.embed.manifest.res" Debug\teacher_manifest.rc 
+       LinkEmbedManifest:
+         E:\visual studio 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\C++\teacher\Debug\teacher.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\teacher.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\C++\teacher\Debug\teacher.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\C++\teacher\Debug\teacher.lib" /MACHINE:X86 Debug\teacher.exe.embed.manifest.res
+         Debug\stdafx.obj
+         Debug\teacher.obj
+         teacher.vcxproj -> F:\C++\teacher\Debug\teacher.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\teacher.unsuccessfulbuild”。
+         正在对“Debug\teacher.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\C++\teacher\teacher\teacher.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.77

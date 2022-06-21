@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 重循环实验 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ANHUIS~1\AppData\Local\Temp\RSP7F4F.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"Debug/重循环实验.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ     /c 
+"F:\C++\重循环实验\重循环实验1.cpp"
+]
+Creating command line "cl.exe @C:\Users\ANHUIS~1\AppData\Local\Temp\RSP7F4F.tmp" 
+Creating temporary file "C:\Users\ANHUIS~1\AppData\Local\Temp\RSP7F50.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/重循环实验.pdb" /debug /machine:I386 /def:".\重循环实验.def" /out:"Debug/重循环实验.dll" /implib:"Debug/重循环实验.lib" /pdbtype:sept 
+".\Debug\StdAfx.obj"
+".\Debug\重循环实验.obj"
+".\Debug\重循环实验.res"
+".\Debug\重循环实验1.obj"
+]
+Creating command line "link.exe @C:\Users\ANHUIS~1\AppData\Local\Temp\RSP7F50.tmp"
+Creating temporary file "C:\Users\ANHUIS~1\AppData\Local\Temp\RSP7F51.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\Debug\重循环实验.dll"
+echo regsvr32 exec. time > ".\Debug\regsvr32.trg"
+]
+Creating command line "C:\Users\ANHUIS~1\AppData\Local\Temp\RSP7F51.bat"
+Compiling...
+重循环实验1.cpp
+f:\c++\重循环实验\重循环实验1.cpp(13) : fatal error C1010: unexpected end of file while looking for precompiled header directive
+执行 cl.exe 时出错.
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+重循环实验.dll - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

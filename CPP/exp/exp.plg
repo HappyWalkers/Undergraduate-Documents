@@ -1,0 +1,99 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: exp - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ANHUIS~1\AppData\Local\Temp\RSP88F9.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/exp.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"F:\C++\exp\exp.cpp"
+]
+Creating command line "cl.exe @C:\Users\ANHUIS~1\AppData\Local\Temp\RSP88F9.tmp" 
+Creating temporary file "C:\Users\ANHUIS~1\AppData\Local\Temp\RSP88FA.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/exp.pdb" /debug /machine:I386 /out:"Debug/exp.exe" /pdbtype:sept 
+".\Debug\exp.obj"
+]
+Creating command line "link.exe @C:\Users\ANHUIS~1\AppData\Local\Temp\RSP88FA.tmp"
+<h3>Output Window</h3>
+Compiling...
+exp.cpp
+F:\C++\exp\exp.cpp(5) : error C2001: newline in constant
+F:\C++\exp\exp.cpp(19) : error C2001: newline in constant
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2100: illegal indirection
+F:\C++\exp\exp.cpp(20) : error C2296: '*' : illegal, left operand has type 'char [1]'
+F:\C++\exp\exp.cpp(20) : error C2143: syntax error : missing ')' before 'return'
+F:\C++\exp\exp.cpp(21) : warning C4508: 'main' : function should return a value; 'void' return type assumed
+Ö´ÐÐ cl.exe Ê±³ö´í.
+
+
+
+<h3>Results</h3>
+exp.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

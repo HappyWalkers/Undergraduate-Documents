@@ -1,0 +1,24 @@
+﻿生成启动时间为 2019/4/5 14:56:38。
+     1>项目“F:\C++\5-2等比数列求和\5-2等比数列求和\5-2等比数列求和.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Release\5-2等比数列求和.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         所有输出均为最新。
+         E:\visual studio 2010\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\5-2等比数列求和.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "5-2等比数列求和.cpp"
+         5-2等比数列求和.cpp
+       Link:
+         E:\visual studio 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\C++\5-2等比数列求和\Release\5-2等比数列求和.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\5-2等比数列求和.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\C++\5-2等比数列求和\Release\5-2等比数列求和.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\C++\5-2等比数列求和\Release\5-2等比数列求和.lib" /MACHINE:X86 "Release\5-2等比数列求和.obj"
+         Release\stdafx.obj
+         正在生成代码
+         已完成代码的生成
+         5-2等比数列求和.vcxproj -> F:\C++\5-2等比数列求和\Release\5-2等比数列求和.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"F:\C++\5-2等比数列求和\Release\5-2等比数列求和.exe;#1" /manifest "Release\5-2等比数列求和.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         正在删除文件“Release\5-2等比数列求和.unsuccessfulbuild”。
+         正在对“Release\5-2等比数列求和.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\C++\5-2等比数列求和\5-2等比数列求和\5-2等比数列求和.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.03

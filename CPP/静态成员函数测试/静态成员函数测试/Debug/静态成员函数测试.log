@@ -1,0 +1,19 @@
+﻿生成启动时间为 2019/4/27 17:42:19。
+     1>项目“F:\C++\静态成员函数测试\静态成员函数测试\静态成员函数测试.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug\静态成员函数测试.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         所有输出均为最新。
+         E:\visual studio 2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\静态成员函数测试.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "静态成员函数测试.cpp"
+         静态成员函数测试.cpp
+     1>f:\c++\静态成员函数测试\静态成员函数测试\静态成员函数测试.cpp(24): error C2628: “MyObj”后面接“int”是非法的(是否忘记了“;”?)
+     1>f:\c++\静态成员函数测试\静态成员函数测试\静态成员函数测试.cpp(24): error C2371: “k”: 重定义；不同的基类型
+                 f:\c++\静态成员函数测试\静态成员函数测试\静态成员函数测试.cpp(10) : 参见“k”的声明
+     1>f:\c++\静态成员函数测试\静态成员函数测试\静态成员函数测试.cpp(24): error C2440: “初始化”: 无法从“int”转换为“MyObj”
+                 无构造函数可以接受源类型，或构造函数重载决策不明确
+     1>f:\c++\静态成员函数测试\静态成员函数测试\静态成员函数测试.cpp(20): error C2088: “<<”: 对于 class 非法
+     1>已完成生成项目“F:\C++\静态成员函数测试\静态成员函数测试\静态成员函数测试.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.32
