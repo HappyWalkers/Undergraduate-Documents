@@ -1,0 +1,60 @@
+% clear
+% close all
+% clc
+%
+% % D=20;!总距离，单位km;
+% % v=20;!小车行驶速率，单位km/h;
+% % r=200;!小车充电速率，单位mA/h;
+% % f=3;!阈值，单位：mA;
+% % T=1;!小车充电时间，单位h;
+% D=20;
+% v=20;
+% r=200;
+% f=3;
+% T=1;
+% data=xlsread("C:\Users\mashed potato\Desktop\校赛\附件2.xlsx");
+% vi=data(2:end,3);
+%
+% b=(1-28/r*vi)*f+(D/v+T)*vi;
+% a=zeros(29,29);
+% for i=1:29
+%     a(i,:)=-vi(i)/r;
+%     a(i,i)=1;
+% end
+% f=ones(29,1);
+% [x,fval]=linprog(f,-a,-b);
+
+function [distance]=min_sum_vol(pRoute,rng,dmat,ifshow)
+v=20;
+r=200;
+f=3;
+T=1;
+data=xlsread("C:\Users\mashed potato\Desktop\校赛\附件2.xlsx");
+vi=data(2:end,3);
+distance=0;
+for s = 1:4
+    d = 0;
+    d = d + dmat(1,pRoute(rng(s,1))); % Add Start Distance
+    for k = rng(s,1):rng(s,2)-1
+        d = d + dmat(pRoute(k),pRoute(k+1));%中间的路程
+    end
+    d = d + dmat(pRoute(rng(s,2)),1); % Add End Distance
+    
+    n=rng(s,2)-rng(s,1)+1;
+    b=(1-(n-1)/r.*vi(pRoute(rng(s,1):rng(s,2))-1))*f+(d/v+T).*vi(pRoute(rng(s,1):rng(s,2))-1);
+    a=zeros(n,n);
+    for i=1:n
+        temp=vi(pRoute(rng(s,1):rng(s,2))-1);
+        a(i,:)=-temp(i)/r;
+        a(i,i)=1;
+    end
+    f=ones(n,1);
+    [x,fval]=linprog(f,-a,-b);
+    distance=distance+fval;
+    if ifshow==1
+        x
+    end
+end
+if ifshow==1
+    distance
+end

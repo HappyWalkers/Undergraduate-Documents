@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{4FB56943-4D3C-4B7F-80FF-7AA02BE6F32C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bhv_attackers_move.cpp" />
+    <ClCompile Include="bhv_basic_move.cpp" />
+    <ClCompile Include="bhv_basic_offensive_kick.cpp" />
+    <ClCompile Include="bhv_basic_tackle.cpp" />
+    <ClCompile Include="bhv_custom_before_kick_off.cpp" />
+    <ClCompile Include="bhv_dangerAreaTackle.cpp" />
+    <ClCompile Include="bhv_goalie_basic_move.cpp" />
+    <ClCompile Include="bhv_goalie_chase_ball.cpp" />
+    <ClCompile Include="bhv_goalie_free_kick.cpp" />
+    <ClCompile Include="bhv_go_to_static_ball.cpp" />
+    <ClCompile Include="bhv_penalty_kick.cpp" />
+    <ClCompile Include="bhv_prepare_set_play_kick.cpp" />
+    <ClCompile Include="bhv_set_play.cpp" />
+    <ClCompile Include="bhv_set_play_free_kick.cpp" />
+    <ClCompile Include="bhv_set_play_goal_kick.cpp" />
+    <ClCompile Include="bhv_set_play_indirect_free_kick.cpp" />
+    <ClCompile Include="bhv_set_play_kick_in.cpp" />
+    <ClCompile Include="bhv_set_play_kick_off.cpp" />
+    <ClCompile Include="bhv_their_goal_kick_move.cpp" />
+    <ClCompile Include="chain_action\actgen_cross.cpp" />
+    <ClCompile Include="chain_action\actgen_direct_pass.cpp" />
+    <ClCompile Include="chain_action\actgen_self_pass.cpp" />
+    <ClCompile Include="chain_action\actgen_shoot.cpp" />
+    <ClCompile Include="chain_action\actgen_short_dribble.cpp" />
+    <ClCompile Include="chain_action\actgen_simple_dribble.cpp" />
+    <ClCompile Include="chain_action\actgen_strict_check_pass.cpp" />
+    <ClCompile Include="chain_action\action_chain_graph.cpp" />
+    <ClCompile Include="chain_action\action_chain_holder.cpp" />
+    <ClCompile Include="chain_action\bhv_chain_action.cpp" />
+    <ClCompile Include="chain_action\bhv_normal_dribble.cpp" />
+    <ClCompile Include="chain_action\bhv_pass_kick_find_receiver.cpp" />
+    <ClCompile Include="chain_action\bhv_strict_check_shoot.cpp" />
+    <ClCompile Include="chain_action\body_force_shoot.cpp" />
+    <ClCompile Include="chain_action\clear_ball.cpp" />
+    <ClCompile Include="chain_action\clear_generator.cpp" />
+    <ClCompile Include="chain_action\cooperative_action.cpp" />
+    <ClCompile Include="chain_action\cross_generator.cpp" />
+    <ClCompile Include="chain_action\dribble.cpp" />
+    <ClCompile Include="chain_action\field_analyzer.cpp" />
+    <ClCompile Include="chain_action\hold_ball.cpp" />
+    <ClCompile Include="chain_action\neck_turn_to_receiver.cpp" />
+    <ClCompile Include="chain_action\pass.cpp" />
+    <ClCompile Include="chain_action\predict_state.cpp" />
+    <ClCompile Include="chain_action\self_pass_generator.cpp" />
+    <ClCompile Include="chain_action\shoot.cpp" />
+    <ClCompile Include="chain_action\shoot_generator.cpp" />
+    <ClCompile Include="chain_action\short_dribble_generator.cpp" />
+    <ClCompile Include="chain_action\simple_pass_checker.cpp" />
+    <ClCompile Include="chain_action\strict_check_pass_generator.cpp" />
+    <ClCompile Include="chain_action\tackle_generator.cpp" />
+    <ClCompile Include="intention_receive.cpp" />
+    <ClCompile Include="intention_wait_after_set_play_kick.cpp" />
+    <ClCompile Include="keepaway_communication.cpp" />
+    <ClCompile Include="main_coach.cpp" />
+    <ClCompile Include="main_player.cpp" />
+    <ClCompile Include="main_trainer.cpp" />
+    <ClCompile Include="neck_default_intercept_neck.cpp" />
+    <ClCompile Include="neck_goalie_turn_neck.cpp" />
+    <ClCompile Include="neck_offensive_intercept_neck.cpp" />
+    <ClCompile Include="role_center_back.cpp" />
+    <ClCompile Include="role_center_back_move.cpp" />
+    <ClCompile Include="role_center_forward.cpp" />
+    <ClCompile Include="role_defensive_half.cpp" />
+    <ClCompile Include="role_defensive_half_move.cpp" />
+    <ClCompile Include="role_goalie.cpp" />
+    <ClCompile Include="role_keepaway_keeper.cpp" />
+    <ClCompile Include="role_keepaway_taker.cpp" />
+    <ClCompile Include="role_offensive_half.cpp" />
+    <ClCompile Include="role_offensive_half_move.cpp" />
+    <ClCompile Include="role_sample.cpp" />
+    <ClCompile Include="role_side_back.cpp" />
+    <ClCompile Include="role_side_back_move.cpp" />
+    <ClCompile Include="role_side_back_org.cpp" />
+    <ClCompile Include="role_side_forward.cpp" />
+    <ClCompile Include="role_side_half.cpp" />
+    <ClCompile Include="sample_coach.cpp" />
+    <ClCompile Include="sample_communication.cpp" />
+    <ClCompile Include="sample_field_evaluator.cpp" />
+    <ClCompile Include="sample_player.cpp" />
+    <ClCompile Include="sample_trainer.cpp" />
+    <ClCompile Include="soccer_role.cpp" />
+    <ClCompile Include="strategy.cpp" />
+    <ClCompile Include="view_tactical.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bhv_attackers_move.h" />
+    <ClInclude Include="bhv_basic_move.h" />
+    <ClInclude Include="bhv_basic_offensive_kick.h" />
+    <ClInclude Include="bhv_basic_tackle.h" />
+    <ClInclude Include="bhv_custom_before_kick_off.h" />
+    <ClInclude Include="bhv_dangerAreaTackle.h" />
+    <ClInclude Include="bhv_goalie_basic_move.h" />
+    <ClInclude Include="bhv_goalie_chase_ball.h" />
+    <ClInclude Include="bhv_goalie_free_kick.h" />
+    <ClInclude Include="bhv_go_to_static_ball.h" />
+    <ClInclude Include="bhv_penalty_kick.h" />
+    <ClInclude Include="bhv_prepare_set_play_kick.h" />
+    <ClInclude Include="bhv_set_play.h" />
+    <ClInclude Include="bhv_set_play_free_kick.h" />
+    <ClInclude Include="bhv_set_play_goal_kick.h" />
+    <ClInclude Include="bhv_set_play_indirect_free_kick.h" />
+    <ClInclude Include="bhv_set_play_kick_in.h" />
+    <ClInclude Include="bhv_set_play_kick_off.h" />
+    <ClInclude Include="bhv_their_goal_kick_move.h" />
+    <ClInclude Include="chain_action\actgen_action_chain_length_filter.h" />
+    <ClInclude Include="chain_action\actgen_cross.h" />
+    <ClInclude Include="chain_action\actgen_direct_pass.h" />
+    <ClInclude Include="chain_action\actgen_self_pass.h" />
+    <ClInclude Include="chain_action\actgen_shoot.h" />
+    <ClInclude Include="chain_action\actgen_short_dribble.h" />
+    <ClInclude Include="chain_action\actgen_simple_dribble.h" />
+    <ClInclude Include="chain_action\actgen_strict_check_pass.h" />
+    <ClInclude Include="chain_action\action_chain_graph.h" />
+    <ClInclude Include="chain_action\action_chain_holder.h" />
+    <ClInclude Include="chain_action\action_generator.h" />
+    <ClInclude Include="chain_action\action_state_pair.h" />
+    <ClInclude Include="chain_action\bhv_chain_action.h" />
+    <ClInclude Include="chain_action\bhv_normal_dribble.h" />
+    <ClInclude Include="chain_action\bhv_pass_kick_find_receiver.h" />
+    <ClInclude Include="chain_action\bhv_strict_check_shoot.h" />
+    <ClInclude Include="chain_action\body_force_shoot.h" />
+    <ClInclude Include="chain_action\clear_ball.h" />
+    <ClInclude Include="chain_action\clear_generator.h" />
+    <ClInclude Include="chain_action\cooperative_action.h" />
+    <ClInclude Include="chain_action\cross_generator.h" />
+    <ClInclude Include="chain_action\dribble.h" />
+    <ClInclude Include="chain_action\field_analyzer.h" />
+    <ClInclude Include="chain_action\field_evaluator.h" />
+    <ClInclude Include="chain_action\hold_ball.h" />
+    <ClInclude Include="chain_action\neck_turn_to_receiver.h" />
+    <ClInclude Include="chain_action\pass.h" />
+    <ClInclude Include="chain_action\pass_checker.h" />
+    <ClInclude Include="chain_action\predict_ball_object.h" />
+    <ClInclude Include="chain_action\predict_player_object.h" />
+    <ClInclude Include="chain_action\predict_state.h" />
+    <ClInclude Include="chain_action\self_pass_generator.h" />
+    <ClInclude Include="chain_action\shoot.h" />
+    <ClInclude Include="chain_action\shoot_generator.h" />
+    <ClInclude Include="chain_action\short_dribble_generator.h" />
+    <ClInclude Include="chain_action\simple_pass_checker.h" />
+    <ClInclude Include="chain_action\strict_check_pass_generator.h" />
+    <ClInclude Include="chain_action\tackle_generator.h" />
+    <ClInclude Include="communication.h" />
+    <ClInclude Include="intention_receive.h" />
+    <ClInclude Include="intention_wait_after_set_play_kick.h" />
+    <ClInclude Include="keepaway_communication.h" />
+    <ClInclude Include="neck_default_intercept_neck.h" />
+    <ClInclude Include="neck_goalie_turn_neck.h" />
+    <ClInclude Include="neck_offensive_intercept_neck.h" />
+    <ClInclude Include="role_center_back.h" />
+    <ClInclude Include="role_center_back_move.h" />
+    <ClInclude Include="role_center_forward.h" />
+    <ClInclude Include="role_defensive_half.h" />
+    <ClInclude Include="role_defensive_half_move.h" />
+    <ClInclude Include="role_goalie.h" />
+    <ClInclude Include="role_keepaway_keeper.h" />
+    <ClInclude Include="role_keepaway_taker.h" />
+    <ClInclude Include="role_offensive_half.h" />
+    <ClInclude Include="role_offensive_half_move.h" />
+    <ClInclude Include="role_sample.h" />
+    <ClInclude Include="role_side_back.h" />
+    <ClInclude Include="role_side_back_move.h" />
+    <ClInclude Include="role_side_forward.h" />
+    <ClInclude Include="role_side_half.h" />
+    <ClInclude Include="sample_coach.h" />
+    <ClInclude Include="sample_communication.h" />
+    <ClInclude Include="sample_field_evaluator.h" />
+    <ClInclude Include="sample_player.h" />
+    <ClInclude Include="sample_trainer.h" />
+    <ClInclude Include="soccer_role.h" />
+    <ClInclude Include="strategy.h" />
+    <ClInclude Include="view_tactical.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

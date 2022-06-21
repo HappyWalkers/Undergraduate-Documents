@@ -1,0 +1,126 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3301,        117]
+NotebookOptionsPosition[      2680,         90]
+NotebookOutlinePosition[      3074,        107]
+CellTagsIndexPosition[      3031,        104]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"sin", 
+    RowBox[{"(", 
+     SuperscriptBox["t", "2"], ")"}]}], ",", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7740769604934025`*^9, 3.77407699070636*^9}, {
+  3.774077034177472*^9, 3.7740770380660505`*^9}, {3.7740771803363085`*^9, 
+  3.774077227277153*^9}, {3.7740773007257795`*^9, 3.774077302077286*^9}}],
+
+Cell[BoxData[
+ RowBox[{"2", " ", "sin", " ", "t"}]], "Output",
+ CellChangeTimes->{3.7740772286546507`*^9, 3.7740773032139363`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   SuperscriptBox["t", "6"], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "5"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"720", " ", "t"}]], "Output",
+ CellChangeTimes->{3.774077306087821*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    RowBox[{"x", "^", "2"}]}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.77407741768756*^9, 3.7740774260035205`*^9}, {
+  3.774077519381394*^9, 3.7740775210837703`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Integrate", "::", "ilim"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({5.764`, 6.286`, 6.759`, 7.168`, \
+7.408`}\\)\[NoBreak] \:4e2d\:6709\:65e0\:6548\:7684\:79ef\:5206\:53d8\:91cf\
+\:6216\:8005\:6781\:9650\:503c. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Integrate/ilim\\\", ButtonNote -> \
+\\\"Integrate::ilim\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.77407764227009*^9}],
+
+Cell[BoxData[
+ RowBox[{"\[Integral]", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "0.03009899922031552`", ",", "0.02530761661066429`", ",", 
+     "0.021889462983834564`", ",", "0.019462741151147957`", ",", 
+     "0.018222084349882678`"}], "}"}], 
+   RowBox[{"\[DifferentialD]", 
+    RowBox[{"{", 
+     RowBox[{
+     "5.764`", ",", "6.286`", ",", "6.759`", ",", "7.168`", ",", "7.408`"}], 
+     "}"}]}]}]}]], "Output",
+ CellChangeTimes->{3.774077642272088*^9}]
+}, Open  ]]
+},
+WindowSize->{707, 816},
+WindowMargins->{{Automatic, 255}, {-168, Automatic}},
+Magnification->2.3999998569488525`,
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (2013\:5e742\:670813\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 367, 8, 107, "Input"],
+Cell[949, 32, 130, 2, 98, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1116, 39, 151, 5, 107, "Input"],
+Cell[1270, 46, 94, 2, 130, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1401, 53, 252, 6, 99, "Input"],
+Cell[1656, 61, 544, 11, 143, "Message"],
+Cell[2203, 74, 461, 13, 308, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

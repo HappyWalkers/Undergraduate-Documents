@@ -1,0 +1,9 @@
+clear all
+close all
+clc
+
+% u = dsolve('D1u=1+u^2','y')
+
+% y = dsolve('D2y=0')
+
+% y = dsolve('D2y + 4*Dy + 29*y=0','y(0)=0, Dy(0)=15')

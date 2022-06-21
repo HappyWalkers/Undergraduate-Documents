@@ -1,0 +1,13 @@
+clear
+clc
+
+maxTankNum = 10000;
+maxTime = 3;
+timeLeft = maxTime;
+t = zeros(maxTankNum, 1);
+j = 0;
+while timeLeft>0
+   j = j + 1
+   t(j) = t(j +exprnd(1/4)
+end
+   

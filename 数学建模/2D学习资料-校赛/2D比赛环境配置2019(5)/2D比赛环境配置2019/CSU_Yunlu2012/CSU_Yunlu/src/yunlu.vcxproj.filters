@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bhv_attackers_move.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_basic_move.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_basic_offensive_kick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_basic_tackle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_custom_before_kick_off.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_dangerAreaTackle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_goalie_basic_move.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_goalie_chase_ball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_goalie_free_kick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_go_to_static_ball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_penalty_kick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_prepare_set_play_kick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_set_play.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_set_play_free_kick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_set_play_goal_kick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_set_play_indirect_free_kick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_set_play_kick_in.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_set_play_kick_off.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bhv_their_goal_kick_move.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intention_receive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intention_wait_after_set_play_kick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="keepaway_communication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_coach.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_trainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="neck_default_intercept_neck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="neck_goalie_turn_neck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="neck_offensive_intercept_neck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_center_back.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_center_back_move.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_center_forward.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_defensive_half.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_defensive_half_move.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_goalie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_keepaway_keeper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_keepaway_taker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_offensive_half.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_offensive_half_move.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_sample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_side_back.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_side_back_move.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_side_back_org.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_side_forward.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="role_side_half.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sample_coach.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sample_communication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sample_field_evaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sample_player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sample_trainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soccer_role.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="view_tactical.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\actgen_cross.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\actgen_direct_pass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\actgen_self_pass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\actgen_shoot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\actgen_short_dribble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\actgen_simple_dribble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\actgen_strict_check_pass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\action_chain_graph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\action_chain_holder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\bhv_chain_action.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\bhv_normal_dribble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\bhv_pass_kick_find_receiver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\bhv_strict_check_shoot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\body_force_shoot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\clear_ball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\clear_generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\cooperative_action.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\cross_generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\dribble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\field_analyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\hold_ball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\neck_turn_to_receiver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\pass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\predict_state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\self_pass_generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\shoot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\shoot_generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\short_dribble_generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\simple_pass_checker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\strict_check_pass_generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chain_action\tackle_generator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bhv_attackers_move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_basic_move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_basic_offensive_kick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_basic_tackle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_custom_before_kick_off.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_dangerAreaTackle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_goalie_basic_move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_goalie_chase_ball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_goalie_free_kick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_go_to_static_ball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_penalty_kick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_prepare_set_play_kick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_set_play.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_set_play_free_kick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_set_play_goal_kick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_set_play_indirect_free_kick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_set_play_kick_in.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_set_play_kick_off.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bhv_their_goal_kick_move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="communication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intention_receive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intention_wait_after_set_play_kick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keepaway_communication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="neck_default_intercept_neck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="neck_goalie_turn_neck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="neck_offensive_intercept_neck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_center_back.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_center_back_move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_center_forward.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_defensive_half.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_defensive_half_move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_goalie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_keepaway_keeper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_keepaway_taker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_offensive_half.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_offensive_half_move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_sample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_side_back.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_side_back_move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_side_forward.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="role_side_half.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sample_coach.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sample_communication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sample_field_evaluator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sample_player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sample_trainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soccer_role.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="view_tactical.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\actgen_action_chain_length_filter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\actgen_cross.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\actgen_direct_pass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\actgen_self_pass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\actgen_shoot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\actgen_short_dribble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\actgen_simple_dribble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\actgen_strict_check_pass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\action_chain_graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\action_chain_holder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\action_generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\action_state_pair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\bhv_chain_action.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\bhv_normal_dribble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\bhv_pass_kick_find_receiver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\bhv_strict_check_shoot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\body_force_shoot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\clear_ball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\clear_generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\cooperative_action.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\cross_generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\dribble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\field_analyzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\field_evaluator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\hold_ball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\neck_turn_to_receiver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\pass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\pass_checker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\predict_ball_object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\predict_player_object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\predict_state.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\self_pass_generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\shoot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\shoot_generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\short_dribble_generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\simple_pass_checker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\strict_check_pass_generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_action\tackle_generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,58 @@
+load('C:\Users\mashed potato\Desktop\MCM_data\position');
+
+r=5;%捕捞半径
+pos=[35,177];
+fy_d=zeros(16,11,50);
+qy_d=zeros(16,11,50);
+for k=1:50
+for i=1:16
+for j=1:11
+
+if fy_j(i,j,k)==1
+fy_d(i,j,k)=dis(pos,[i,j]);
+end
+
+if qy_j(i,j,k)==1
+qy_d(i,j,k)=dis(pos,[i,j]);
+end
+
+end
+end
+end
+
+%% best
+best_fyd=zeros(1,50);
+best_qyd=zeros(1,50);
+best_fyp=zeros(1,50);
+best_qyp=zeros(1,50);
+
+for k=1:50
+[best_fyd(1,k),best_fyp(1,k)]=min( fy_d(:,:,k));
+[best_qyd(1,k),best_qyp(1,k)]=min(qy_d(:,:,k));
+end
+
+%% worst
+worst_fyd=zeros(1,50);
+worst_qyd=zeros(1,50);
+worst_fyp=zeros(1,50);
+worst_qyp=zeros(1,50);
+
+for k=1:50
+[worst_fyd(1,k),worst_fyp(1,k)]=max( fy_d(:,:,k));
+[worst_qyd(1,k),worst_qyp(1,k)]=max(qy_d(:,:,k));
+end
+
+%% possible
+possible_fyd=zeros(1,50);
+possible_qyd=zeros(1,50);
+possible_fyp=zeros(1,50);
+possible_qyp=zeros(1,50);
+
+for k=1:50
+[possible_fyd(1,k),possible_fyp(1,k)]=median( fy_d(:,:,k));
+[possible_qyd(1,k),possible_qyp(1,k)]=median(qy_d(:,:,k));
+end
+
+save('C:\Users\mashed potato\Desktop\MCM_data\B','best_fyd',best_qyd','best_fyp',best_qyp');
+save('C:\Users\mashed potato\Desktop\MCM_data\B','worst_fyd',worst_qyd','worst_fyp',worst_qyp');
+save('C:\Users\mashed potato\Desktop\MCM_data\B','possible_fyd',possible_qyd','possible_fyp',possible_qyp');

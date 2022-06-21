@@ -1,0 +1,25 @@
+clear
+
+load('C:\Users\mashed potato\Desktop\MCM_data\A3');
+
+time=2021:2070
+time=mapminmax('apply',time,ps_t);
+guess=zeros(16,11,12,50);%位置，12月，50年
+guess_y=zeros(16,11,50);
+for i=1:16
+	for j=1:11
+		for k=1:12
+			if degree(i,j,k,2)~=-327.6800
+				guess(i,j,k,:)=sim(net{i,j,k},time);
+				guess(i,j,k,:)=mapminmax('reverse',reshape(guess(i,j,k,:),1,146),ps_d(i,j,k));
+end
+guess_y(i,j,k)=average(guess(i,j,k,:));
+end
+end
+end
+
+time=mapminmax('reverse',time,ps_t);
+save('C:\Users\mashed potato\Desktop\MCM_data\guess50');
+
+				
+	

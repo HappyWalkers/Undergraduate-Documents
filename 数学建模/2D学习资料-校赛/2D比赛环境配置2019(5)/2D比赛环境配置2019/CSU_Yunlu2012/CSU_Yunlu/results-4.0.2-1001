@@ -1,0 +1,269 @@
+ht@ubuntu:~/automonitor$ ./start
+start robocup 2d auto test.
+team number: 2
+round number: 50
+server host: localhost
+server port: 6000
+games of each round: 1
+all rounds: 50
+current time:Wed Oct  1 02:35:00 2014
+==================================
+begin round >> 1
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+kick off.
+5257 CSU14-4.0.7(1):YuShan2013(0)
+6000 CSU14-4.0.7(1):YuShan2013(0)
+game over.
+----------------------------------
+game(2):[(./start2) vs (./start1)]
+kick off.
+kick off.
+3803 YuShan2013(0):CSU14-4.0.7(1)
+5318 YuShan2013(1):CSU14-4.0.7(1)
+kick off.
+kick off.
+Timed out.
+==================================
+begin round >> 2
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+383 CSU14-4.0.7(1):YuShan2013(0)
+2262 CSU14-4.0.7(1):YuShan2013(1)
+kick off.
+kick off.
+6831 CSU14-4.0.7(2):YuShan2013(1)
+kick off.
+8000 CSU14-4.0.7(2):YuShan2013(1)
+game over.
+----------------------------------
+game(2):[(./start2) vs (./start1)]
+kick off.
+1609 YuShan2013(0):CSU14-4.0.7(1)
+kick off.
+6000 YuShan2013(0):CSU14-4.0.7(1)
+game over.
+==================================
+begin round >> 3
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+1117 CSU14-4.0.7(1):YuShan2013(0)
+kick off.
+5892 CSU14-4.0.7(1):YuShan2013(1)
+kick off.
+6942 CSU14-4.0.7(1):YuShan2013(2)
+kick off.
+8000 CSU14-4.0.7(1):YuShan2013(2)
+game over.
+----------------------------------
+game(2):[(./start2) vs (./start1)]
+kick off.
+1257 YuShan2013(0):CSU14-4.0.7(1)
+1940 YuShan2013(0):CSU14-4.0.7(2)
+kick off.
+3668 YuShan2013(1):CSU14-4.0.7(2)
+5584 YuShan2013(1):CSU14-4.0.7(3)
+5810 YuShan2013(1):CSU14-4.0.7(4)
+6000 YuShan2013(1):CSU14-4.0.7(4)
+game over.
+==================================
+begin round >> 4
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+1033 CSU14-4.0.7(1):YuShan2013(0)
+kick off.
+3580 CSU14-4.0.7(1):YuShan2013(1)
+5394 CSU14-4.0.7(2):YuShan2013(1)
+6000 CSU14-4.0.7(2):YuShan2013(1)
+game over.
+----------------------------------
+game(2):[(./start2) vs (./start1)]
+kick off.
+1440 YuShan2013(1):CSU14-4.0.7(0)
+kick off.
+6000 YuShan2013(1):CSU14-4.0.7(0)
+game over.
+==================================
+begin round >> 5
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+537 CSU14-4.0.7(0):YuShan2013(1)
+765 CSU14-4.0.7(0):YuShan2013(2)
+1382 CSU14-4.0.7(0):YuShan2013(3)
+1832 CSU14-4.0.7(1):YuShan2013(3)
+kick off.
+6000 CSU14-4.0.7(1):YuShan2013(3)
+game over.
+----------------------------------
+game(2):[(./start2) vs (./start1)]
+kick off.
+721 YuShan2013(0):CSU14-4.0.7(1)
+1585 YuShan2013(1):CSU14-4.0.7(1)
+kick off.
+5854 YuShan2013(1):CSU14-4.0.7(2)
+6000 YuShan2013(1):CSU14-4.0.7(2)
+game over.
+==================================
+begin round >> 6
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+kick off.
+kick off.
+kick off.
+7149 CSU14-4.0.7(0):YuShan2013(1)
+8000 CSU14-4.0.7(0):YuShan2013(1)
+game over.
+----------------------------------
+game(2):[(./start2) vs (./start1)]
+kick off.
+1080 YuShan2013(1):CSU14-4.0.7(0)
+1740 YuShan2013(1):CSU14-4.0.7(1)
+kick off.
+3744 YuShan2013(2):CSU14-4.0.7(1)
+5894 YuShan2013(2):CSU14-4.0.7(2)
+kick off.
+kick off.
+7128 YuShan2013(3):CSU14-4.0.7(2)
+8000 YuShan2013(3):CSU14-4.0.7(2)
+game over.
+==================================
+begin round >> 7
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+652 CSU14-4.0.7(1):YuShan2013(0)
+kick off.
+6000 CSU14-4.0.7(1):YuShan2013(0)
+game over.
+----------------------------------
+game(2):[(./start2) vs (./start1)]
+kick off.
+252 YuShan2013(0):CSU14-4.0.7(1)
+1197 YuShan2013(1):CSU14-4.0.7(1)
+2224 YuShan2013(1):CSU14-4.0.7(2)
+kick off.
+4580 YuShan2013(2):CSU14-4.0.7(2)
+kick off.
+kick off.
+7324 YuShan2013(3):CSU14-4.0.7(2)
+7623 YuShan2013(3):CSU14-4.0.7(3)
+Timed out.
+==================================
+begin round >> 8
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+1359 CSU14-4.0.7(1):YuShan2013(0)
+1711 CSU14-4.0.7(1):YuShan2013(1)
+kick off.
+5590 CSU14-4.0.7(2):YuShan2013(1)
+5712 CSU14-4.0.7(3):YuShan2013(1)
+6000 CSU14-4.0.7(3):YuShan2013(1)
+game over.
+----------------------------------
+game(2):[(./start2) vs (./start1)]
+kick off.
+1713 YuShan2013(0):CSU14-4.0.7(1)
+kick off.
+5641 YuShan2013(1):CSU14-4.0.7(1)
+5749 YuShan2013(1):CSU14-4.0.7(2)
+6000 YuShan2013(1):CSU14-4.0.7(2)
+game over.
+==================================
+begin round >> 9
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+329 CSU14-4.0.7(0):YuShan2013(1)
+kick off.
+6000 CSU14-4.0.7(0):YuShan2013(1)
+game over.
+----------------------------------
+game(2):[(./start2) vs (./start1)]
+kick off.
+kick off.
+4589 YuShan2013(1):CSU14-4.0.7(0)
+5720 YuShan2013(2):CSU14-4.0.7(0)
+6000 YuShan2013(2):CSU14-4.0.7(0)
+game over.
+==================================
+begin round >> 10
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+965 CSU14-4.0.7(0):YuShan2013(1)
+kick off.
+6000 CSU14-4.0.7(0):YuShan2013(1)
+game over.
+----------------------------------
+game(2):[(./start2) vs (./start1)]
+kick off.
+1697 YuShan2013(1):CSU14-4.0.7(0)
+1808 YuShan2013(1):CSU14-4.0.7(1)
+kick off.
+kick off.
+6791 YuShan2013(2):CSU14-4.0.7(1)
+kick off.
+7588 YuShan2013(2):CSU14-4.0.7(2)
+Timed out.
+==================================
+begin round >> 11
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+1361 CSU14-4.0.7(1):YuShan2013(0)
+kick off.
+4321 CSU14-4.0.7(1):YuShan2013(1)
+kick off.
+6272 CSU14-4.0.7(1):YuShan2013(2)
+6940 CSU14-4.0.7(1):YuShan2013(3)
+kick off.
+8000 CSU14-4.0.7(1):YuShan2013(3)
+game over.
+----------------------------------
+game(2):[(./start2) vs (./start1)]
+kick off.
+984 YuShan2013(1):CSU14-4.0.7(0)
+kick off.
+4637 YuShan2013(1):CSU14-4.0.7(1)
+5879 YuShan2013(2):CSU14-4.0.7(1)
+6000 YuShan2013(2):CSU14-4.0.7(1)
+game over.
+==================================
+begin round >> 12
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+kick off.
+kick off.
+kick off.
+7108 CSU14-4.0.7(0):YuShan2013(1)
+8000 CSU14-4.0.7(0):YuShan2013(1)
+game over.
+----------------------------------
+game(2):[(./start2) vs (./start1)]
+kick off.
+kick off.
+kick off.
+6441 YuShan2013(0):CSU14-4.0.7(1)
+kick off.
+8000 YuShan2013(0):CSU14-4.0.7(1)
+game over.
+==================================
+begin round >> 13
+----------------------------------
+game(1):[(./start1) vs (./start2)]
+kick off.
+kick off.
+3851 CSU14-4.0.7(1):YuShan2013(0)
+6000 CSU14-4.0.7(1):YuShan2013(0)
+game over.
+^C----------------------------------
+exit auto test.
+
